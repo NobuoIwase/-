@@ -164,6 +164,87 @@ def find_split_lines(page, left, right, numx, y0, y1, dpi=150, thr=200, frac=0.3
     margin = 30 / scale
     return [y0 + y * scale for y in ys if margin < y < pix.h - margin]
 
+def number_positions(page, is_text, left, num_x, top, bottom, expected_start=1):
+    """番号列（left〜num_x, top〜bottom）にある問番号とその y 中心 [(number, y)] を返す。
+    テキストPDFは単語座標。スキャンは番号列の帯の黒画素投影で数字の塊を見つけ、塊ごとに OCR で数字を読む
+    （読めなければ expected_start からの連番で補う）"""
+    out = []
+    if is_text:
+        for w in page.get_text("words"):
+            x0, y0, x1, y1, t = w[:5]
+            if t.strip().isdigit() and left <= x0 < num_x and top <= y0 <= bottom:
+                n = int(t)
+                if 1 <= n <= 50:
+                    out.append((n, (y0 + y1) / 2))
+        out.sort(key=lambda t: t[1])
+        return out
+    dpi = 300
+    scale = 72.0 / dpi
+    strip = pymupdf.Rect(left + 2, top + 2, num_x - 2, bottom - 2)
+    pix = page.get_pixmap(dpi=dpi, clip=strip, colorspace=pymupdf.csGRAY)
+    a = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.h, pix.w)
+    inner = a[:, int(pix.w * 0.15):int(pix.w * 0.85)]   # 左右の罫線の膨らみを避ける
+    dark_rows = (inner < 160).sum(axis=1) >= 2
+    idx = np.where(dark_rows)[0]
+    blobs, s0, prev = [], None, None
+    for i in idx:
+        if s0 is None:
+            s0 = prev = i
+        elif i - prev > 6:
+            blobs.append((s0, prev)); s0 = prev = i
+        else:
+            prev = i
+    if s0 is not None:
+        blobs.append((s0, prev))
+    blobs = [(y0, y1) for (y0, y1) in blobs if 12 <= (y1 - y0) <= 70]
+    kind, eng = ocr_engine()
+    cands = []
+    for (y0, y1) in blobs:
+        pad = 8
+        crop = a[max(0, y0 - pad):min(pix.h, y1 + pad), :]
+        img = np.repeat(crop[:, :, None], 3, axis=2)
+        img = np.kron(img, np.ones((2, 2, 1), dtype=np.uint8))  # 2倍に拡大
+        n = None
+        try:
+            if kind == "v3":
+                res = eng(img[:, :, ::-1])
+                txt = "".join(res.txts) if res is not None and res.txts else ""
+            else:
+                res, _ = eng(img[:, :, ::-1])
+                txt = "".join(r[1] for r in (res or []))
+            m = re.search(r"\d{1,2}", txt.replace("O", "0").replace("o", "0").replace("l", "1").replace("I", "1"))
+            if m and 1 <= int(m.group()) <= 50:
+                n = int(m.group())
+        except Exception:
+            n = None
+        cands.append((n, strip.y0 + (y0 + y1) / 2 * scale))
+    # 連番で整合させる: 読めた番号が期待値と矛盾すれば連番を優先
+    expect = expected_start
+    for n, y in cands:
+        if n is None or n < expect or n > expect + 2:
+            n = expect
+        out.append((n, y))
+        expect = n + 1
+    return out
+
+def rows_from_numbers(nums, hy, table_top, table_bottom):
+    """番号の y 位置から行境界を作る。各行の上端は番号の直上の罫線（30pt 以内）、無ければ番号の 10pt 上"""
+    rows = []
+    tops = []
+    for n, y in nums:
+        above = [h for h in hy if y - 30 <= h <= y]
+        tops.append(max(above) if above else y - 10)
+    for i, (n, y) in enumerate(nums):
+        top = tops[i]
+        if i + 1 < len(nums):
+            bottom = tops[i + 1]
+        else:
+            below = [h for h in hy if h > y + 10]
+            bottom = min(below) if below else table_bottom
+        if bottom - top > 25:
+            rows.append((top, bottom, n))
+    return rows
+
 def cell_text(page, rect):
     t = page.get_text("text", clip=rect)
     t = re.sub(r"[\x00-\x08\x0b-\x1f]", "", t)
@@ -245,16 +326,30 @@ def extract_exam(qpdf, apdf, exam_id, meta, dpi=200, page_dpi=150):
         else:
             num_x = left + (right - left) * 0.03
             mid_x = inner[0] if inner else left + (right - left) * 0.41
-        # 各行の番号を先に読む。1つも読めない頁は表があっても図面（凡例表など）とみなす
-        def read_number(y0, y1):
-            num_rect = pymupdf.Rect(left, y0, num_x, y1)
-            if is_text:
-                t = cell_text(page, num_rect)
-            else:
-                t = ocr_text(page.get_pixmap(dpi=300, clip=num_rect))
-            m = re.search(r"\d+", t)
-            return int(m.group()) if m else None
-        numbers = [read_number(y0, y1) for (y0, y1) in rows]
+        # 行境界は「番号の位置」から決める（写真行などで罫線が途切れても取りこぼさない）。
+        # 番号が 3 件未満しか取れない頁は罫線ベースの行に番号を読んで付ける（従来方式）
+        table_top, table_bottom = hy[0], hy[-1]
+        nums = number_positions(page, is_text, left, num_x, table_top, table_bottom, expected_start=seq + 1)
+        # 単調増加でないもの（誤読）を落とす
+        cleaned = []
+        for n, y in nums:
+            if not cleaned or n > cleaned[-1][0]:
+                cleaned.append((n, y))
+        nums = cleaned
+        if len(nums) >= 3 or (is_text and len(nums) >= 1):
+            nrows = rows_from_numbers(nums, hy, table_top, table_bottom)
+            rows = [(a, b) for (a, b, _) in nrows]
+            numbers = [n for (_, _, n) in nrows]
+        else:
+            def read_number(y0, y1):
+                num_rect = pymupdf.Rect(left, y0, num_x, y1)
+                if is_text:
+                    t = cell_text(page, num_rect)
+                else:
+                    t = ocr_text(page.get_pixmap(dpi=300, clip=num_rect))
+                m = re.search(r"\d+", t)
+                return int(m.group()) if m else None
+            numbers = [read_number(y0, y1) for (y0, y1) in rows]
         looks_like_table = (num_x - left) < 40 and (mid_x - num_x) > 120
         if (not any(n is not None for n in numbers) and not looks_like_table) or seq >= 50:
             if len(page.get_drawings()) > 50 or len(page.get_images()) > 0:
@@ -348,6 +443,13 @@ def extract_exam(qpdf, apdf, exam_id, meta, dpi=200, page_dpi=150):
     return meta
 
 def extract_answers(apdf):
+    # 目視で書き起こした上書きファイルがあれば最優先（スキャン解答表の OCR が不十分な回）
+    ov = os.path.join(PDF_DIR, "..", "answers_override", os.path.basename(apdf)[:-4] + ".json")
+    if os.path.exists(ov):
+        d = json.load(open(ov, encoding="utf-8"))
+        ans = dict(d["answers"])
+        ans["_source"] = "manual"
+        return ans
     doc = pymupdf.open(apdf)
     page = doc[0]
     t = page.get_text()

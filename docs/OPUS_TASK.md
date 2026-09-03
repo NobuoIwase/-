@@ -39,6 +39,10 @@ python3 scripts/extract_pdf.py                          # 全回
 2. `answers.json` … 公式解答。`"12": "ロ"` → `answer: 1`（イ0 ロ1 ハ2 ニ3）
 3. `questions_raw.json` … 各問の `stemText`, `choicesText`, `images.stem/choices/row`, `figure`（自動切り出しの図、あれば）,
    `stemDrawings`（問い欄の描画数。0 より大きければ図がある可能性大）, `choiceImages`（答え欄の埋め込み画像 = 写真選択肢）
+   - 要注意フラグ: `numberGuessed: true`（番号が読めず連番で補った）, `previousMerged: true`（直前の行に 2 問が結合している疑い）,
+     `figure.suspicious: true`（自動切り出しの図が大きすぎる＝本文を含んでいる疑い）。これらの問は必ず `cells/qNN_row.png` を見る
+   - `meta.answerSource` が `"manual"` の回（2023 下期）は、解答表がスキャンだったため目視で書き起こした解答キー
+     （`data/raw/denko2/answers_override/`）。`"ocr"` の回があれば解答キー自体を画像で再確認する
 4. 画像は Read ツールで見る。まず `cells/qNN_row.png`（行全体）を見れば問いと答えが両方分かる。
    **50 問すべての row 画像を見る必要はない**: textPdf が true で `stemDrawings == 0` かつ `choiceImages` が空で
    `choicesDrawings` が小さい問はテキストだけで作れる。図・写真・回路図・OCR 由来の問だけ画像を見る
