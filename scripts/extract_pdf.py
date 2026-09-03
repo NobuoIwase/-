@@ -3,7 +3,7 @@
 第二種電気工事士 学科試験 公表問題PDF → 問ごとのセル画像 + テキスト草稿 + 解答キー を抽出する。
 
 使い方:
-  pip install pymupdf numpy pillow rapidocr-onnxruntime
+  pip install pymupdf numpy pillow rapidocr   # 日本語OCR。入らなければ rapidocr-onnxruntime
   python3 scripts/extract_pdf.py                 # 全回
   python3 scripts/extract_pdf.py --exam 20260524_q01 --dpi 200
 
@@ -49,10 +49,18 @@ EXAMS = {
 
 _ocr = None
 def ocr_engine():
+    """日本語認識モデル (rapidocr v3, PP-OCRv4 japan) を優先。無ければ rapidocr_onnxruntime (中国語モデル、仮名が落ちる)"""
     global _ocr
     if _ocr is None:
-        from rapidocr_onnxruntime import RapidOCR
-        _ocr = RapidOCR()
+        try:
+            from rapidocr import RapidOCR, LangRec, OCRVersion, ModelType
+            eng = RapidOCR(params={"Rec.lang_type": LangRec.JAPAN, "Rec.ocr_version": OCRVersion.PPOCRV4,
+                                   "Rec.model_type": ModelType.MOBILE, "Global.log_level": "warning"})
+            _ocr = ("v3", eng)
+        except Exception as e:  # noqa
+            print("  [warn] rapidocr(japan) が使えません。rapidocr_onnxruntime にフォールバック:", e)
+            from rapidocr_onnxruntime import RapidOCR
+            _ocr = ("v1", RapidOCR())
     return _ocr
 
 def ocr_text(pix):
@@ -62,11 +70,19 @@ def ocr_text(pix):
         img = np.repeat(img, 3, axis=2)
     elif pix.n == 4:
         img = img[:, :, :3]
-    res, _ = ocr_engine()(img[:, :, ::-1])  # BGR
-    if not res:
-        return ""
-    lines = sorted(res, key=lambda r: (round(r[0][0][1] / 12), r[0][0][0]))
-    return "\n".join(r[1] for r in lines)
+    kind, eng = ocr_engine()
+    if kind == "v3":
+        res = eng(img[:, :, ::-1])
+        if res is None or not res.txts:
+            return ""
+        items = list(zip(res.boxes, res.txts))
+    else:
+        res, _ = eng(img[:, :, ::-1])
+        if not res:
+            return ""
+        items = [(r[0], r[1]) for r in res]
+    items.sort(key=lambda r: (round(float(r[0][0][1]) / 12), float(r[0][0][0])))
+    return "\n".join(t for _, t in items)
 
 def _dilate_rows(dark, k=2):
     """縦方向に ±k 画素の論理和（スキャンの微小な傾きを吸収）"""
@@ -134,6 +150,20 @@ def _cluster(idx, gap=3):
     out.append((start + prev) / 2.0)
     return out
 
+def find_split_lines(page, left, right, numx, y0, y1, dpi=150, thr=200, frac=0.30):
+    """結合された行 (y0,y1) の中から、弱い水平罫線を探す（閾値を下げて再判定）。戻り値: y座標[pt]のリスト"""
+    clip = pymupdf.Rect(left, y0, right, y1)
+    pix = page.get_pixmap(dpi=dpi, colorspace=pymupdf.csGRAY, clip=clip)
+    a = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.h, pix.w)
+    dark = _dilate_rows(_thin_rows(a < thr, 5), 2)
+    scale = 72.0 / dpi
+    nx = int((numx - left) / scale)
+    row = dark.sum(axis=1) / max(1, dark.shape[1])
+    rown = dark[:, :max(1, nx)].sum(axis=1) / max(1, nx)
+    ys = _cluster(np.where((row > frac) & (rown > frac))[0], gap=4)
+    margin = 30 / scale
+    return [y0 + y * scale for y in ys if margin < y < pix.h - margin]
+
 def cell_text(page, rect):
     t = page.get_text("text", clip=rect)
     t = re.sub(r"[\x00-\x08\x0b-\x1f]", "", t)
@@ -188,6 +218,20 @@ def extract_exam(qpdf, apdf, exam_id, meta, dpi=200, page_dpi=150):
             os.path.join(out, "pages", f"p{pno+1:02d}.png"))
         hy, vx = detect_lines(page)
         rows = [(hy[i], hy[i + 1]) for i in range(len(hy) - 1) if hy[i + 1] - hy[i] > 40]
+        if len(rows) > 0 and len(vx) >= 3:
+            # 極端に高い行（他の行の 1.8 倍超）は 2 問が結合している可能性 → 弱い罫線で分割を試みる
+            heights = sorted(y1 - y0 for (y0, y1) in rows)
+            med = heights[len(heights) // 2]
+            fixed = []
+            for (y0, y1) in rows:
+                if len(rows) >= 2 and (y1 - y0) > med * 1.8:
+                    sp = find_split_lines(page, vx[0], vx[-1], vx[1], y0, y1)
+                    if sp:
+                        ys = [y0] + sp + [y1]
+                        fixed += [(ys[i], ys[i + 1]) for i in range(len(ys) - 1) if ys[i + 1] - ys[i] > 40]
+                        continue
+                fixed.append((y0, y1))
+            rows = fixed
         if len(rows) == 0 or len(vx) < 3:
             # 表がない頁 = 配線図面 or 注意書き。図面候補として記録
             if len(page.get_drawings()) > 50 or len(page.get_images()) > 0:
@@ -231,8 +275,15 @@ def extract_exam(qpdf, apdf, exam_id, meta, dpi=200, page_dpi=150):
                 guessed = True
             else:
                 guessed = False
+            skipped = False
             if number != seq + 1:
                 if guessed or abs(number - (seq + 1)) > 3:
+                    number = seq + 1
+                    guessed = True
+                elif number > seq + 1:
+                    skipped = True  # 直前の行に複数問が結合している可能性
+                elif number <= seq:
+                    # OCR の誤読（9→8 など）。番号は単調増加なので連番で補正
                     number = seq + 1
                     guessed = True
             seq = number
@@ -244,6 +295,7 @@ def extract_exam(qpdf, apdf, exam_id, meta, dpi=200, page_dpi=150):
             page.get_pixmap(dpi=dpi, clip=ch_rect).save(os.path.join(out, "cells", f"{tag}_choices.png"))
             q = {
                 "number": number, "page": pno + 1, "numberGuessed": guessed,
+                "previousMerged": skipped,
                 "rowBbox": [round(v, 1) for v in row_rect],
                 "stemBbox": [round(v, 1) for v in stem_rect],
                 "choicesBbox": [round(v, 1) for v in ch_rect],

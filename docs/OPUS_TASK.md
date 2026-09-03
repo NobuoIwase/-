@@ -17,7 +17,7 @@
 
 ```bash
 npm ci
-pip install pymupdf numpy pillow rapidocr-onnxruntime
+pip install pymupdf numpy pillow rapidocr   # 日本語OCRモデル。antlr4 のビルドで失敗する環境では rapidocr-onnxruntime でも動く（精度は落ちる）
 # 抽出画像（git 管理外）を再生成する。全回で数十分。1 回分だけなら --exam を付ける
 python3 scripts/extract_pdf.py --exam 20260524_q01      # 例: 2026 上期
 python3 scripts/extract_pdf.py                          # 全回
