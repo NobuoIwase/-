@@ -111,8 +111,8 @@ main { flex: 1; padding: 12px; }
 .overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 50; display: flex; flex-direction: column; touch-action: none;
 }
-.overlay .zoomarea { flex: 1; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-.overlay img { max-width: none; background: #fff; transform-origin: 0 0; user-select: none; -webkit-user-drag: none; }
+.overlay .zoomarea { flex: 1; overflow: hidden; position: relative; }
+.overlay img { position: absolute; left: 0; top: 0; max-width: none; background: #fff; transform-origin: 0 0; user-select: none; -webkit-user-drag: none; }
 .overlay .tools { display: flex; gap: 8px; padding: 10px calc(10px + env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) 10px; }
 .overlay .tools button { flex: 1; min-height: 48px; border-radius: 12px; border: 1px solid #555; background: #222; color: #fff; }
 .numgrid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; }
