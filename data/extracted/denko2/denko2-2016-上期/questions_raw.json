@@ -1,0 +1,1552 @@
+[
+  {
+    "number": 1,
+    "page": 5,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.0,
+      146.4,
+      657.6,
+      277.9
+    ],
+    "stemBbox": [
+      82.8,
+      146.4,
+      296.2,
+      277.9
+    ],
+    "choicesBbox": [
+      296.2,
+      146.4,
+      657.6,
+      277.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q01_row.png",
+      "stem": "cells/q01_stem.png",
+      "choices": "cells/q01_choices.png"
+    },
+    "stemText": "の回路，端子a-間の合成\n抵抗[Q]。\n3 Ω\n3 Ω\n3 Ω\n3 Ω\na\n3 Q",
+    "choicesText": "↑.1.1\n.2.5\n八. 6\n二. 15"
+  },
+  {
+    "number": 2,
+    "page": 5,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.0,
+      277.9,
+      657.6,
+      415.2
+    ],
+    "stemBbox": [
+      82.8,
+      277.9,
+      296.2,
+      415.2
+    ],
+    "choicesBbox": [
+      296.2,
+      277.9,
+      657.6,
+      415.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q02_row.png",
+      "stem": "cells/q02_stem.png",
+      "choices": "cells/q02_choices.png"
+    },
+    "stemText": "の交流回路，抵抗12の\n両端の電压 V[V]。\n12 Q V [V]\n200V\n16 Q",
+    "choicesText": "↑.86\n.114\n八. 120\n二. 160"
+  },
+  {
+    "number": 3,
+    "page": 5,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.0,
+      415.2,
+      657.6,
+      513.4
+    ],
+    "stemBbox": [
+      82.8,
+      415.2,
+      296.2,
+      513.4
+    ],
+    "choicesBbox": [
+      296.2,
+      415.2,
+      657.6,
+      513.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q03_row.png",
+      "stem": "cells/q03_stem.png",
+      "choices": "cells/q03_choices.png"
+    },
+    "stemText": "二絶緣電線（单線）の抵抗許容電流\n述，の。",
+    "choicesText": "．許容電流，周の温度上昇，大<。\n口。許容電流，導体の直径大<，大<。\n八。電線の抵抗，導体の長比例。\n二。電線の抵抗，導体の直径の2秉反比例。"
+  },
+  {
+    "number": 4,
+    "page": 5,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.0,
+      513.4,
+      657.6,
+      630.7
+    ],
+    "stemBbox": [
+      82.8,
+      513.4,
+      296.2,
+      630.7
+    ],
+    "choicesBbox": [
+      296.2,
+      513.4,
+      657.6,
+      630.7
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q04_row.png",
+      "stem": "cells/q04_stem.png",
+      "choices": "cells/q04_choices.png"
+    },
+    "stemText": "電線の接不良，接点の接触抵抗\n 0.2  。 の電線 15 A の電流\n流，接点1時間凳生寸\n熱量[k]。\n，接触抵抗值变化の。",
+    "choicesText": "↑.11\n口. 45\n八. 72\n二. 162"
+  },
+  {
+    "number": 5,
+    "page": 5,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.0,
+      630.7,
+      657.6,
+      728.6
+    ],
+    "stemBbox": [
+      82.8,
+      630.7,
+      296.2,
+      728.6
+    ],
+    "choicesBbox": [
+      296.2,
+      630.7,
+      657.6,
+      728.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q05_row.png",
+      "stem": "cells/q05_stem.png",
+      "choices": "cells/q05_choices.png"
+    },
+    "stemText": "定格電压V[V]，定格電流I[A]の三相誘導\n電動機定格状熊時間t[h]の間，連運耘\n，消费電力量W[kW·h]。\nの電動機の力率[%]表式。",
+    "choicesText": "M\nW\n3VI\n3VI\nT.\n八\nx 105\n■\nx 105\n× 105\nx 105\n/3VIt\n3VIt\nWt\n1M"
+  },
+  {
+    "number": 6,
+    "page": 5,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.0,
+      728.6,
+      657.6,
+      963.6
+    ],
+    "stemBbox": [
+      82.8,
+      728.6,
+      296.2,
+      963.6
+    ],
+    "choicesBbox": [
+      296.2,
+      728.6,
+      657.6,
+      963.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q06_row.png",
+      "stem": "cells/q06_stem.png",
+      "choices": "cells/q06_choices.png"
+    },
+    "stemText": "の单相3線式回路，電線\n1当の抵抗0.2の，a-b間の\n電压[V] 过。\n0.2 Q\na\n10 A\n抵抗負荷\n104 V\n0.2 Ω\n1 Φ 3W\n208 V\n電源\n10 A\n104 V\n抵抗負荷\n0.2 Q",
+    "choicesText": "1. 96\n八.102\n二. 106\n口.100"
+  },
+  {
+    "number": 7,
+    "page": 6,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      83.5,
+      657.4,
+      337.9
+    ],
+    "stemBbox": [
+      82.6,
+      83.5,
+      296.2,
+      337.9
+    ],
+    "choicesBbox": [
+      296.2,
+      83.5,
+      657.4,
+      337.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q07_row.png",
+      "stem": "cells/q07_stem.png",
+      "choices": "cells/q07_choices.png"
+    },
+    "stemText": "の上单相3線式回路，消费\n電力1000W，200Wの2の负荷忆\n抵抗負荷。中の×\n印点断線\n場合，a-b間の電压[V] 。\n，断線負荷の抵抗值变化\n。\na\n抵抗負荷\n100 V\n1 000 W(10 Q)\n1 Φ 3W 200 V\n電源\n抵抗負荷\n100 V\n200 W(50 Q)",
+    "choicesText": "↑.17\n口. 33\n八.100\n-. 167"
+  },
+  {
+    "number": 8,
+    "page": 6,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      337.9,
+      657.4,
+      475.4
+    ],
+    "stemBbox": [
+      82.6,
+      337.9,
+      296.2,
+      475.4
+    ],
+    "choicesBbox": [
+      296.2,
+      337.9,
+      657.4,
+      475.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q08_row.png",
+      "stem": "cells/q08_stem.png",
+      "choices": "cells/q08_choices.png"
+    },
+    "stemText": "金属管上低庄屋内配線工事，管内亿\n断面3.5mm²の） 600V 比二絶緣電線（软\n鋼線）3本收施設場合，電線1本\n当大の許容電流[A]。\n大龙L，周用温度30℃以下，電流减少\n俫数 0.70上寸3。",
+    "choicesText": "↑. 19\n口. 26\n八. 34\n-. 49"
+  },
+  {
+    "number": 6,
+    "page": 6,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      475.4,
+      657.4,
+      691.2
+    ],
+    "stemBbox": [
+      82.6,
+      475.4,
+      296.2,
+      691.2
+    ],
+    "choicesBbox": [
+      296.2,
+      475.4,
+      657.4,
+      691.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q06_row.png",
+      "stem": "cells/q06_stem.png",
+      "choices": "cells/q06_choices.png"
+    },
+    "stemText": "の上5定格電流50Aの過電流遮断器\n保護低庄屋内韩線分岐，7m\nの位置過電流遮断器施設寸，a-b\n間の電線の許容電流の最小值[A]。\n50 A\n1Φ2W\nB\n電源\na\n7\nm\nb",
+    "choicesText": "↑.12.5\n. 17.5\n八. 22.5\n二. 27.5"
+  },
+  {
+    "number": 10,
+    "page": 6,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      691.2,
+      657.4,
+      945.6
+    ],
+    "stemBbox": [
+      82.6,
+      691.2,
+      296.2,
+      945.6
+    ],
+    "choicesBbox": [
+      296.2,
+      691.2,
+      657.4,
+      945.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q10_row.png",
+      "stem": "cells/q10_stem.png",
+      "choices": "cells/q10_choices.png"
+    },
+    "stemText": "低庄屋内配線の分岐回路の設計，配線用\n遮断器，分岐回路の電線の太及\nの組合，適切の。\n，分岐点配線用遮断器3 m,\n電線の数值分岐回路の電線（软铜線）の太\n左示寸。\n，兼用\nの寸。",
+    "choicesText": "30 A\n20 A\n30 A\n20 A\nB\nB\nmm2\n2.0 mm\n2.0 mm\n2.6 mm\n5.\n5\n定格電流20 Aの\n定格電流30Aの\n定格電流15Aの\n定格電流20Aの\n1個\n1個\n2個\n2个"
+  },
+  {
+    "number": 11,
+    "page": 7,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      83.8,
+      657.4,
+      181.9
+    ],
+    "stemBbox": [
+      82.3,
+      83.8,
+      295.9,
+      181.9
+    ],
+    "choicesBbox": [
+      295.9,
+      83.8,
+      657.4,
+      181.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q11_row.png",
+      "stem": "cells/q11_stem.png",
+      "choices": "cells/q11_choices.png"
+    },
+    "stemText": "電気工事の種類，の工事使用工具\nの粗合，適切の。",
+    "choicesText": "．金属線工事\n。合成樹脂管工事\n八．金属管工事\n。事"
+  },
+  {
+    "number": 12,
+    "page": 7,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      181.9,
+      657.4,
+      279.8
+    ],
+    "stemBbox": [
+      82.3,
+      181.9,
+      295.9,
+      279.8
+    ],
+    "choicesBbox": [
+      295.9,
+      181.9,
+      657.4,
+      279.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q12_row.png",
+      "stem": "cells/q12_stem.png",
+      "choices": "cells/q12_choices.png"
+    },
+    "stemText": "（金属）の使用方法\n，不適切の。",
+    "choicesText": "．金属管工事電線の引入容易の用。\n．照明器具取付部分電線引出場合用。\n八．金属管工事電線相互接部分用。\n二。配線用遮断器集合置の用。"
+  },
+  {
+    "number": 13,
+    "page": 7,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      279.8,
+      657.4,
+      358.1
+    ],
+    "stemBbox": [
+      82.3,
+      279.8,
+      295.9,
+      358.1
+    ],
+    "choicesBbox": [
+      295.9,
+      279.8,
+      657.4,
+      358.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q13_row.png",
+      "stem": "cells/q13_stem.png",
+      "choices": "cells/q13_choices.png"
+    },
+    "stemText": "低压屋内配線使用寸600V\n絶緣電線（IV）の絶緣物の最高許容温度[℃]\n壮。",
+    "choicesText": "↑.30\n口. 45\n八. 60\n二. 75"
+  },
+  {
+    "number": 14,
+    "page": 7,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      358.1,
+      657.4,
+      456.0
+    ],
+    "stemBbox": [
+      82.3,
+      358.1,
+      295.9,
+      456.0
+    ],
+    "choicesBbox": [
+      295.9,
+      358.1,
+      657.4,
+      456.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q14_row.png",
+      "stem": "cells/q14_stem.png",
+      "choices": "cells/q14_choices.png"
+    },
+    "stemText": "三相導電動機逆回世の方法。",
+    "choicesText": "．三相電源の3本の結線3本入替之。\n。三相電源の3本の結線の，2本替。\n八。 サ取付。\n二。夕一夕始動器取付。"
+  },
+  {
+    "number": 15,
+    "page": 7,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      456.0,
+      657.4,
+      554.4
+    ],
+    "stemBbox": [
+      82.3,
+      456.0,
+      295.9,
+      554.4
+    ],
+    "choicesBbox": [
+      295.9,
+      456.0,
+      657.4,
+      554.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q15_row.png",
+      "stem": "cells/q15_stem.png",
+      "choices": "cells/q15_choices.png"
+    },
+    "stemText": "の濃場所内等の照明適\n七の。",
+    "choicesText": ".\n．萤光\n八，口電球\n二．水銀"
+  },
+  {
+    "number": 16,
+    "page": 7,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      554.4,
+      657.4,
+      769.4
+    ],
+    "stemBbox": [
+      82.3,
+      554.4,
+      295.9,
+      769.4
+    ],
+    "choicesBbox": [
+      295.9,
+      554.4,
+      657.4,
+      769.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q16_row.png",
+      "stem": "cells/q16_stem.png",
+      "choices": "cells/q16_choices.png"
+    },
+    "stemText": "写真示寸材料の用途。",
+    "choicesText": "。F一接筒所用。\n。取付の用。\n．合成樹脂管工事，電線接笛所用。\n二.天一吊下用。"
+  },
+  {
+    "number": 17,
+    "page": 7,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      769.4,
+      657.4,
+      965.5
+    ],
+    "stemBbox": [
+      82.3,
+      769.4,
+      295.9,
+      965.5
+    ],
+    "choicesBbox": [
+      295.9,
+      769.4,
+      657.4,
+      965.5
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q17_row.png",
+      "stem": "cells/q17_stem.png",
+      "choices": "cells/q17_choices.png"
+    },
+    "stemText": "写真示寸器具の名称。\n20\n定格福压AC100-200V\n20\nA\n定格感度電流\n定格遮断電流\n30mA\n2.5kA\nJET\n退型重不作型助作.1以内\n3P3E33W",
+    "choicesText": "↑．配線用遮断器\n口．漏電遮断器\n八．電磁接触器\n二．漏電警報器"
+  },
+  {
+    "number": 18,
+    "page": 8,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      83.0,
+      656.9,
+      278.9
+    ],
+    "stemBbox": [
+      82.3,
+      83.0,
+      295.9,
+      278.9
+    ],
+    "choicesBbox": [
+      295.9,
+      83.0,
+      656.9,
+      278.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q18_row.png",
+      "stem": "cells/q18_stem.png",
+      "choices": "cells/q18_choices.png"
+    },
+    "stemText": "写真亿示寸工具の用途",
+    "choicesText": "．金属管の曲加工用。\n．合成樹脂製可電線管の接加工用。\nの曲加用\n二。硬質化電線管の曲加工用。"
+  },
+  {
+    "number": 19,
+    "page": 8,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      278.9,
+      656.9,
+      474.7
+    ],
+    "stemBbox": [
+      82.3,
+      278.9,
+      295.9,
+      474.7
+    ],
+    "choicesBbox": [
+      295.9,
+      278.9,
+      656.9,
+      474.7
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q19_row.png",
+      "stem": "cells/q19_stem.png",
+      "choices": "cells/q19_choices.png"
+    },
+    "stemText": "600V絶平形\n1.6 mm 使用L大低庄屋内配線工事，絶緣\n電線相互の終端接部分の絶緣処理，\n不適切女七の。\n，一JIS定厚\n約0.2mm の絶緣一7寸。",
+    "choicesText": "．接統，接統部分自已融着性絶緣（厚約0.5mm)\n半幅以上重1回（2層）卷，更保護一（厚約0.2mm）半幅以上\n重拟了 1回 (2層) 卷亢。\n．接，接部分黑色粘着性緣\n（厚約0.5mm）半幅以上重拉2回（4層）卷。\n。接，接部分半幅以上重回\n(2 層)卷V七。\n二，差形夕接，接部分卷。"
+  },
+  {
+    "number": 20,
+    "page": 8,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      474.7,
+      656.9,
+      592.3
+    ],
+    "stemBbox": [
+      82.3,
+      474.7,
+      295.9,
+      592.3
+    ],
+    "choicesBbox": [
+      295.9,
+      474.7,
+      656.9,
+      592.3
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q20_row.png",
+      "stem": "cells/q20_stem.png",
+      "choices": "cells/q20_choices.png"
+    },
+    "stemText": "床亿固定L七定格電庄200V，定格出力\n2.2kWの三相锈導電動機の鉄台接地工事\n寸場合，接地線（软鋼線）の太上接地\n抵抗值の組合，不適切の。\n，漏電遮断器置の。",
+    "choicesText": "↑．直径 2.6 mm，75 Ω\n口。 直径 2.0 mm， 50 Ω2\n八．直径 1.6 mm，10 Ω\n二．公称断面积0.75 mm²，5 Ω"
+  },
+  {
+    "number": 21,
+    "page": 8,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      592.3,
+      656.9,
+      749.5
+    ],
+    "stemBbox": [
+      82.3,
+      592.3,
+      295.9,
+      749.5
+    ],
+    "choicesBbox": [
+      295.9,
+      592.3,
+      656.9,
+      749.5
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q21_row.png",
+      "stem": "cells/q21_stem.png",
+      "choices": "cells/q21_choices.png"
+    },
+    "stemText": "100/200Vの低庄屋内配線工事，\n600絶\n用事の施方法，\n適切女毛の。",
+    "choicesText": "．防護装置使用金属管の長10m，乾燥場所\nの，金属管D種接地工事施。\n。丸形，屈曲部の内侧の半外の6倍\n忆L气曲沙忆。\n八。建物の一卜璧の中直接埋設。（時配線工事の\n場合除<。)\n二。金属製遮層の電話用弱電流電線共同一の合成樹脂管收"
+  },
+  {
+    "number": 22,
+    "page": 8,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      749.5,
+      656.9,
+      922.1
+    ],
+    "stemBbox": [
+      82.3,
+      749.5,
+      295.9,
+      922.1
+    ],
+    "choicesBbox": [
+      295.9,
+      749.5,
+      656.9,
+      922.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q22_row.png",
+      "stem": "cells/q22_stem.png",
+      "choices": "cells/q22_choices.png"
+    },
+    "stemText": "使用電庄300V以下の低庄屋内配線の工事\n方法，不適切の。",
+    "choicesText": "．金属可電線管工事，線（600V絶緣電線）用，\n管内接統部分設收。\n口。口夕卜工事，電線分岐寸場合，接部分十分絶緣被覆\n施，，接部分容易点接箱\n术夕）忆收忆。\n八．金属卜工事，電線分岐寸場合，接部分十分絶緣被覆施，\n，接部分容易点。\n，事，の終端部施"
+  },
+  {
+    "number": 23,
+    "page": 9,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      83.8,
+      657.4,
+      181.9
+    ],
+    "stemBbox": [
+      82.6,
+      83.8,
+      295.9,
+      181.9
+    ],
+    "choicesBbox": [
+      295.9,
+      83.8,
+      657.4,
+      181.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q23_row.png",
+      "stem": "cells/q23_stem.png",
+      "choices": "cells/q23_choices.png"
+    },
+    "stemText": "店舖付住宅亿三相200V，定格消费電力\n2.8kWの施設寸屋内配線\n工事の方法，不適切の。",
+    "choicesText": "．電路漏電遮断器施設寸。\n口。電路專用の配線用遮断器施設寸。\n八，屋内配線，簡易接触防護措置施寸。\n。屋内配線接。"
+  },
+  {
+    "number": 24,
+    "page": 9,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      181.9,
+      657.4,
+      279.8
+    ],
+    "stemBbox": [
+      82.6,
+      181.9,
+      295.9,
+      279.8
+    ],
+    "choicesBbox": [
+      295.9,
+      181.9,
+      657.4,
+      279.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q24_row.png",
+      "stem": "cells/q24_stem.png",
+      "choices": "cells/q24_choices.png"
+    },
+    "stemText": "一般用電气工作物の低庄屋内配線工事完了\nの查，一般行\n七の。",
+    "choicesText": "．絶緣耐力試\n口．絶緣抵抗の測定\n接地抵抗の測定\n八\n二．目視点"
+  },
+  {
+    "number": 25,
+    "page": 9,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      279.8,
+      657.4,
+      456.0
+    ],
+    "stemBbox": [
+      82.6,
+      279.8,
+      295.9,
+      456.0
+    ],
+    "choicesBbox": [
+      295.9,
+      279.8,
+      657.4,
+      456.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q25_row.png",
+      "stem": "cells/q25_stem.png",
+      "choices": "cells/q25_choices.png"
+    },
+    "stemText": "分岐開開器開放負荷電源完全亿\n分離，の負荷侧の低庄屋内電路大地間の\n絶緣抵抗一括測定方法，適切\n七の。",
+    "choicesText": "．負荷侧の点器「」，常時配線接統負荷，\n使用状熊亿L飞測定寸。\n．負荷侧の点减器「切」，常時配線接統負荷,\n使用状熊L主下測定寸。\n．負荷侧の点减器「」，常時配線接負荷，\n寸取外L測定寸。\n二。負荷侧の点器「切」，常時配線接負荷,\n寸取外L測定寸。"
+  },
+  {
+    "number": 26,
+    "page": 9,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      456.0,
+      657.4,
+      632.6
+    ],
+    "stemBbox": [
+      82.6,
+      456.0,
+      295.9,
+      632.6
+    ],
+    "choicesBbox": [
+      295.9,
+      456.0,
+      657.4,
+      632.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q26_row.png",
+      "stem": "cells/q26_stem.png",
+      "choices": "cells/q26_choices.png"
+    },
+    "stemText": "直式接地抵抗計（一夕）使用\n直接地抵抗測定場合，補助\n接地極（2笛所）の配置，適切の。",
+    "choicesText": "{．被測定接地極端，一直線上 2 所の補助接地極順次 1 m 程度\n離L了配置寸3。\n口．被測定接地極中央，左右一直線上補助接地極5 m程度離L\n配置文。\n八．被測定接地極端，一直線上2筒所の補助接地極順次 10 m程度\n離L了配置寸3。\n二．被測定接地極 2笛所の補助接地極相互 5 m 程度離L正三角形\n配置寸3。"
+  },
+  {
+    "number": 27,
+    "page": 9,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      632.6,
+      657.4,
+      750.2
+    ],
+    "stemBbox": [
+      82.6,
+      632.6,
+      295.9,
+      750.2
+    ],
+    "choicesBbox": [
+      295.9,
+      632.6,
+      657.4,
+      750.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q27_row.png",
+      "stem": "cells/q27_stem.png",
+      "choices": "cells/q27_choices.png"
+    },
+    "stemText": "電気計器の目盛板の記号。\n記号の意味及測定回路，正\n七の。",
+    "choicesText": "．可動鉄片形目盛板水平置，交流回路使用。\n。可動形目盛板水平置，交流回路使用。\n八。可動鉄片形目盛板直立，直流回路使用寸。\n二。可動形目盛板水平置，直流回路使用。"
+  },
+  {
+    "number": 28,
+    "page": 9,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.8,
+      750.2,
+      657.4,
+      965.5
+    ],
+    "stemBbox": [
+      82.6,
+      750.2,
+      295.9,
+      965.5
+    ],
+    "choicesBbox": [
+      295.9,
+      750.2,
+      657.4,
+      965.5
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q28_row.png",
+      "stem": "cells/q28_stem.png",
+      "choices": "cells/q28_choices.png"
+    },
+    "stemText": "電気工事士の義務文制限開記述\n，の。",
+    "choicesText": "．電気工事士，電気工事士法定電気工事の作業事，\n電気工事士免状携带\n口。電気工事士，電気工事士法定電氨工事の作業事寸，\n電気設備開寸技術基定省令適合寸の作業\n机试八。\n八．電氮工事士，住所变更，免状交付都道府知事申請\n免状の書換\n二，電気工事士，電氨工事の作業電気用品安全法定電氨用品\n使用寸場合，同法定適正表示付の使用\n广。"
+  },
+  {
+    "number": 29,
+    "page": 10,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      83.8,
+      657.1,
+      201.1
+    ],
+    "stemBbox": [
+      82.3,
+      83.8,
+      295.7,
+      201.1
+    ],
+    "choicesBbox": [
+      295.7,
+      83.8,
+      657.1,
+      201.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q29_row.png",
+      "stem": "cells/q29_stem.png",
+      "choices": "cells/q29_choices.png"
+    },
+    "stemText": "電気工事士法亿，一般用電気工作物\nの工事又作業電気工事士事\nの。",
+    "choicesText": "个。 電庄600V以下使用寸電力量計取付。\n口，夕一一の施設使用寸小型变庄器（二次電庄36V以下）の\n二次侧の配線寸3。\n八。 電線支持寸柱，腕木設置寸。\n二。 電線管术夕接寸。"
+  },
+  {
+    "number": 30,
+    "page": 10,
+    "numberGuessed": false,
+    "rowBbox": [
+      59.5,
+      201.1,
+      657.1,
+      299.0
+    ],
+    "stemBbox": [
+      82.3,
+      201.1,
+      295.7,
+      299.0
+    ],
+    "choicesBbox": [
+      295.7,
+      201.1,
+      657.1,
+      299.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q30_row.png",
+      "stem": "cells/q30_stem.png",
+      "choices": "cells/q30_choices.png"
+    },
+    "stemText": "電氨用品安全法の適用受次の電気用品\nの，特定電氮用品。",
+    "choicesText": "↑.定格電流20Aの漏電遮断器\n口．消费電力 30 W の换気扇\n八．外径19mm の金属製電線管\n二.消費電力40Wの萤光"
+  },
+  {
+    "number": 31,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      263.0,
+      658.6,
+      321.8
+    ],
+    "stemBbox": [
+      83.3,
+      263.0,
+      296.9,
+      321.8
+    ],
+    "choicesBbox": [
+      296.9,
+      263.0,
+      658.6,
+      321.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q31_row.png",
+      "stem": "cells/q31_stem.png",
+      "choices": "cells/q31_choices.png"
+    },
+    "stemText": "①示寸記号の名称。",
+    "choicesText": "．調光器\n素通L\n口：\n。延\n二。"
+  },
+  {
+    "number": 32,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      321.8,
+      658.6,
+      400.1
+    ],
+    "stemBbox": [
+      83.3,
+      321.8,
+      296.9,
+      400.1
+    ],
+    "choicesBbox": [
+      296.9,
+      321.8,
+      658.6,
+      400.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q32_row.png",
+      "stem": "cells/q32_stem.png",
+      "choices": "cells/q32_choices.png"
+    },
+    "stemText": "②示の極配置（刃受），\n正の。",
+    "choicesText": "T.\n口.\n/.\n二\n10\nD\nD\nD\nD"
+  },
+  {
+    "number": 33,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      400.1,
+      658.6,
+      498.5
+    ],
+    "stemBbox": [
+      83.3,
+      400.1,
+      296.9,
+      498.5
+    ],
+    "choicesBbox": [
+      296.9,
+      400.1,
+      658.6,
+      498.5
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q33_row.png",
+      "stem": "cells/q33_stem.png",
+      "choices": "cells/q33_choices.png"
+    },
+    "stemText": "③示部分の事方法，適切の",
+    "choicesText": "T：金属線乙工事\n口。金属管工事\n八。金属夕夕卜工事\n二.600V絶緣丸形使用事"
+  },
+  {
+    "number": 34,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      498.5,
+      658.6,
+      557.5
+    ],
+    "stemBbox": [
+      83.3,
+      498.5,
+      296.9,
+      557.5
+    ],
+    "choicesBbox": [
+      296.9,
+      498.5,
+      658.6,
+      557.5
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q34_row.png",
+      "stem": "cells/q34_stem.png",
+      "choices": "cells/q34_choices.png"
+    },
+    "stemText": "示部分取付計器の記号。",
+    "choicesText": "T.\n口.\n.\nCT\nS\nWh\nW"
+  },
+  {
+    "number": 35,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      557.5,
+      658.6,
+      616.1
+    ],
+    "stemBbox": [
+      83.3,
+      557.5,
+      296.9,
+      616.1
+    ],
+    "choicesBbox": [
+      296.9,
+      557.5,
+      658.6,
+      616.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q35_row.png",
+      "stem": "cells/q35_stem.png",
+      "choices": "cells/q35_choices.png"
+    },
+    "stemText": "示部分の電路大地間の抵抗，\n許容最小值[MQ]。",
+    "choicesText": "↑. 0.1\n口．\n0.2\n八. 0.4\n二。\n1.0"
+  },
+  {
+    "number": 36,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      616.1,
+      658.6,
+      675.1
+    ],
+    "stemBbox": [
+      83.3,
+      616.1,
+      296.9,
+      675.1
+    ],
+    "choicesBbox": [
+      296.9,
+      616.1,
+      658.6,
+      675.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q36_row.png",
+      "stem": "cells/q36_stem.png",
+      "choices": "cells/q36_choices.png"
+    },
+    "stemText": "示寸記号の名称。",
+    "choicesText": ".\n(天井直付)\n埋达器具\n口。\n二："
+  },
+  {
+    "number": 37,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      675.1,
+      658.6,
+      733.7
+    ],
+    "stemBbox": [
+      83.3,
+      675.1,
+      296.9,
+      733.7
+    ],
+    "choicesBbox": [
+      296.9,
+      675.1,
+      658.6,
+      733.7
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q37_row.png",
+      "stem": "cells/q37_stem.png",
+      "choices": "cells/q37_choices.png"
+    },
+    "stemText": "示寸部分の接地工事接地抵抗の\n許容最大值[Ω］。",
+    "choicesText": "↑.1\n100\n口。\n300\n/.\n500\n二.\n600"
+  },
+  {
+    "number": 38,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      733.7,
+      658.6,
+      812.4
+    ],
+    "stemBbox": [
+      83.3,
+      733.7,
+      296.9,
+      812.4
+    ],
+    "choicesBbox": [
+      296.9,
+      733.7,
+      658.6,
+      812.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q38_row.png",
+      "stem": "cells/q38_stem.png",
+      "choices": "cells/q38_choices.png"
+    },
+    "stemText": "⑧示寸部分の最少電線本数（心線数）。",
+    "choicesText": "↑.2\n口.3\n八. 4\n二. 5"
+  },
+  {
+    "number": 39,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      812.4,
+      658.6,
+      871.0
+    ],
+    "stemBbox": [
+      83.3,
+      812.4,
+      296.9,
+      871.0
+    ],
+    "choicesBbox": [
+      296.9,
+      812.4,
+      658.6,
+      871.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q39_row.png",
+      "stem": "cells/q39_stem.png",
+      "choices": "cells/q39_choices.png"
+    },
+    "stemText": "9示記号の名称。",
+    "choicesText": "自動点减器\n熱線式自動\nT.\n口.\n二.\n防雨形"
+  },
+  {
+    "number": 40,
+    "page": 11,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.2,
+      871.0,
+      658.6,
+      929.8
+    ],
+    "stemBbox": [
+      83.3,
+      871.0,
+      296.9,
+      929.8
+    ],
+    "choicesBbox": [
+      296.9,
+      871.0,
+      658.6,
+      929.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q40_row.png",
+      "stem": "cells/q40_stem.png",
+      "choices": "cells/q40_choices.png"
+    },
+    "stemText": "示寸記号の配線方法。",
+    "choicesText": "．天井配線\n．床配線\n露出配線\n床面露出配線\n八"
+  },
+  {
+    "number": 41,
+    "page": 12,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      79.7,
+      652.8,
+      292.8
+    ],
+    "stemBbox": [
+      83.3,
+      79.7,
+      211.4,
+      292.8
+    ],
+    "choicesBbox": [
+      211.4,
+      79.7,
+      652.8,
+      292.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q41_row.png",
+      "stem": "cells/q41_stem.png",
+      "choices": "cells/q41_choices.png"
+    },
+    "stemText": "11示寸部分の接統工事\n庄着接統\n场合の\nの種類，個数及刻印の\n組合，正の。\n龙，使用寸電線\nVVF1.6，写真\n中央\nの，小，中接統後の\n刻印表市。",
+    "choicesText": "00\n(小((\n(0)\n小2個\n小2個\n小4個\n小4個\n中\n中\n中\n中2個\n中2個"
+  },
+  {
+    "number": 42,
+    "page": 12,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      292.8,
+      652.8,
+      434.9
+    ],
+    "stemBbox": [
+      83.3,
+      292.8,
+      211.4,
+      434.9
+    ],
+    "choicesBbox": [
+      211.4,
+      292.8,
+      652.8,
+      434.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q42_row.png",
+      "stem": "cells/q42_stem.png",
+      "choices": "cells/q42_choices.png"
+    },
+    "stemText": "2示寸記号の器具",
+    "choicesText": "T.\n口\n/1"
+  },
+  {
+    "number": 43,
+    "page": 12,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      434.9,
+      652.8,
+      647.8
+    ],
+    "stemBbox": [
+      83.3,
+      434.9,
+      211.4,
+      647.8
+    ],
+    "choicesBbox": [
+      211.4,
+      434.9,
+      652.8,
+      647.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q43_row.png",
+      "stem": "cells/q43_stem.png",
+      "choices": "cells/q43_choices.png"
+    },
+    "stemText": "③示WF用\n内の接統\n差形夕寸場合，\n使用寸差形夕夕の\n種類上最少個数の組合世\n，適切の。\n，使用電線注\n寸VVF1.6 。",
+    "choicesText": "2個\n2個\n2個\n3個\n1個\n1個\n1個\n1個\n1個\n1個\n1個\n1個"
+  },
+  {
+    "number": 44,
+    "page": 12,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      647.8,
+      652.8,
+      807.4
+    ],
+    "stemBbox": [
+      83.3,
+      647.8,
+      211.4,
+      807.4
+    ],
+    "choicesBbox": [
+      211.4,
+      647.8,
+      652.8,
+      807.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q44_row.png",
+      "stem": "cells/q44_stem.png",
+      "choices": "cells/q44_choices.png"
+    },
+    "stemText": "4示寸部分の配線工事\n必要一\n，使用\nの心線数最少。",
+    "choicesText": "T.\n口.\n."
+  },
+  {
+    "number": 45,
+    "page": 12,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      807.4,
+      652.8,
+      967.2
+    ],
+    "stemBbox": [
+      83.3,
+      807.4,
+      211.4,
+      967.2
+    ],
+    "choicesBbox": [
+      211.4,
+      807.4,
+      652.8,
+      967.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q45_row.png",
+      "stem": "cells/q45_stem.png",
+      "choices": "cells/q45_choices.png"
+    },
+    "stemText": "15示VF用」\n求内の接統寸\n庄着接寸場合，使用\nの種類\n最少個数の組合，\n適切の。\n，使用電線注\n寸~VVF1.6 寸。",
+    "choicesText": "小\n小\n4個\n2個\n小\n小\n4個\n5個\n1個\n2個"
+  },
+  {
+    "number": 46,
+    "page": 13,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      78.7,
+      652.8,
+      249.4
+    ],
+    "stemBbox": [
+      83.3,
+      78.7,
+      211.4,
+      249.4
+    ],
+    "choicesBbox": [
+      211.4,
+      78.7,
+      652.8,
+      249.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q46_row.png",
+      "stem": "cells/q46_stem.png",
+      "choices": "cells/q46_choices.png"
+    },
+    "stemText": "の配線の施工，一般的\n使用\nの。",
+    "choicesText": "T"
+  },
+  {
+    "number": 47,
+    "page": 13,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      249.4,
+      652.8,
+      403.0
+    ],
+    "stemBbox": [
+      83.3,
+      249.4,
+      211.4,
+      403.0
+    ],
+    "choicesBbox": [
+      211.4,
+      249.4,
+      652.8,
+      403.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q47_row.png",
+      "stem": "cells/q47_stem.png",
+      "choices": "cells/q47_choices.png"
+    },
+    "stemText": "の配線の施工，般的\n使用の\nの。",
+    "choicesText": "T\n口"
+  },
+  {
+    "number": 48,
+    "page": 13,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      403.0,
+      652.8,
+      591.4
+    ],
+    "stemBbox": [
+      83.3,
+      403.0,
+      211.4,
+      591.4
+    ],
+    "choicesBbox": [
+      211.4,
+      403.0,
+      652.8,
+      591.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q48_row.png",
+      "stem": "cells/q48_stem.png",
+      "choices": "cells/q48_choices.png"
+    },
+    "stemText": "の配線区，使用\n龙，写真下の，\n接点の構成示寸。",
+    "choicesText": "口\n拉\n2\n3"
+  },
+  {
+    "number": 49,
+    "page": 13,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      591.4,
+      652.8,
+      779.5
+    ],
+    "stemBbox": [
+      83.3,
+      591.4,
+      211.4,
+      779.5
+    ],
+    "choicesBbox": [
+      211.4,
+      591.4,
+      652.8,
+      779.5
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q49_row.png",
+      "stem": "cells/q49_stem.png",
+      "choices": "cells/q49_choices.png"
+    },
+    "stemText": "の配線の施工关\n，使用の\n物の組合。",
+    "choicesText": "T\n9\nO"
+  },
+  {
+    "number": 50,
+    "page": 13,
+    "numberGuessed": false,
+    "rowBbox": [
+      60.5,
+      779.5,
+      652.8,
+      967.2
+    ],
+    "stemBbox": [
+      83.3,
+      779.5,
+      211.4,
+      967.2
+    ],
+    "choicesBbox": [
+      211.4,
+      779.5,
+      652.8,
+      967.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q50_row.png",
+      "stem": "cells/q50_stem.png",
+      "choices": "cells/q50_choices.png"
+    },
+    "stemText": "の配線区，使用\n個数\nの組合，正の",
+    "choicesText": "1個\n2個\n2個\n1個"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g4-mokuzo-haisen-kouji",
+      "name": "木造住宅の配線工事の適否",
+      "category": 4,
+      "summary": "CD管/PF管、金属管、VE管などの施設場所と支持間隔"
+    },
+    {
+      "id": "g5-sokuteiki-youto",
+      "name": "測定器と用途の組合せ",
+      "category": 5,
+      "summary": "テスタ・検相器・電力計・クランプ計などの用途"
+    },
+    {
+      "id": "g5-zetsuen-teikou-kijun",
+      "name": "絶縁抵抗の基準値",
+      "category": 5,
+      "summary": "対地電圧区分ごとの絶縁抵抗基準（0.1/0.2/0.4 MΩ）"
+    },
+    {
+      "id": "g7-denkikoujishi-sagyou-hani",
+      "name": "電気工事士でなければできない作業・軽微な工事",
+      "category": 7,
+      "summary": "電気工事士法の作業範囲と軽微な工事"
+    },
+    {
+      "id": "g1-shouhi-denryoku",
+      "name": "消費電力の計算",
+      "category": 1,
+      "summary": "P = VI = V²/R = I²R"
+    }
+  ]
+}

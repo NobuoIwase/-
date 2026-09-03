@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dev-dist/
+*.log
+# 抽出画像は scripts/extract_pdf.py で再生成できるため管理しない（JSONのみ管理）
+data/extracted/**/*.png
+.DS_Store
+__pycache__/
+*.pyc

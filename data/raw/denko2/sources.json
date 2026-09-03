@@ -1,0 +1,549 @@
+{
+  "subject": "denko2",
+  "source": "一般財団法人 電気技術者試験センター 第二種電気工事士試験の問題と解答 https://www.shiken.or.jp/construction/second/qa/",
+  "terms": "著作権は放棄されていない。教育目的などで問題集・テキストに使用する場合は許諾・使用料不要。出典を『出典：令和5年度上期第二種電気工事士試験（午前）』のように明記し、改変した場合はその旨を明記する。",
+  "downloadedAt": "2026-09-03",
+  "note": "令和3年度(2021)下期 学科試験のPDFは公式サイトに掲載が見つからず未取得。令和2年度(2020)上期は試験中止のため存在しない。",
+  "files": [
+    {
+      "file": "20150607_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20150607_co_second_a01.pdf",
+      "year": 2015,
+      "term": "上期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 16238,
+      "sha256": "310e4462f3d28d897216e2700c8b49ee5629f15bbf0ed998405117c8813b4fce"
+    },
+    {
+      "file": "20150607_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20150607_co_second_q01.pdf",
+      "year": 2015,
+      "term": "上期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 2050611,
+      "sha256": "9b907dea6fc117820ab55c7bf1945e992a8acf063fce6efe0332e031e0e5f9ab"
+    },
+    {
+      "file": "20151003_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20151003_co_second_a01.pdf",
+      "year": 2015,
+      "term": "下期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 16998,
+      "sha256": "ba1a86a54c9d3a27743ffd61d99761671f3d28562eb8a75db8976fa32ae453e0"
+    },
+    {
+      "file": "20151003_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20151003_co_second_q01.pdf",
+      "year": 2015,
+      "term": "下期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 2124739,
+      "sha256": "687283a9664ac9af1da44a3d1abce9d97e530555c8823b244c590eb10725a170"
+    },
+    {
+      "file": "20160605_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20160605_co_second_a01.pdf",
+      "year": 2016,
+      "term": "上期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 16899,
+      "sha256": "6804dcf4a9ca5383f928e434035a70a243f31bc7a49f4e0217f9a4c60b6f9a8f"
+    },
+    {
+      "file": "20160605_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20160605_co_second_q01.pdf",
+      "year": 2016,
+      "term": "上期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 1979133,
+      "sha256": "3f463770d5ab46215d6122e66a94e47dc764881ce1376d8cb3faf37e14025df0"
+    },
+    {
+      "file": "20161001_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20161001_co_second_a01.pdf",
+      "year": 2016,
+      "term": "下期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 16995,
+      "sha256": "b36719f08c05c708994c0896037ecdc467be3552f851fe074148e7d22afe254f"
+    },
+    {
+      "file": "20161001_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20161001_co_second_q01.pdf",
+      "year": 2016,
+      "term": "下期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 1932319,
+      "sha256": "26124625d166f22e99ffeae9bb54b805c9d8db7a03a3ab0051cf4ccaff87bc50"
+    },
+    {
+      "file": "20170604_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20170604_co_second_a01.pdf",
+      "year": 2017,
+      "term": "上期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 32827,
+      "sha256": "0548f0932a94b6fe72e12052302ab6047a337ab6509703247881489f380d0cc1"
+    },
+    {
+      "file": "20170604_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20170604_co_second_q01.pdf",
+      "year": 2017,
+      "term": "上期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 1985758,
+      "sha256": "cbf165eba0388812117fba5c6f1db6fecd2cf75aa07b8163365e46b167dae515"
+    },
+    {
+      "file": "20170930_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20170930_co_second_a01.pdf",
+      "year": 2017,
+      "term": "下期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 33246,
+      "sha256": "f09182e890c836258926dc3e8606b0d15962dd75ea6434d42ceb45c93941166b"
+    },
+    {
+      "file": "20170930_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20170930_co_second_q01.pdf",
+      "year": 2017,
+      "term": "下期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 1526544,
+      "sha256": "e63c9d376bc9d5d1e2bd20011309d00343dfd2c6b1155b98e4a577cfcd6bd6c0"
+    },
+    {
+      "file": "20180603_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20180603_co_second_a01.pdf",
+      "year": 2018,
+      "term": "上期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 37879,
+      "sha256": "8d1b6247103b0155c26561a6139ea73a33f7f14f0a2b017799045b58bc842d34"
+    },
+    {
+      "file": "20180603_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20180603_co_second_q01.pdf",
+      "year": 2018,
+      "term": "上期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 3037644,
+      "sha256": "21b8143a82ac469e89dc77d995268f08f85e869df4a516cd0e1da67781135dfa"
+    },
+    {
+      "file": "20181007_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20181007_co_second_a01.pdf",
+      "year": 2018,
+      "term": "下期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 19640,
+      "sha256": "a94364d60228d8508f1e3eeea99ffc81743c20856330f7a851742a636fbf9bb4"
+    },
+    {
+      "file": "20181007_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20181007_co_second_q01.pdf",
+      "year": 2018,
+      "term": "下期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 3257520,
+      "sha256": "5d3dd29e79e31261277ef5ebc6f4e8767f1bfa3607fad614813cc17741362406"
+    },
+    {
+      "file": "20190602_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20190602_co_second_a01.pdf",
+      "year": 2019,
+      "term": "上期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 63596,
+      "sha256": "1a5236538c004feeb72169c9c4d1e74e5bd26b7c878ca712084dc611ad3b2b3b"
+    },
+    {
+      "file": "20190602_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20190602_co_second_q01.pdf",
+      "year": 2019,
+      "term": "上期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 4087428,
+      "sha256": "3fe4557a9430e27c9af42aea9dbe95fefa885bb73895009e5a41c53b20bc7207"
+    },
+    {
+      "file": "20191006_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20191006_co_second_a01.pdf",
+      "year": 2019,
+      "term": "下期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 19961,
+      "sha256": "d6cde65d69789ecba705a39e57a59a37ca20710cfe13e4fc13cd4c2d13aabed6"
+    },
+    {
+      "file": "20191006_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20191006_co_second_q01.pdf",
+      "year": 2019,
+      "term": "下期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 4095546,
+      "sha256": "04badddcbbf3051c2a4c5f447e3a03986b0732652882e821b4c1619fcc1c456c"
+    },
+    {
+      "file": "20201004_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20201004_co_second_a01.pdf",
+      "year": 2020,
+      "term": "下期",
+      "session": "午前",
+      "kind": "解答",
+      "bytes": 65374,
+      "sha256": "5c5debf0475c87ba7e2b71e2d0c4beee3349c628aedec5bfaae05ddfa1c66c58"
+    },
+    {
+      "file": "20201004_co_second_a02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20201004_co_second_a02.pdf",
+      "year": 2020,
+      "term": "下期",
+      "session": "午後",
+      "kind": "解答",
+      "bytes": 65456,
+      "sha256": "a85562df2cf4511b4882480751e8f572715193e5e866aeff4383999b81b7a98a"
+    },
+    {
+      "file": "20201004_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20201004_co_second_q01.pdf",
+      "year": 2020,
+      "term": "下期",
+      "session": "午前",
+      "kind": "問題",
+      "bytes": 2351022,
+      "sha256": "2b48b719a66b20e4fc7e345ccdd5dfbf98159ddf4e33675f67cd260551edddb5"
+    },
+    {
+      "file": "20201004_co_second_q02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20201004_co_second_q02.pdf",
+      "year": 2020,
+      "term": "下期",
+      "session": "午後",
+      "kind": "問題",
+      "bytes": 1820660,
+      "sha256": "befa5aa62b7f7b42fa7e5f2611cf6b7448f4f5186ae54e97690aab84d157f7e7"
+    },
+    {
+      "file": "20210530_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20210530_co_second_a01.pdf",
+      "year": 2021,
+      "term": "上期",
+      "session": "午前",
+      "kind": "解答",
+      "bytes": 114673,
+      "sha256": "084cd9234b4c277e2951487b804ba17f66442e5617f1e63561d7dd0b9b14cf4d"
+    },
+    {
+      "file": "20210530_co_second_a02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20210530_co_second_a02.pdf",
+      "year": 2021,
+      "term": "上期",
+      "session": "午後",
+      "kind": "解答",
+      "bytes": 114672,
+      "sha256": "aacbe239eb254af6f89358c25d3259619281a6afac563616dca679654874be80"
+    },
+    {
+      "file": "20210530_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20210530_co_second_q01.pdf",
+      "year": 2021,
+      "term": "上期",
+      "session": "午前",
+      "kind": "問題",
+      "bytes": 2047848,
+      "sha256": "3978bca6015082eaae513a75eefa880c5248c200822de24157c9957e7aeb8afd"
+    },
+    {
+      "file": "20210530_co_second_q02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20210530_co_second_q02.pdf",
+      "year": 2021,
+      "term": "上期",
+      "session": "午後",
+      "kind": "問題",
+      "bytes": 1280145,
+      "sha256": "d5f4faefaff1795427ff3b60a55c7ab3336d76f953f9c34c7687100ce902b42c"
+    },
+    {
+      "file": "20220529_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20220529_co_second_a01.pdf",
+      "year": 2022,
+      "term": "上期",
+      "session": "午前",
+      "kind": "解答",
+      "bytes": 51488,
+      "sha256": "7f4ee22e6c4281b89fe4376b2876c1340d05c5de1ccb00039b77a219e040f92a"
+    },
+    {
+      "file": "20220529_co_second_a02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20220529_co_second_a02.pdf",
+      "year": 2022,
+      "term": "上期",
+      "session": "午後",
+      "kind": "解答",
+      "bytes": 51577,
+      "sha256": "e9a4ee928bb61e0f0baf7b5d29a37491e2d012fd2dd2162c5005ef8975511291"
+    },
+    {
+      "file": "20220529_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20220529_co_second_q01.pdf",
+      "year": 2022,
+      "term": "上期",
+      "session": "午前",
+      "kind": "問題",
+      "bytes": 3372557,
+      "sha256": "7f850ccc169f10d35e251b3e473661060ab7e8d32dc7f02a63782d62bbeb8f5b"
+    },
+    {
+      "file": "20220529_co_second_q02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20220529_co_second_q02.pdf",
+      "year": 2022,
+      "term": "上期",
+      "session": "午後",
+      "kind": "問題",
+      "bytes": 3287199,
+      "sha256": "8d66c81951239a833902aa19bfbe02ac3a85149b073a8be455b87047b63116f2"
+    },
+    {
+      "file": "20221030_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20221030_co_second_a01.pdf",
+      "year": 2022,
+      "term": "下期",
+      "session": "午前",
+      "kind": "解答",
+      "bytes": 50700,
+      "sha256": "161f7d1fd4b3a30e996f6d126d80c2c2ea10a9c9441820ad9362b31173e5b6c8"
+    },
+    {
+      "file": "20221030_co_second_a02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20221030_co_second_a02.pdf",
+      "year": 2022,
+      "term": "下期",
+      "session": "午後",
+      "kind": "解答",
+      "bytes": 50770,
+      "sha256": "3f2ff44b00e4064c48e1d3d5983df7fabb051a4a7a9b752d32f121ee5ee56377"
+    },
+    {
+      "file": "20221030_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20221030_co_second_q01.pdf",
+      "year": 2022,
+      "term": "下期",
+      "session": "午前",
+      "kind": "問題",
+      "bytes": 2832487,
+      "sha256": "8bc37b48034f017ecc2898d4cfb16d5c1cb77f9c55ab73d6b4cfec5b00460d07"
+    },
+    {
+      "file": "20221030_co_second_q02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20221030_co_second_q02.pdf",
+      "year": 2022,
+      "term": "下期",
+      "session": "午後",
+      "kind": "問題",
+      "bytes": 2737347,
+      "sha256": "3b9692ddf0356a873a2c30af7aae71b83ddae603737e3516e5a4421759529f60"
+    },
+    {
+      "file": "20230528_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20230528_co_second_a01.pdf",
+      "year": 2023,
+      "term": "上期",
+      "session": "午前",
+      "kind": "解答",
+      "bytes": 47508,
+      "sha256": "6d069b997806d57feb3cc9ad960d0583a78f335944088369cb962a3aa468faff"
+    },
+    {
+      "file": "20230528_co_second_a02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20230528_co_second_a02.pdf",
+      "year": 2023,
+      "term": "上期",
+      "session": "午後",
+      "kind": "解答",
+      "bytes": 47590,
+      "sha256": "3cbe3b1c567f9bd553612dd6c78e78897d0bd00c6fd5ef59d360b6e9c3ed3e7f"
+    },
+    {
+      "file": "20230528_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20230528_co_second_q01.pdf",
+      "year": 2023,
+      "term": "上期",
+      "session": "午前",
+      "kind": "問題",
+      "bytes": 2675063,
+      "sha256": "9d266b8023a207f97c56ccf4b903a69cf37fba4d6a90a76b268e8e5f57d6f111"
+    },
+    {
+      "file": "20230528_co_second_q02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20230528_co_second_q02.pdf",
+      "year": 2023,
+      "term": "上期",
+      "session": "午後",
+      "kind": "問題",
+      "bytes": 2645218,
+      "sha256": "56fc0bc736d39a90e1ba08d617f9b293ed73aab43f829d022c398c72912dbf73"
+    },
+    {
+      "file": "20231029_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20231029_co_second_a01.pdf",
+      "year": 2023,
+      "term": "下期",
+      "session": "午前",
+      "kind": "解答",
+      "bytes": 54291,
+      "sha256": "8bd1f25fddb4518f0e03e35bbfdcce1322ba4ba48a5b375fadc83354be45b4e3"
+    },
+    {
+      "file": "20231029_co_second_a02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20231029_co_second_a02.pdf",
+      "year": 2023,
+      "term": "下期",
+      "session": "午後",
+      "kind": "解答",
+      "bytes": 54359,
+      "sha256": "54a1cc682a5021ae6d0c05a9dc5cbb427b631ad7533b17559741c0cfcfe13a9a"
+    },
+    {
+      "file": "20231029_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20231029_co_second_q01.pdf",
+      "year": 2023,
+      "term": "下期",
+      "session": "午前",
+      "kind": "問題",
+      "bytes": 2401595,
+      "sha256": "d379ac0ba31a982f4d191d03f97b10bc294e2acc2227eda20d2e7b2e5860029d"
+    },
+    {
+      "file": "20231029_co_second_q02.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20231029_co_second_q02.pdf",
+      "year": 2023,
+      "term": "下期",
+      "session": "午後",
+      "kind": "問題",
+      "bytes": 2229186,
+      "sha256": "1745a023d58fafd124e2cc3e69bee3d4f7513f8e2870d20c6ee65267ed8f9cca"
+    },
+    {
+      "file": "20240526_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20240526_co_second_a01.pdf",
+      "year": 2024,
+      "term": "上期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 46294,
+      "sha256": "31b1b214ee98e4340f4a65708d9ab3f8e2482084ff9d168b5b0698116ebe5a4a"
+    },
+    {
+      "file": "20240526_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20240526_co_second_q01.pdf",
+      "year": 2024,
+      "term": "上期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 2608199,
+      "sha256": "75c63bb409cd18c0fd442f24478dd6920b7f95ba1864ff4ab1ebadc5a8d29e78"
+    },
+    {
+      "file": "20241027_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20241027_co_second_a01.pdf",
+      "year": 2024,
+      "term": "下期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 46628,
+      "sha256": "221233ea508b81be22cfa5c0e472477f054492bc2fa21ec01a664c54ebefc582"
+    },
+    {
+      "file": "20241027_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20241027_co_second_q01.pdf",
+      "year": 2024,
+      "term": "下期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 2523934,
+      "sha256": "24810bc348b169ac0acda3ba0ace038f3e7947772963bbdfe5b4dd550fb466cb"
+    },
+    {
+      "file": "20250525_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20250525_co_second_a01.pdf",
+      "year": 2025,
+      "term": "上期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 49489,
+      "sha256": "194e465b21806b6bc89865f08ee0a89bd4164a5fe4ce9405b29a8b53b2244ef6"
+    },
+    {
+      "file": "20250525_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20250525_co_second_q01.pdf",
+      "year": 2025,
+      "term": "上期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 2493430,
+      "sha256": "e1a564f3c783d0c6c55356ab058937fa3a919c271d7ba43aeb258427c57d5bc3"
+    },
+    {
+      "file": "20251026_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20251026_co_second_a01.pdf",
+      "year": 2025,
+      "term": "下期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 45954,
+      "sha256": "e9ec83247fc97e8e315a8272bf53b75cdb45d6682502ab7120809cd337d91efd"
+    },
+    {
+      "file": "20251026_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20251026_co_second_q01.pdf",
+      "year": 2025,
+      "term": "下期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 3126065,
+      "sha256": "127d4b6084db9cea6247428410fd734ae255acba56be18d03c2b5ee07a9c4499"
+    },
+    {
+      "file": "20260524_co_second_a01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20260524_co_second_a01.pdf",
+      "year": 2026,
+      "term": "上期",
+      "session": null,
+      "kind": "解答",
+      "bytes": 45704,
+      "sha256": "12ce4d5828cef2b37f8da1f795d6f24a247c02b99083572988e275f44b73ca06"
+    },
+    {
+      "file": "20260524_co_second_q01.pdf",
+      "url": "https://www.shiken.or.jp/construction/upload/20260524_co_second_q01.pdf",
+      "year": 2026,
+      "term": "上期",
+      "session": null,
+      "kind": "問題",
+      "bytes": 4657087,
+      "sha256": "9397a1fed5495e3683a718a9823dfaa5dbd80f91271a3259718d0b17bd665dfa"
+    }
+  ]
+}
