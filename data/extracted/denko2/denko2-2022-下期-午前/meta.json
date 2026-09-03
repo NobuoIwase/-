@@ -1,0 +1,20 @@
+{
+  "subject": "denko2",
+  "year": 2022,
+  "term": "下期",
+  "session": "午前",
+  "date": "20221030",
+  "examId": "denko2-2022-下期-午前",
+  "questionPdf": "20221030_co_second_q01.pdf",
+  "answerPdf": "20221030_co_second_a01.pdf",
+  "textPdf": true,
+  "pages": 16,
+  "questionCount": 50,
+  "figurePages": [
+    4,
+    14,
+    15,
+    16
+  ],
+  "answerSource": "pdf"
+}

@@ -1,0 +1,525 @@
+[
+  {
+    "subject": "denko2",
+    "year": 2015,
+    "term": "上期",
+    "session": null,
+    "date": "20150607",
+    "examId": "denko2-2015-上期",
+    "questionPdf": "20150607_co_second_q01.pdf",
+    "answerPdf": "20150607_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2015,
+    "term": "下期",
+    "session": null,
+    "date": "20151003",
+    "examId": "denko2-2015-下期",
+    "questionPdf": "20151003_co_second_q01.pdf",
+    "answerPdf": "20151003_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2016,
+    "term": "上期",
+    "session": null,
+    "date": "20160605",
+    "examId": "denko2-2016-上期",
+    "questionPdf": "20160605_co_second_q01.pdf",
+    "answerPdf": "20160605_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2016,
+    "term": "下期",
+    "session": null,
+    "date": "20161001",
+    "examId": "denko2-2016-下期",
+    "questionPdf": "20161001_co_second_q01.pdf",
+    "answerPdf": "20161001_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2017,
+    "term": "上期",
+    "session": null,
+    "date": "20170604",
+    "examId": "denko2-2017-上期",
+    "questionPdf": "20170604_co_second_q01.pdf",
+    "answerPdf": "20170604_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2017,
+    "term": "下期",
+    "session": null,
+    "date": "20170930",
+    "examId": "denko2-2017-下期",
+    "questionPdf": "20170930_co_second_q01.pdf",
+    "answerPdf": "20170930_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2018,
+    "term": "上期",
+    "session": null,
+    "date": "20180603",
+    "examId": "denko2-2018-上期",
+    "questionPdf": "20180603_co_second_q01.pdf",
+    "answerPdf": "20180603_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2018,
+    "term": "下期",
+    "session": null,
+    "date": "20181007",
+    "examId": "denko2-2018-下期",
+    "questionPdf": "20181007_co_second_q01.pdf",
+    "answerPdf": "20181007_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2019,
+    "term": "上期",
+    "session": null,
+    "date": "20190602",
+    "examId": "denko2-2019-上期",
+    "questionPdf": "20190602_co_second_q01.pdf",
+    "answerPdf": "20190602_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2019,
+    "term": "下期",
+    "session": null,
+    "date": "20191006",
+    "examId": "denko2-2019-下期",
+    "questionPdf": "20191006_co_second_q01.pdf",
+    "answerPdf": "20191006_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2020,
+    "term": "下期",
+    "session": "午前",
+    "date": "20201004",
+    "examId": "denko2-2020-下期-午前",
+    "questionPdf": "20201004_co_second_q01.pdf",
+    "answerPdf": "20201004_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2020,
+    "term": "下期",
+    "session": "午後",
+    "date": "20201004",
+    "examId": "denko2-2020-下期-午後",
+    "questionPdf": "20201004_co_second_q02.pdf",
+    "answerPdf": "20201004_co_second_a02.pdf",
+    "textPdf": false,
+    "pages": 15,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2021,
+    "term": "上期",
+    "session": "午前",
+    "date": "20210530",
+    "examId": "denko2-2021-上期-午前",
+    "questionPdf": "20210530_co_second_q01.pdf",
+    "answerPdf": "20210530_co_second_a01.pdf",
+    "textPdf": false,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2021,
+    "term": "上期",
+    "session": "午後",
+    "date": "20210530",
+    "examId": "denko2-2021-上期-午後",
+    "questionPdf": "20210530_co_second_q02.pdf",
+    "answerPdf": "20210530_co_second_a02.pdf",
+    "textPdf": false,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2022,
+    "term": "上期",
+    "session": "午前",
+    "date": "20220529",
+    "examId": "denko2-2022-上期-午前",
+    "questionPdf": "20220529_co_second_q01.pdf",
+    "answerPdf": "20220529_co_second_a01.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2022,
+    "term": "上期",
+    "session": "午後",
+    "date": "20220529",
+    "examId": "denko2-2022-上期-午後",
+    "questionPdf": "20220529_co_second_q02.pdf",
+    "answerPdf": "20220529_co_second_a02.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2022,
+    "term": "下期",
+    "session": "午前",
+    "date": "20221030",
+    "examId": "denko2-2022-下期-午前",
+    "questionPdf": "20221030_co_second_q01.pdf",
+    "answerPdf": "20221030_co_second_a01.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2022,
+    "term": "下期",
+    "session": "午後",
+    "date": "20221030",
+    "examId": "denko2-2022-下期-午後",
+    "questionPdf": "20221030_co_second_q02.pdf",
+    "answerPdf": "20221030_co_second_a02.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2023,
+    "term": "上期",
+    "session": "午前",
+    "date": "20230528",
+    "examId": "denko2-2023-上期-午前",
+    "questionPdf": "20230528_co_second_q01.pdf",
+    "answerPdf": "20230528_co_second_a01.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2023,
+    "term": "上期",
+    "session": "午後",
+    "date": "20230528",
+    "examId": "denko2-2023-上期-午後",
+    "questionPdf": "20230528_co_second_q02.pdf",
+    "answerPdf": "20230528_co_second_a02.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2023,
+    "term": "下期",
+    "session": "午前",
+    "date": "20231029",
+    "examId": "denko2-2023-下期-午前",
+    "questionPdf": "20231029_co_second_q01.pdf",
+    "answerPdf": "20231029_co_second_a01.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "manual"
+  },
+  {
+    "subject": "denko2",
+    "year": 2023,
+    "term": "下期",
+    "session": "午後",
+    "date": "20231029",
+    "examId": "denko2-2023-下期-午後",
+    "questionPdf": "20231029_co_second_q02.pdf",
+    "answerPdf": "20231029_co_second_a02.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "manual"
+  },
+  {
+    "subject": "denko2",
+    "year": 2024,
+    "term": "上期",
+    "session": null,
+    "date": "20240526",
+    "examId": "denko2-2024-上期",
+    "questionPdf": "20240526_co_second_q01.pdf",
+    "answerPdf": "20240526_co_second_a01.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2024,
+    "term": "下期",
+    "session": null,
+    "date": "20241027",
+    "examId": "denko2-2024-下期",
+    "questionPdf": "20241027_co_second_q01.pdf",
+    "answerPdf": "20241027_co_second_a01.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2025,
+    "term": "上期",
+    "session": null,
+    "date": "20250525",
+    "examId": "denko2-2025-上期",
+    "questionPdf": "20250525_co_second_q01.pdf",
+    "answerPdf": "20250525_co_second_a01.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2025,
+    "term": "下期",
+    "session": null,
+    "date": "20251026",
+    "examId": "denko2-2025-下期",
+    "questionPdf": "20251026_co_second_q01.pdf",
+    "answerPdf": "20251026_co_second_a01.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15,
+      16
+    ],
+    "answerSource": "pdf"
+  },
+  {
+    "subject": "denko2",
+    "year": 2026,
+    "term": "上期",
+    "session": null,
+    "date": "20260524",
+    "examId": "denko2-2026-上期",
+    "questionPdf": "20260524_co_second_q01.pdf",
+    "answerPdf": "20260524_co_second_a01.pdf",
+    "textPdf": true,
+    "pages": 16,
+    "questionCount": 50,
+    "figurePages": [
+      4,
+      14,
+      15
+    ],
+    "answerSource": "pdf"
+  }
+]

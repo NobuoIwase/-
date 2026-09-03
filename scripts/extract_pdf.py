@@ -172,7 +172,8 @@ def number_positions(page, is_text, left, num_x, top, bottom, expected_start=1):
     if is_text:
         for w in page.get_text("words"):
             x0, y0, x1, y1, t = w[:5]
-            if t.strip().isdigit() and left <= x0 < num_x and top <= y0 <= bottom:
+            t = t.strip()
+            if re.fullmatch(r"[0-9]{1,2}", t) and left <= x0 < num_x and top <= y0 <= bottom:
                 n = int(t)
                 if 1 <= n <= 50:
                     out.append((n, (y0 + y1) / 2))
@@ -475,7 +476,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--exam", help="例: 20260524_q01 (省略時は全回)")
     ap.add_argument("--dpi", type=int, default=200)
+    ap.add_argument("--index-only", action="store_true", help="抽出は行わず meta.json を集めて index.json を再生成")
     args = ap.parse_args()
+    if args.index_only:
+        metas = [json.load(open(f, encoding="utf-8")) for f in sorted(glob.glob(os.path.join(OUT_DIR, "denko2-*", "meta.json")))]
+        json.dump(metas, open(os.path.join(OUT_DIR, "index.json"), "w"), ensure_ascii=False, indent=2)
+        print(f"index.json: {len(metas)} exams")
+        return
     results = []
     for qpdf in sorted(glob.glob(os.path.join(PDF_DIR, "*_co_second_q0*.pdf"))):
         base = os.path.basename(qpdf)

@@ -1,0 +1,19 @@
+{
+  "subject": "denko2",
+  "year": 2021,
+  "term": "上期",
+  "session": "午後",
+  "date": "20210530",
+  "examId": "denko2-2021-上期-午後",
+  "questionPdf": "20210530_co_second_q02.pdf",
+  "answerPdf": "20210530_co_second_a02.pdf",
+  "textPdf": false,
+  "pages": 16,
+  "questionCount": 50,
+  "figurePages": [
+    4,
+    14,
+    15
+  ],
+  "answerSource": "pdf"
+}

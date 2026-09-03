@@ -1,0 +1,20 @@
+{
+  "subject": "denko2",
+  "year": 2024,
+  "term": "上期",
+  "session": null,
+  "date": "20240526",
+  "examId": "denko2-2024-上期",
+  "questionPdf": "20240526_co_second_q01.pdf",
+  "answerPdf": "20240526_co_second_a01.pdf",
+  "textPdf": true,
+  "pages": 16,
+  "questionCount": 50,
+  "figurePages": [
+    4,
+    14,
+    15,
+    16
+  ],
+  "answerSource": "pdf"
+}
