@@ -36,6 +36,8 @@ export function Zoom({ src, onClose }: { src: string; onClose: () => void }) {
   }
 
   useEffect(() => {
+    // キャッシュ済み画像は onLoad が発火しないことがあるので、マウント時に読み込み済みなら即フィット
+    if (imgRef.current?.complete) fit()
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
     window.addEventListener('keydown', onKey)
     window.addEventListener('resize', fit)
