@@ -1,0 +1,96 @@
+[
+  {
+    "_comment": "書式見本。実データは public/data/denko2/questions/<examId>.json（このファイルはアプリに読み込まれない）",
+    "id": "denko2-sample-static-01",
+    "subject": "denko2",
+    "category": 4,
+    "groupId": "g4-mokuzo-haisen-kouji",
+    "type": "static",
+    "stem": "木造住宅の単相3線式100/200 V屋内配線工事で，**不適切な工事方法**は。\nただし，使用する電線は600 Vビニル絶縁電線，直径1.6 mm（軟銅線）とする。",
+    "choices": [
+      "合成樹脂製可とう電線管（CD管）を木造の床下や壁の内部及び天井裏に配管した。",
+      "合成樹脂製可とう電線管（PF管）内に通線し，支持点間の距離を1.0 mで造営材に固定した。",
+      "同じ径の硬質ポリ塩化ビニル電線管（VE）2本をTSカップリングで接続した。",
+      "金属管を点検できない隠ぺい場所で使用した。"
+    ],
+    "answer": 0,
+    "explanation": {
+      "whyCorrect": "CD管は自己消火性がないため、直接コンクリートに埋め込む場合か、専用の不燃性・自消性の管や溝に収める場合以外は使えません。木造の床下・壁内・天井裏に露出でそのまま配管するのは不適切です。",
+      "whyOthersWrong": [
+        "",
+        "PF管は自消性があり、木造の隠ぺい場所にも施設できます。支持点間の距離は1.5 m以下と定められているので、1.0 mは適切です。",
+        "VE管同士の接続にTSカップリングを使うのは正しい方法です（接着剤で接合）。",
+        "金属管工事は、乾燥した場所であれば点検できない隠ぺい場所にも施設できます。"
+      ],
+      "supplement": "PF管とCD管の違いが頻出です。**PF管＝自消性あり（Plastic Flexible）、CD管＝自消性なし（Combined Duct、オレンジ色）**。CD管はコンクリート埋込み専用と覚えると確実です。合成樹脂管の支持点間隔は**1.5 m以下**、金属管は**2 m以下**。",
+      "references": ["電技解釈 第158条（合成樹脂管工事）", "電技解釈 第159条（金属管工事）"]
+    },
+    "status": "active",
+    "source": { "year": 2026, "term": "上期", "number": 21 }
+  },
+  {
+    "_comment": "写真選択肢 + 配線図（sharedFigure）の見本。choices は内容の短い説明、shuffleChoices は省略時 false になる",
+    "id": "denko2-sample-photo-01",
+    "subject": "denko2",
+    "category": 6,
+    "groupId": "g6-ringslv",
+    "type": "static",
+    "stem": "⑪で示すボックス内の接続をすべて圧着接続とする場合，使用するリングスリーブの種類と最少個数の組合せで，**正しいものは**。\nただし，使用する電線はすべてVVF1.6とする。",
+    "sharedFigure": "figures/denko2-2026-上期/p15.png",
+    "choicesFigure": "figures/denko2-2026-上期/q41_choices.png",
+    "choices": ["小 3個", "小 4個", "小 3個と中 1個", "小 1個と中 2個"],
+    "answer": 3,
+    "explanation": {
+      "whyCorrect": "⑪のボックスには6本のケーブル（計12心）が集まり、接続は接地側（白）5本、非接地側（黒）5本、点滅器の帰り線2本の3か所。1.6 mmは5本なら中スリーブ、2本なら小スリーブなので、中2個＋小1個になります。",
+      "supplement": "リングスリーブの選定（1.6 mmのみ）：**2本→小（刻印○）、3～4本→小（刻印小）、5～6本→中（刻印中）**。",
+      "references": ["電技解釈 第12条（電線の接続法）", "JIS C 2806（銅線用裸圧着スリーブ）"]
+    },
+    "status": "active",
+    "source": { "year": 2026, "term": "上期", "number": 41 }
+  },
+  {
+    "_comment": "計算テンプレート（calc）の見本。stem と explanation の {V} {R} {answer} が出題時に置換される",
+    "id": "denko2-sample-calc-01",
+    "subject": "denko2",
+    "category": 1,
+    "groupId": "g1-shouhi-denryoku",
+    "type": "calc",
+    "stem": "抵抗 {R} Ωの電熱器に {V} Vの電圧を加えたとき，消費電力〔W〕は。",
+    "choices": ["200", "400", "1 000", "2 000"],
+    "answer": 1,
+    "explanation": {
+      "whyCorrect": "消費電力 P = V²/R で求めます。",
+      "supplement": "P = VI = I²R = V²/R の3つの形を使い分けられるようにしておくと、与えられた量に応じて即答できます。",
+      "references": ["電力の公式 P = VI = V²/R"]
+    },
+    "calcTemplate": {
+      "params": { "V": [100, 200], "R": [10, 20, 25, 40, 50, 100] },
+      "formula": "V * V / R",
+      "accept": "answer >= 100 && answer <= 4000",
+      "distractors": ["answer / 2", "answer * 2", "V * R / 10"],
+      "unit": "W",
+      "round": 0,
+      "explanation": "消費電力 P = V²/R = {V}² ÷ {R} = **{answer} W**。\n\n（I = V/R = {V}/{R} A を先に求めて P = VI としても同じ結果になります）",
+      "original": { "V": 100, "R": 25 }
+    },
+    "status": "retired",
+    "retiredReason": "計算テンプレートの書式例（実在の過去問ではない）。出題しない。",
+    "source": { "year": 0, "term": "sample", "number": 0 }
+  },
+  {
+    "_comment": "法改正で答えが変わる問の見本（retired）と、用語だけ変わった問の note の使い方",
+    "id": "denko2-sample-retired-01",
+    "subject": "denko2",
+    "category": 7,
+    "groupId": "g7-denkikoujishi-sagyou-hani",
+    "type": "static",
+    "stem": "（見本）電気工事士法において，…",
+    "choices": ["…", "…", "…", "…"],
+    "answer": 0,
+    "note": "現行法では「一般用電気工作物等」。出題当時の表記のまま掲載",
+    "explanation": { "whyCorrect": "…", "supplement": "…" },
+    "status": "retired",
+    "retiredReason": "2023年の電気事業法改正（小規模事業用電気工作物の新設）により選択肢ロの正誤が変わるため出題停止",
+    "source": { "year": 2019, "term": "下期", "number": 28 }
+  }
+]

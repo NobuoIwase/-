@@ -2,16 +2,57 @@
   "id": "denko2",
   "name": "第二種電気工事士 学科試験",
   "shortName": "電工二種",
-  "exam": { "questionCount": 50, "minutes": 120, "passScore": 30 },
+  "exam": {
+    "questionCount": 50,
+    "minutes": 120,
+    "passScore": 30
+  },
   "categories": [
-    { "id": 1, "name": "電気に関する基礎理論", "short": "基礎理論", "examCount": 5 },
-    { "id": 2, "name": "配電理論及び配線設計", "short": "配電・配線設計", "examCount": 6 },
-    { "id": 3, "name": "電気機器・配線器具並びに電気工事用の材料及び工具", "short": "機器・材料・工具", "examCount": 7 },
-    { "id": 4, "name": "電気工事の施工方法", "short": "施工方法", "examCount": 6 },
-    { "id": 5, "name": "一般用電気工作物等の検査方法", "short": "検査方法", "examCount": 4 },
-    { "id": 6, "name": "配線図", "short": "配線図", "examCount": 19 },
-    { "id": 7, "name": "一般用電気工作物等の保安に関する法令", "short": "法令", "examCount": 3 }
+    {
+      "id": 1,
+      "name": "電気に関する基礎理論",
+      "short": "基礎理論",
+      "examCount": 5
+    },
+    {
+      "id": 2,
+      "name": "配電理論及び配線設計",
+      "short": "配電・配線設計",
+      "examCount": 6
+    },
+    {
+      "id": 3,
+      "name": "電気機器・配線器具並びに電気工事用の材料及び工具",
+      "short": "機器・材料・工具",
+      "examCount": 7
+    },
+    {
+      "id": 4,
+      "name": "電気工事の施工方法",
+      "short": "施工方法",
+      "examCount": 6
+    },
+    {
+      "id": 5,
+      "name": "一般用電気工作物等の検査方法",
+      "short": "検査方法",
+      "examCount": 4
+    },
+    {
+      "id": 6,
+      "name": "配線図",
+      "short": "配線図",
+      "examCount": 19
+    },
+    {
+      "id": 7,
+      "name": "一般用電気工作物等の保安に関する法令",
+      "short": "法令",
+      "examCount": 3
+    }
   ],
-  "questionFiles": ["samples.json"],
+  "questionFiles": [
+    "denko2-2026-上期.json"
+  ],
   "citation": "出典：{year}年度{term}第二種電気工事士{exam}試験{session}（一般財団法人 電気技術者試験センター）"
 }

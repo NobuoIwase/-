@@ -2,7 +2,8 @@
 
 この文書は Opus（Claude Code）向けの作業手順書です。設計判断はすでに済んでいるので、
 **この手順どおりに、1 回分（50 問）ずつ**データを作ってください。分からない点は `docs/DATA_FORMAT.md` と
-`public/data/denko2/questions/samples.json`（書式見本）を見てください。仕様を変更したくなったら、変更せずに
+`docs/samples.json`（書式見本）と、完成済みの実データ `public/data/denko2/questions/denko2-2026-上期.json`
+（パイロットで作成・レビュー済み。50 問の実例として最も参考になる）を見てください。仕様を変更したくなったら、変更せずに
 `data/review/denko2/<examId>.md` に「提案」として書き残してください。
 
 ## 0. 前提
@@ -148,7 +149,7 @@ git add public/data/denko2 data/review && git commit -m "data(denko2): <examId> 
 - スキャン年度（2015〜2021）は OCR 草稿の誤りが多い（「，」「。」「ー」「一」、数字の 0/O、単位）。
   **必ず** `cells/qNN_row.png` で全問確認する
 - 同じ年度の午前/午後は問題が異なる。共通点が多いので groupId を揃える
-- 迷ったら samples.json の書き方に合わせる
+- 迷ったら `docs/samples.json` と `denko2-2026-上期.json` の書き方に合わせる
 
 ## 7. 禁止事項
 

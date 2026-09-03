@@ -1,0 +1,1602 @@
+[
+  {
+    "number": 1,
+    "page": 5,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      147.8,
+      667.9,
+      304.6
+    ],
+    "stemBbox": [
+      93.4,
+      147.8,
+      306.7,
+      304.6
+    ],
+    "choicesBbox": [
+      306.7,
+      147.8,
+      667.9,
+      304.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q01_row.png",
+      "stem": "cells/q01_stem.png",
+      "choices": "cells/q01_choices.png"
+    },
+    "stemText": "図のような回路で，電流計\n（Ａの値が１Ａ\nを示した。このときの電圧計\nのの指示値\n[v] は.\n4袋\n4袋\n８ｐ\n4袋\nＡ\n4袋",
+    "choicesText": "イ.16\nロ.32\nハ40\nニ.48"
+  },
+  {
+    "number": 2,
+    "page": 5,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      304.6,
+      667.9,
+      461.0
+    ],
+    "stemBbox": [
+      93.4,
+      304.6,
+      306.7,
+      461.0
+    ],
+    "choicesBbox": [
+      306.7,
+      304.6,
+      667.9,
+      461.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q02_row.png",
+      "stem": "cells/q02_stem.png",
+      "choices": "cells/q02_choices.png"
+    },
+    "stemText": "図のような回路で,スイッチS1を閉じ,\nスイッチSを開いたときの,端子ａーら間の\n合成抵抗〔ø』は。\n30袋\n30袋\n300\nａｏ\nＳ130à\nрｏ",
+    "choicesText": "イ.45\nō.60\nハ.75\nニ.120"
+  },
+  {
+    "number": 3,
+    "page": 5,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      461.0,
+      667.9,
+      559.0
+    ],
+    "stemBbox": [
+      93.4,
+      461.0,
+      306.7,
+      559.0
+    ],
+    "choicesBbox": [
+      306.7,
+      461.0,
+      667.9,
+      559.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q03_row.png",
+      "stem": "cells/q03_stem.png",
+      "choices": "cells/q03_choices.png"
+    },
+    "stemText": "直径 26m,長さ10ｍの銅導線と抵抗値が\n最も近い同材質の銅導線は。",
+    "choicesText": "イ.直径1.6mm,長さ20m\nロ.断面積55mm,長さ10ｍ\n八.直径32 mm,長さ５ｍ\n二断面積８mm,長さ10ｍ"
+  },
+  {
+    "number": 4,
+    "page": 5,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      559.0,
+      667.9,
+      734.9
+    ],
+    "stemBbox": [
+      93.4,
+      559.0,
+      306.7,
+      734.9
+    ],
+    "choicesBbox": [
+      306.7,
+      559.0,
+      667.9,
+      734.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q04_row.png",
+      "stem": "cells/q04_stem.png",
+      "choices": "cells/q04_choices.png"
+    },
+    "stemText": "図のような交流回路で，電源電圧102Ｖ,\n抵抗の両端の電圧が90Ｖ,リアクタンスの両端\nの電圧が48Ｖであるとき，負荷の力率「％]は。\n90\n102\n48Ｖ",
+    "choicesText": "イ.47\nロ.69\nハ.88\n-.96"
+  },
+  {
+    "number": 5,
+    "page": 5,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      734.9,
+      667.9,
+      949.7
+    ],
+    "stemBbox": [
+      93.4,
+      734.9,
+      306.7,
+      949.7
+    ],
+    "choicesBbox": [
+      306.7,
+      734.9,
+      667.9,
+      949.7
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q05_row.png",
+      "stem": "cells/q05_stem.png",
+      "choices": "cells/q05_choices.png"
+    },
+    "stemText": "図のような三相負荷に三相交流電圧を加え\nたとき，各線に20Ａの電流が流れた。線間\n電圧ＥＶ〕は。\n20Ａ\nø\n6\nø\n３ゅ3Ｗ\n６ｐ\n-\nＥ\n20Ａ\n電源\n20Ａ",
+    "choicesText": "イ.120\n.173\nハ,208\nニ.240"
+  },
+  {
+    "number": 6,
+    "page": 6,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      85.4,
+      668.2,
+      281.0
+    ],
+    "stemBbox": [
+      93.4,
+      85.4,
+      307.0,
+      281.0
+    ],
+    "choicesBbox": [
+      307.0,
+      85.4,
+      668.2,
+      281.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q06_row.png",
+      "stem": "cells/q06_stem.png",
+      "choices": "cells/q06_choices.png"
+    },
+    "stemText": "図のような単相３線式回路において，電線１線当\nたりの抵抗が０１ｓのとき，ｓ－ｐ間の電圧Ｖは.\n0.1ç\nａ\n20Ａ\n103 Ｖ\n抵抗負荷\n0.1ç\n1ｐ3Ｗ\n206Ｖ\n電源\n10Ａ\n103 Ｖ\n抵抗負荷\n0.1ç",
+    "choicesText": "イ.99\n.100\nハ. 101\nニ.102"
+  },
+  {
+    "number": 7,
+    "page": 6,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      281.0,
+      668.2,
+      417.8
+    ],
+    "stemBbox": [
+      93.4,
+      281.0,
+      307.0,
+      417.8
+    ],
+    "choicesBbox": [
+      307.0,
+      281.0,
+      668.2,
+      417.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q07_row.png",
+      "stem": "cells/q07_stem.png",
+      "choices": "cells/q07_choices.png"
+    },
+    "stemText": "金属管による低圧屋内配線工事で，管内に\n直径2.0ｍ巾の 600Vビニル絶縁電線 (軟銅線)\n4本を収めて施設した場合，電線１本当たり\nの許容電流Ａ〕は。\nただし，周囲温度は30℃以下，電流\n減少係数は０.６3とする。",
+    "choicesText": "イ.17\nロ．22\nハ.30\nニ.35"
+  },
+  {
+    "number": 8,
+    "page": 6,
+    "numberGuessed": true,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      417.8,
+      668.2,
+      594.0
+    ],
+    "stemBbox": [
+      93.4,
+      417.8,
+      307.0,
+      594.0
+    ],
+    "choicesBbox": [
+      307.0,
+      417.8,
+      668.2,
+      594.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q08_row.png",
+      "stem": "cells/q08_stem.png",
+      "choices": "cells/q08_choices.png"
+    },
+    "stemText": "図のような三相３線式回路で，電線１線\n当たりの抵抗値が015〜，線電流が10Ａのとき,\nこの電線路の電力損失〔Ｗは。\n10Ａ\n抵抗負荷\n0.150\n３φ３Ｖ\n電源\n10\nＡ\n0.150\nつ\n10Ａ\n0.150\nつ",
+    "choicesText": "イ.26\nロ.15\nハ.26\nニ.45"
+  },
+  {
+    "number": 9,
+    "page": 6,
+    "numberGuessed": true,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      594.0,
+      668.2,
+      789.6
+    ],
+    "stemBbox": [
+      93.4,
+      594.0,
+      307.0,
+      789.6
+    ],
+    "choicesBbox": [
+      307.0,
+      594.0,
+      668.2,
+      789.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q09_row.png",
+      "stem": "cells/q09_stem.png",
+      "choices": "cells/q09_choices.png"
+    },
+    "stemText": "低王屋内西配線の分岐回路の設言計で、配線用遮断器\n分岐回路の電線の太さ及びコンセントの組合せ\nとして，適切なものは。\nただし，分岐点から配線用遮断器までは３ｍ,\n電線の数値は分岐回路の霞線（軟銅線）の太さを\n示す.\nまたコンセントは兼用コンセントではないもの\nとする。",
+    "choicesText": "イ.\nロ.\nハ.\nＢＬ\n120Ａ\nō３0Ａ\nＢＬ\n120Ａ\nＢ\n30Ａ\n2.0 mm\n2.0 mm\n1.6 mm\n26 mm\n定格電流_20Ａの\n定格電流_20Ａの\n定格電流_30Ａの\n定格電流15Ａの\nコンセント2個\nコンセント2個\nコンセント1個\nコンセント1個"
+  },
+  {
+    "number": 10,
+    "page": 6,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      789.6,
+      668.2,
+      975.4
+    ],
+    "stemBbox": [
+      93.4,
+      789.6,
+      307.0,
+      975.4
+    ],
+    "choicesBbox": [
+      307.0,
+      789.6,
+      668.2,
+      975.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q10_row.png",
+      "stem": "cells/q10_stem.png",
+      "choices": "cells/q10_choices.png"
+    },
+    "stemText": "図のように定格電流60Ａの過電流遮断器で\n保護された低圧屋内幹線から分岐して，10ｍ\nの位置に過電流遮断器を施設するとき，ａ－ち\n間の電線の許容電流の最小値「Ａ〕は。\n60Ａ\n1ｎ2Ｗ\n電源\nａ\n10m",
+    "choicesText": "イ.15\nロ.21\nハ,27\nニ.33"
+  },
+  {
+    "number": 11,
+    "page": 7,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      85.4,
+      667.9,
+      183.1
+    ],
+    "stemBbox": [
+      93.4,
+      85.4,
+      307.0,
+      183.1
+    ],
+    "choicesBbox": [
+      307.0,
+      85.4,
+      667.9,
+      183.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q11_row.png",
+      "stem": "cells/q11_stem.png",
+      "choices": "cells/q11_choices.png"
+    },
+    "stemText": "漏電遮断器に関する記述として，誤っている\nものは。",
+    "choicesText": "イ・高速形漏電遮断器は，定格感度電流における動作時間が０1秒以下である。\n口・高感度形漏電遮断器は，定格感度電流が１000ｍＡ以下である。\n小・漏電遮断器は，零相変流器によって地絡電流を検出する。\nニ・漏電遮断器には、漏電電流を模擬したテスト装置がある。"
+  },
+  {
+    "number": 12,
+    "page": 7,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      183.1,
+      667.9,
+      300.2
+    ],
+    "stemBbox": [
+      93.4,
+      183.1,
+      307.0,
+      300.2
+    ],
+    "choicesBbox": [
+      307.0,
+      183.1,
+      667.9,
+      300.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q12_row.png",
+      "stem": "cells/q12_stem.png",
+      "choices": "cells/q12_choices.png"
+    },
+    "stemText": "金属管工事に使用される「ねじなしボックス\nコネクタ」に関する記述として,誤っている\nものは。",
+    "choicesText": "イ・ねじなし電線管と金属製アウトレットボックスを接続するのに用いる。\nロ・ボンド線を接続するための接地用の端子がある。\nハ・絶縁ブッシングを取り付けて使用する。\nニ・ねじなし電線管との接続は止めネジを回して,ネジの頭部をねじ切らない\nように締め付ける。"
+  },
+  {
+    "number": 13,
+    "page": 7,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      300.2,
+      667.9,
+      398.2
+    ],
+    "stemBbox": [
+      93.4,
+      300.2,
+      307.0,
+      398.2
+    ],
+    "choicesBbox": [
+      307.0,
+      300.2,
+      667.9,
+      398.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q13_row.png",
+      "stem": "cells/q13_stem.png",
+      "choices": "cells/q13_choices.png"
+    },
+    "stemText": "組み合わせて使用する機器で，その組合せ\nが明らかに誤っているものは。",
+    "choicesText": "イ・ネオン変圧器と高圧水銀灯\n口・光電式自動点滅器と庭園灯\n八・零相変流器と漏電警報器\nニ・スターデルタ始動器とー般用低圧三相かご形誘導電動機"
+  },
+  {
+    "number": 14,
+    "page": 7,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      398.2,
+      667.9,
+      496.1
+    ],
+    "stemBbox": [
+      93.4,
+      398.2,
+      307.0,
+      496.1
+    ],
+    "choicesBbox": [
+      307.0,
+      398.2,
+      667.9,
+      496.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q14_row.png",
+      "stem": "cells/q14_stem.png",
+      "choices": "cells/q14_choices.png"
+    },
+    "stemText": "使用電圧が300Ｖ以下の屋内に施設する\n器具であって，付属する移動電線にビ＝ル\nコードが使用できるものは。",
+    "choicesText": "イ・電気トースター\nロ・電気こたつ\nハ・電気扇風機\nニ・電気ニんろ"
+  },
+  {
+    "number": 15,
+    "page": 7,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      496.1,
+      667.9,
+      691.0
+    ],
+    "stemBbox": [
+      93.4,
+      496.1,
+      307.0,
+      691.0
+    ],
+    "choicesBbox": [
+      307.0,
+      496.1,
+      667.9,
+      691.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q15_row.png",
+      "stem": "cells/q15_stem.png",
+      "choices": "cells/q15_choices.png"
+    },
+    "stemText": "金属管（鋼製電線管）工事で切断及び曲げ作業\nに使用する工具の組合せとして，適切なものは。",
+    "choicesText": "イ・リーマ\nロ.やすり\n金切りのこ\nパイプレンチ\nパイプベンダ\nトーチランプ\nハ・やすり\nニ・リーマ\n金切りのこ\nパイプレンチ\nトーチランプ\nパイプベンダ"
+  },
+  {
+    "number": 16,
+    "page": 7,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      691.0,
+      667.9,
+      945.1
+    ],
+    "stemBbox": [
+      93.4,
+      691.0,
+      307.0,
+      945.1
+    ],
+    "choicesBbox": [
+      307.0,
+      691.0,
+      667.9,
+      945.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q16_row.png",
+      "stem": "cells/q16_stem.png",
+      "choices": "cells/q16_choices.png"
+    },
+    "stemText": "写真に示す材料が使用される工事は。\n25mm\n(金属製)",
+    "choicesText": "イ・金属線ぴ工事\nロ・金属ダクト工事\n八・金属可とう電線管工事\n二・金属管工事"
+  },
+  {
+    "number": 17,
+    "page": 8,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      84.5,
+      667.9,
+      292.8
+    ],
+    "stemBbox": [
+      93.1,
+      84.5,
+      306.7,
+      292.8
+    ],
+    "choicesBbox": [
+      306.7,
+      84.5,
+      667.9,
+      292.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q17_row.png",
+      "stem": "cells/q17_stem.png",
+      "choices": "cells/q17_choices.png"
+    },
+    "stemText": "写真に示す材料の用途は。\n(合成樹脂製)",
+    "choicesText": "イ・フロアダクトが交差する箇所に用いる。\n口・多数の遮断器を集合して設置するために用いる。\n小・多数の金属管が集合する箇所に用いる。\nニ・住宅でスイッチやコンセントを取り付けるのに用いる。"
+  },
+  {
+    "number": 18,
+    "page": 8,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      292.8,
+      667.9,
+      449.5
+    ],
+    "stemBbox": [
+      93.1,
+      292.8,
+      306.7,
+      449.5
+    ],
+    "choicesBbox": [
+      306.7,
+      292.8,
+      667.9,
+      449.5
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q18_row.png",
+      "stem": "cells/q18_stem.png",
+      "choices": "cells/q18_choices.png"
+    },
+    "stemText": "写真に示す工具の用途は。",
+    "choicesText": "イ・ＶRケーブルの外装や絶縁被覆をはぎ取るのに用いる。\nロ・CＶケーブル（低圧用）の外装や絶縁被覆をはぎ取るのに用いる。\nハ・Ｖ下ケーブルの外装や絶縁被覆をはぎ取るのに用いる。\nニ・VＦコード（ビニル平形コード）の絶縁被覆をはぎ取るのに用いる。"
+  },
+  {
+    "number": 19,
+    "page": 8,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      449.5,
+      667.9,
+      567.1
+    ],
+    "stemBbox": [
+      93.1,
+      449.5,
+      306.7,
+      567.1
+    ],
+    "choicesBbox": [
+      306.7,
+      449.5,
+      667.9,
+      567.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q19_row.png",
+      "stem": "cells/q19_stem.png",
+      "choices": "cells/q19_choices.png"
+    },
+    "stemText": "使用電圧200ｚの電動機に接続する部分\nの金属可とう電線管工事として，不適切な\nものは。\nただし，管は２種金属製可とう電線管を使用\nする。",
+    "choicesText": "イ・管とボックスとの接続にストレートボックスコネクタを使用した。\n口・管の長さが６ｍであるので，電線管のＤ種接地工事を省略した。\nハ・管の内側の曲げ半径を管の内径の６倍以上とした。\nニ・管と金属管（鋼製電線管）との接続にコンビネーションカップリングを使用\nした。"
+  },
+  {
+    "number": 20,
+    "page": 8,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      567.1,
+      667.9,
+      703.9
+    ],
+    "stemBbox": [
+      93.1,
+      567.1,
+      306.7,
+      703.9
+    ],
+    "choicesBbox": [
+      306.7,
+      567.1,
+      667.9,
+      703.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q20_row.png",
+      "stem": "cells/q20_stem.png",
+      "choices": "cells/q20_choices.png"
+    },
+    "stemText": "単相３線式100/200７屋内配線の住宅用\n分電盤の工事を施工した。不適切なものは。",
+    "choicesText": "イ・電灯専用（単相100Ｖ）の分岐回路に２極１素子の配線用遮断器を用い,\n素子のない極に中性線を結線した。\n口・電熱器（単相１00Ｖ）の分岐回路に２極２素子の配線用遮断器を取り付けた。\nハ・主開閉器の中性極に銅バーを取り付けた。\nニ・ルームエアコン（単相200Ｖ）の分岐回路に２極１素子の配線用遮断器を\n取り付けた。"
+  },
+  {
+    "number": 21,
+    "page": 8,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      703.9,
+      667.9,
+      958.1
+    ],
+    "stemBbox": [
+      93.1,
+      703.9,
+      306.7,
+      958.1
+    ],
+    "choicesBbox": [
+      306.7,
+      703.9,
+      667.9,
+      958.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q21_row.png",
+      "stem": "cells/q21_stem.png",
+      "choices": "cells/q21_choices.png"
+    },
+    "stemText": "電磁的不平衡を生じないように，電線を\n金属管に挿入する方法として，適切なものは。",
+    "choicesText": "３ｐ３Ｗ\n１φ２Ｗ\n電源\n電源\n負荷負荷\n負崎\n１ｐ２Ｖ\n３φ３Ｗ\n電源\n電源\n負荷負荷\n負荷"
+  },
+  {
+    "number": 22,
+    "page": 9,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      85.0,
+      668.4,
+      241.7
+    ],
+    "stemBbox": [
+      93.4,
+      85.0,
+      307.0,
+      241.7
+    ],
+    "choicesBbox": [
+      307.0,
+      85.0,
+      668.4,
+      241.7
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q22_row.png",
+      "stem": "cells/q22_stem.png",
+      "choices": "cells/q22_choices.png"
+    },
+    "stemText": "低圧屋内配線の図記号と，それに対する施工\n方法の組合せとして，正しいものは。",
+    "choicesText": "イ・---------・厚鋼電線管で天井隠ぺい配線。\nIV1.6 (E19)\n硬質塩化ビニル電線管で露出配線。\nロ.\nIV1.6 (PF16)\n合成樹脂製可とう電線管で天井隠ぺい配線。\nハ.\nIV1.6 (16)\n二・---------.・２種金属製可とう電線管で露出配線\nIV1.6 (F2 17)"
+  },
+  {
+    "number": 23,
+    "page": 9,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      241.7,
+      668.4,
+      437.0
+    ],
+    "stemBbox": [
+      93.4,
+      241.7,
+      307.0,
+      437.0
+    ],
+    "choicesBbox": [
+      307.0,
+      241.7,
+      668.4,
+      437.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q23_row.png",
+      "stem": "cells/q23_stem.png",
+      "choices": "cells/q23_choices.png"
+    },
+    "stemText": "木造住宅の金属板張り（金属系サイディング)\nの壁を貫通する部分の低圧屋内配線工事として,\n適切なものは。\nただし，金属管工事、金属可とう電線管工事\nに使用する電線は,600Vビニル絶縁電線とする",
+    "choicesText": "イ・金属管工事とし，壁の金属板張りと電気的に完全に接続された金属管にＤ種\n接地工事を施し,貫通施工した。\n口・金属管工事とし，壁に小径の穴を開け，金属板張りと金属管とを接触させ\n金属管を貫通施工した。\n八・金属可とう電線管工事とし，壁の金属板張りを十分に切り開き，金属製\n可とう電線管を壁と電気的に接続し，貫通施工した。\nニ・ケーブル工事とし,壁の金属板張りを十分に切り開き,600Ｖビニル\n絶縁ビニルシースケーブルを合成樹脂管に収めて電気的に絶縁し,貫通\n施工した。"
+  },
+  {
+    "number": 24,
+    "page": 9,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      437.0,
+      668.4,
+      535.4
+    ],
+    "stemBbox": [
+      93.4,
+      437.0,
+      307.0,
+      535.4
+    ],
+    "choicesBbox": [
+      307.0,
+      437.0,
+      668.4,
+      535.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q24_row.png",
+      "stem": "cells/q24_stem.png",
+      "choices": "cells/q24_choices.png"
+    },
+    "stemText": "導通試験の目的として，誤っているものは。",
+    "choicesText": "イ・器具への結線の未接続を発見する。\n口・電路の充電の有無を確認する。\n八・回路の接続の正誤を判別する。\n二・電線の断線を発見する。"
+  },
+  {
+    "number": 25,
+    "page": 9,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      535.4,
+      668.4,
+      652.6
+    ],
+    "stemBbox": [
+      93.4,
+      535.4,
+      307.0,
+      652.6
+    ],
+    "choicesBbox": [
+      307.0,
+      535.4,
+      668.4,
+      652.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q25_row.png",
+      "stem": "cells/q25_stem.png",
+      "choices": "cells/q25_choices.png"
+    },
+    "stemText": "単相３線式100/200Ｖの屋内配線において,\n開閉器又は過電流遮断器で区切ることができる\n電路ごとの絶縁抵抗の最小値として，「電気設備\nに関する技術基準を定める省令」に規定されて\nいる値「Mçの組合せで，正しいものは。",
+    "choicesText": "イ・電路と大地間\n0.1\n口・電路と大地間\n0.1\n電線相互間\n0.1\n電線相互間\n0.2\n八電路と大地間\n0-2\n二・電路と大地間\n0.2\n電線相互間\n0.2\n電線相互間\n0.4"
+  },
+  {
+    "number": 26,
+    "page": 9,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      652.6,
+      668.4,
+      750.0
+    ],
+    "stemBbox": [
+      93.4,
+      652.6,
+      307.0,
+      750.0
+    ],
+    "choicesBbox": [
+      307.0,
+      652.6,
+      668.4,
+      750.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q26_row.png",
+      "stem": "cells/q26_stem.png",
+      "choices": "cells/q26_choices.png"
+    },
+    "stemText": "ネオン式検電器を使用する目的は。",
+    "choicesText": "イ・ネオン放電灯の照度を測定する。\nロ・ネオン管灯回路の導通を調べる。\n八・電路の漏れ電流を測定する。\n二。電路の充電の有無を確認する。"
+  },
+  {
+    "number": 27,
+    "page": 9,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      70.6,
+      750.0,
+      668.4,
+      925.9
+    ],
+    "stemBbox": [
+      93.4,
+      750.0,
+      307.0,
+      925.9
+    ],
+    "choicesBbox": [
+      307.0,
+      750.0,
+      668.4,
+      925.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q27_row.png",
+      "stem": "cells/q27_stem.png",
+      "choices": "cells/q27_choices.png"
+    },
+    "stemText": "低圧屋内電路に接続されている単相負荷の\n力率を求める場合，必要な測定器の組合せ\nとして,正しいものは。",
+    "choicesText": "イ・周波数計\n電圧計\n電力計\nロ・周波数計\n電圧計\n電流計\n電流計\nハ・電圧計\n電力計\n二・周波数計\n電流計\n電力計"
+  },
+  {
+    "number": 28,
+    "page": 10,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      68.6,
+      85.2,
+      666.7,
+      222.2
+    ],
+    "stemBbox": [
+      91.4,
+      85.2,
+      305.0,
+      222.2
+    ],
+    "choicesBbox": [
+      305.0,
+      85.2,
+      666.7,
+      222.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q28_row.png",
+      "stem": "cells/q28_stem.png",
+      "choices": "cells/q28_choices.png"
+    },
+    "stemText": "電気工事士法において,第二種電気工事士\n免状の交付を受けている者であっても従事\nできない電気工事の作業は。",
+    "choicesText": "イ・自家用電気工作物（最大電力500×Ｗ未満の需要設備）の地中電線用の管を\n設置する作業\n口・自家用電気工作物（最大電力500 ×W 未満の需要設備）　の低圧部分の電線相互を\n接続する作業\nハ・一般用電気工作物の接地工事の作業\nニ・一般用電気工作物のネオン工事の作業"
+  },
+  {
+    "number": 29,
+    "page": 10,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      68.6,
+      222.2,
+      666.7,
+      359.0
+    ],
+    "stemBbox": [
+      91.4,
+      222.2,
+      305.0,
+      359.0
+    ],
+    "choicesBbox": [
+      305.0,
+      222.2,
+      666.7,
+      359.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q29_row.png",
+      "stem": "cells/q29_stem.png",
+      "choices": "cells/q29_choices.png"
+    },
+    "stemText": "電気用品安全法の適用を受ける電気用品に\n関する記述として，誤っているものは。",
+    "choicesText": "イ：\nの記号は,電気用品のうち「特定電気用品以外の電気用品」を示す。\nの記号は,電気用品のうち「特定電気用品」を示す。\nハ・くＰＳ>Ｅの記号は,電気用品のうち輸入した「特定電気用品以外の電気\n用品！を示す。\n二。電気工事士は,電気用品安全法に定められた所定の表示が付されているもの\nでなければ,電気用品を電気工作物の設置又は変更の工事に使用してはならない。"
+  },
+  {
+    "number": 30,
+    "page": 10,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      68.6,
+      359.0,
+      666.7,
+      496.1
+    ],
+    "stemBbox": [
+      91.4,
+      359.0,
+      305.0,
+      496.1
+    ],
+    "choicesBbox": [
+      305.0,
+      359.0,
+      666.7,
+      496.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q30_row.png",
+      "stem": "cells/q30_stem.png",
+      "choices": "cells/q30_choices.png"
+    },
+    "stemText": "一般用電気工作物の適用を受けるものは。\nただし，発電設備は電圧600Ｖ以下で,\n１構内に設置するものとする。",
+    "choicesText": "イ・高圧受電で，受電電力の容量が55ｚＷの機械工場\n口・低圧受電で，受電電力の容量が40×Ｗ,出力151Ｗの非常用内燃力発電\n設備を備えた映画館\nハ・高圧受電で,受電電カの容量が551Ｗのコンビニエンスストア\n二，低圧受電で,受電電力の容量が40×Ｗ，出力15×Ｗの太陽電池発電設備\nを備えた幼稚園"
+  },
+  {
+    "number": 31,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      253.0,
+      657.8,
+      315.6
+    ],
+    "stemBbox": [
+      83.3,
+      253.0,
+      296.9,
+      315.6
+    ],
+    "choicesBbox": [
+      296.9,
+      253.0,
+      657.8,
+      315.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q31_row.png",
+      "stem": "cells/q31_stem.png",
+      "choices": "cells/q31_choices.png"
+    },
+    "stemText": "Dで示す部分の最少電線本数(心線数)は。\nただレ，\n電源からの接地側電線は,スイッチ\nを経由しないで照明器具に配線する。",
+    "choicesText": "イ：3\nニ6\nロ.4\nハ５"
+  },
+  {
+    "number": 32,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      315.6,
+      657.8,
+      378.5
+    ],
+    "stemBbox": [
+      83.3,
+      315.6,
+      296.9,
+      378.5
+    ],
+    "choicesBbox": [
+      296.9,
+      315.6,
+      657.8,
+      378.5
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q32_row.png",
+      "stem": "cells/q32_stem.png",
+      "choices": "cells/q32_choices.png"
+    },
+    "stemText": "2で示す引込口開閉器が省略できる場合の;\n工場と倉庫との間の電路の長さの最大値〔ｍ汀\nは",
+    "choicesText": "イ.5\nニ：20\nロ.10\nハ.15"
+  },
+  {
+    "number": 33,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      378.5,
+      657.8,
+      456.2
+    ],
+    "stemBbox": [
+      83.3,
+      378.5,
+      296.9,
+      456.2
+    ],
+    "choicesBbox": [
+      296.9,
+      378.5,
+      657.8,
+      456.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q33_row.png",
+      "stem": "cells/q33_stem.png",
+      "choices": "cells/q33_choices.png"
+    },
+    "stemText": "で示す部分に使用できる電線は。",
+    "choicesText": "イ・引込用ビニル絶縁電線\nロ・架橋ポリエチレン絶縁ビニルシースケーブル\nハ・ゴム絶縁丸打コード\nニ屋外用ビニル絶縁電線"
+  },
+  {
+    "number": 34,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      456.2,
+      657.8,
+      535.0
+    ],
+    "stemBbox": [
+      83.3,
+      456.2,
+      296.9,
+      535.0
+    ],
+    "choicesBbox": [
+      296.9,
+      456.2,
+      657.8,
+      535.0
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q34_row.png",
+      "stem": "cells/q34_stem.png",
+      "choices": "cells/q34_choices.png"
+    },
+    "stemText": "で示す図記号の名称は。\n4",
+    "choicesText": "イ・ブザー\nロ・パイロットランプ\nハ電磁開閉器用押しボタン\nニ握り押しボタン"
+  },
+  {
+    "number": 35,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      535.0,
+      657.8,
+      628.6
+    ],
+    "stemBbox": [
+      83.3,
+      535.0,
+      296.9,
+      628.6
+    ],
+    "choicesBbox": [
+      296.9,
+      535.0,
+      657.8,
+      628.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q35_row.png",
+      "stem": "cells/q35_stem.png",
+      "choices": "cells/q35_choices.png"
+    },
+    "stemText": "5で示す引込線取付点の地表上の高さの最低\n値[ｍ]は.\nただし，引込線は道路を横断せず，技術上\nやむを得ない場合で交通に支障がないものと\nする。",
+    "choicesText": "イ.2.5\nロ.3.0\nハ.3.5\nニ・40"
+  },
+  {
+    "number": 36,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      628.6,
+      657.8,
+      675.6
+    ],
+    "stemBbox": [
+      83.3,
+      628.6,
+      296.9,
+      675.6
+    ],
+    "choicesBbox": [
+      296.9,
+      628.6,
+      657.8,
+      675.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q36_row.png",
+      "stem": "cells/q36_stem.png",
+      "choices": "cells/q36_choices.png"
+    },
+    "stemText": "6で示す図記号の名称は。",
+    "choicesText": "漏電遮断器 (過負荷保護付)\n漏電警報器\nイ.\nロ.\nモータブレーカ\n配線用遮断器\nハ."
+  },
+  {
+    "number": 37,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      675.6,
+      657.8,
+      753.8
+    ],
+    "stemBbox": [
+      83.3,
+      675.6,
+      296.9,
+      753.8
+    ],
+    "choicesBbox": [
+      296.9,
+      675.6,
+      657.8,
+      753.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q37_row.png",
+      "stem": "cells/q37_stem.png",
+      "choices": "cells/q37_choices.png"
+    },
+    "stemText": "つで示す部分に施設してはならない過電流\n遮断装置は。",
+    "choicesText": "イ・２極にヒューズを取り付けたカバー付ナイフスイッチ\n口．２極２素子の配線用遮断器\nハー２極にヒューズを取り付けたカットアウトスイッチ\n二・２極１素子の配線用遮断器"
+  },
+  {
+    "number": 38,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      753.8,
+      657.8,
+      816.7
+    ],
+    "stemBbox": [
+      83.3,
+      753.8,
+      296.9,
+      816.7
+    ],
+    "choicesBbox": [
+      296.9,
+      753.8,
+      657.8,
+      816.7
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q38_row.png",
+      "stem": "cells/q38_stem.png",
+      "choices": "cells/q38_choices.png"
+    },
+    "stemText": "で示す部分の接地工事の接地抵抗の最大値\nと，電線（軟銅線）の最小太さとの組合せで,\n適切なものは。",
+    "choicesText": "イ.300ｏ\n.500©\n'. 300ø\n-.600©\n16 mm\n2.0 mm\n2.0 mm\n1.6 mm"
+  },
+  {
+    "number": 39,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      816.7,
+      657.8,
+      863.3
+    ],
+    "stemBbox": [
+      83.3,
+      816.7,
+      296.9,
+      863.3
+    ],
+    "choicesBbox": [
+      296.9,
+      816.7,
+      657.8,
+      863.3
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q39_row.png",
+      "stem": "cells/q39_stem.png",
+      "choices": "cells/q39_choices.png"
+    },
+    "stemText": "9で示す部分の電路と大地間の絶縁抵抗として,\n許容される最小値[Mç』\nは",
+    "choicesText": "イ.01\nD.0.2\nハ.04\n-.1.0"
+  },
+  {
+    "number": 40,
+    "page": 11,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      60.5,
+      863.3,
+      657.8,
+      933.6
+    ],
+    "stemBbox": [
+      83.3,
+      863.3,
+      296.9,
+      933.6
+    ],
+    "choicesBbox": [
+      296.9,
+      863.3,
+      657.8,
+      933.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q40_row.png",
+      "stem": "cells/q40_stem.png",
+      "choices": "cells/q40_choices.png"
+    },
+    "stemText": "Ｕøで示すコンセントの極配置（刃受）で;\n正しいものは。",
+    "choicesText": "イ.\nロ.\nハ.\n-\n『\n-\n_-"
+  },
+  {
+    "number": 41,
+    "page": 12,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      61.4,
+      81.1,
+      654.0,
+      258.2
+    ],
+    "stemBbox": [
+      84.0,
+      81.1,
+      212.6,
+      258.2
+    ],
+    "choicesBbox": [
+      212.6,
+      81.1,
+      654.0,
+      258.2
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q41_row.png",
+      "stem": "cells/q41_stem.png",
+      "choices": "cells/q41_choices.png"
+    },
+    "stemText": "0でホすジョイントボックス\n内の接続をすべて圧着接続\nとする場合，使用するリング\nスリーブの種類と必要最少\n個数の組合せで，適切なも\nのは。",
+    "choicesText": "------------------------------------\n------------------------------------\n------------------------------------\nロ\n--\n--\n中\n2個\n1個\n-\n中\n大\n3個\n3個\n水;\n大\n1個\n2個"
+  },
+  {
+    "number": 42,
+    "page": 12,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      61.4,
+      258.2,
+      654.0,
+      435.6
+    ],
+    "stemBbox": [
+      84.0,
+      258.2,
+      212.6,
+      435.6
+    ],
+    "choicesBbox": [
+      212.6,
+      258.2,
+      654.0,
+      435.6
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q42_row.png",
+      "stem": "cells/q42_stem.png",
+      "choices": "cells/q42_choices.png"
+    },
+    "stemText": "12で示すジョイントボックス\n内の接続をすべて差込形\nコネクタとする場合,使用す\nる差込形コネクタの種類と\n最少個数の組合せで，適切\nなものは。\nただし，使用する電線は\nすべて WVF1.６ とする。",
+    "choicesText": "------------------------------------\n------------------------------m-----\n-----------------------------------4\n口\n2個\n2個\n3個\n3個\n1個\n2個\n1個\n1個"
+  },
+  {
+    "number": 43,
+    "page": 12,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      61.4,
+      435.6,
+      654.0,
+      577.4
+    ],
+    "stemBbox": [
+      84.0,
+      435.6,
+      212.6,
+      577.4
+    ],
+    "choicesBbox": [
+      212.6,
+      435.6,
+      654.0,
+      577.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q43_row.png",
+      "stem": "cells/q43_stem.png",
+      "choices": "cells/q43_choices.png"
+    },
+    "stemText": "13で示す部分の配線工事に\n必要なケーブルは。\nただし,使用するケーブル\nの心線数は最少とする。",
+    "choicesText": "``.\n-"
+  },
+  {
+    "number": 44,
+    "page": 12,
+    "numberGuessed": true,
+    "previousMerged": false,
+    "rowBbox": [
+      61.4,
+      577.4,
+      654.0,
+      790.1
+    ],
+    "stemBbox": [
+      84.0,
+      577.4,
+      212.6,
+      790.1
+    ],
+    "choicesBbox": [
+      212.6,
+      577.4,
+      654.0,
+      790.1
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q44_row.png",
+      "stem": "cells/q44_stem.png",
+      "choices": "cells/q44_choices.png"
+    },
+    "stemText": "4で示す部分の接続工事を\nリングスリーブで圧着接続\nした場合のリングスリーブ\nの種類,　個数及び刻印との\n組合せで，正しいものは。\nただし，使用する電線は\nすべて1Ｖ1.6とし,写真に\n示すリングスリーブ中央\nのō，小，中は接続後の\n刻印を表す。",
+    "choicesText": "--------------------------------------------\n--------------------------------------------\n--------------------------------------------\n中1個\n小３個\n小３個\n小３個\n小２個"
+  },
+  {
+    "number": 45,
+    "page": 12,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      61.4,
+      790.1,
+      654.0,
+      949.4
+    ],
+    "stemBbox": [
+      84.0,
+      790.1,
+      212.6,
+      949.4
+    ],
+    "choicesBbox": [
+      212.6,
+      790.1,
+      654.0,
+      949.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q45_row.png",
+      "stem": "cells/q45_stem.png",
+      "choices": "cells/q45_choices.png"
+    },
+    "stemText": "15で示す部分の工事におい\nて，使用されるニとのない\nものは。",
+    "choicesText": "イ.\nロ.\n_"
+  },
+  {
+    "number": 46,
+    "page": 13,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      59.8,
+      76.3,
+      653.3,
+      247.4
+    ],
+    "stemBbox": [
+      82.6,
+      76.3,
+      211.0,
+      247.4
+    ],
+    "choicesBbox": [
+      211.0,
+      76.3,
+      653.3,
+      247.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q46_row.png",
+      "stem": "cells/q46_stem.png",
+      "choices": "cells/q46_choices.png"
+    },
+    "stemText": "ßで示す部分の配線を器具\nの裏面から見たものであ\nる。正しいものは。\nただし,電線の色別は、白色\nは電源からの接地側電線,\n黒色は電源からの非接地側\n電線，赤色は負荷に結線す\nる電線とする。",
+    "choicesText": ""
+  },
+  {
+    "number": 47,
+    "page": 13,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      59.8,
+      247.4,
+      653.3,
+      401.8
+    ],
+    "stemBbox": [
+      82.6,
+      247.4,
+      211.0,
+      401.8
+    ],
+    "choicesBbox": [
+      211.0,
+      247.4,
+      653.3,
+      401.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q47_row.png",
+      "stem": "cells/q47_stem.png",
+      "choices": "cells/q47_choices.png"
+    },
+    "stemText": "©で示す部分の地中配線の\n工事において、使用する物\nとして，不適切なものは。",
+    "choicesText": "口\n危険注意\nこの下に低庄電カケープルあり"
+  },
+  {
+    "number": 48,
+    "page": 13,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      59.8,
+      401.8,
+      653.3,
+      573.4
+    ],
+    "stemBbox": [
+      82.6,
+      401.8,
+      211.0,
+      573.4
+    ],
+    "choicesBbox": [
+      211.0,
+      401.8,
+      653.3,
+      573.4
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q48_row.png",
+      "stem": "cells/q48_stem.png",
+      "choices": "cells/q48_choices.png"
+    },
+    "stemText": "18で示すジョイントボックス\n内の電線相互の接続作業に\n用いるものとして，不適切\nなものは。",
+    "choicesText": "ロ."
+  },
+  {
+    "number": 49,
+    "page": 13,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      59.8,
+      573.4,
+      653.3,
+      761.8
+    ],
+    "stemBbox": [
+      82.6,
+      573.4,
+      211.0,
+      761.8
+    ],
+    "choicesBbox": [
+      211.0,
+      573.4,
+      653.3,
+      761.8
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q49_row.png",
+      "stem": "cells/q49_stem.png",
+      "choices": "cells/q49_choices.png"
+    },
+    "stemText": "１9で示す図記号の器具は。",
+    "choicesText": "ロ.\n0Fド\nロF\n30円\n30A\nC.HKNS."
+  },
+  {
+    "number": 50,
+    "page": 13,
+    "numberGuessed": false,
+    "previousMerged": false,
+    "rowBbox": [
+      59.8,
+      761.8,
+      653.3,
+      949.9
+    ],
+    "stemBbox": [
+      82.6,
+      761.8,
+      211.0,
+      949.9
+    ],
+    "choicesBbox": [
+      211.0,
+      761.8,
+      653.3,
+      949.9
+    ],
+    "textSource": "ocr",
+    "images": {
+      "row": "cells/q50_row.png",
+      "stem": "cells/q50_stem.png",
+      "choices": "cells/q50_choices.png"
+    },
+    "stemText": "この配線図で，使用されて\nいるコンセントとその個数\nの組合せで,正しいものは。",
+    "choicesText": "1個\n1個\n2個\n1個"
+  }
+]

@@ -328,7 +328,9 @@ def extract_exam(qpdf, apdf, exam_id, meta, dpi=200, page_dpi=150):
                 if fb is not None:
                     fn = f"cells/{tag}_figure.png"
                     page.get_pixmap(dpi=dpi, clip=fb).save(os.path.join(out, fn))
-                    q["figure"] = {"file": fn, "bbox": [round(v, 1) for v in fb]}
+                    q["figure"] = {"file": fn, "bbox": [round(v, 1) for v in fb],
+                                   # bbox が問い欄の高さの 55% 超 → 本文のアンダーラインや空欄枠を拾っている疑い。要目視
+                                   "suspicious": (fb.height > stem_rect.height * 0.55)}
             else:
                 q["stemText"] = ocr_text(page.get_pixmap(dpi=300, clip=stem_rect))
                 q["choicesText"] = ocr_text(page.get_pixmap(dpi=300, clip=ch_rect))

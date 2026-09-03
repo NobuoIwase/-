@@ -30,6 +30,252 @@
       "name": "消費電力の計算",
       "category": 1,
       "summary": "P = VI = V²/R = I²R"
+    },
+    {
+      "id": "g1-gousei-teikou",
+      "name": "合成抵抗の計算",
+      "category": 1,
+      "summary": "直列・並列・短絡された抵抗の扱い"
+    },
+    {
+      "id": "g1-denki-teikou-teikouritsu",
+      "name": "電線の電気抵抗と抵抗率",
+      "category": 1,
+      "summary": "R = ρL/A、温度特性、金属ごとの抵抗率"
+    },
+    {
+      "id": "g1-netsuryou-denryokuryou",
+      "name": "電力量と発熱量",
+      "category": 1,
+      "summary": "H = Pt、1 W·h = 3.6 kJ の換算"
+    },
+    {
+      "id": "g1-rikiritsu-kaizen",
+      "name": "力率と力率改善",
+      "category": 1,
+      "summary": "進相コンデンサによる電流・損失の変化"
+    },
+    {
+      "id": "g1-sanso-y-dansen",
+      "name": "三相Y結線と1相断線",
+      "category": 1,
+      "summary": "相電圧と線間電圧、断線後の分圧"
+    },
+    {
+      "id": "g2-denatsu-kouka",
+      "name": "配線の電圧降下",
+      "category": 2,
+      "summary": "v = 2rI（単相2線式）など配電方式ごとの係数"
+    },
+    {
+      "id": "g2-tanso3sen-denatsu",
+      "name": "単相3線式回路の電圧",
+      "category": 2,
+      "summary": "平衡・不平衡と中性線電流"
+    },
+    {
+      "id": "g2-kyoyou-denryu-gensyou",
+      "name": "電線の許容電流と電流減少係数",
+      "category": 2,
+      "summary": "太さごとの許容電流と管内本数による減少係数"
+    },
+    {
+      "id": "g2-kansen-futosa",
+      "name": "低圧幹線の太さを決める電流",
+      "category": 2,
+      "summary": "IM と IH の大小による 1.25 倍・1.1 倍の使い分け"
+    },
+    {
+      "id": "g2-bunki-kairo",
+      "name": "分岐回路の遮断器・電線・コンセント",
+      "category": 2,
+      "summary": "定格電流ごとの電線の太さとコンセントの定格"
+    },
+    {
+      "id": "g2-cord-kyoyou-denryu",
+      "name": "コードの許容電流と使用できる器具",
+      "category": 2,
+      "summary": "0.75/1.25/2 mm² の許容電流と消費電力の換算"
+    },
+    {
+      "id": "g3-gouseijushikan-fuzokuhin",
+      "name": "合成樹脂管工事の付属品",
+      "category": 3,
+      "summary": "TSカップリング・コネクタ・ブッシングなどの用途"
+    },
+    {
+      "id": "g3-sagyou-to-kougu",
+      "name": "作業と工具の組合せ",
+      "category": 3,
+      "summary": "対象材料ごとの工具の使い分け"
+    },
+    {
+      "id": "g3-yudo-dendouki",
+      "name": "三相誘導電動機の特性",
+      "category": 3,
+      "summary": "同期速度 Ns = 120f/p、すべり、始動電流、逆回転"
+    },
+    {
+      "id": "g3-shinso-condenser",
+      "name": "低圧進相コンデンサの目的",
+      "category": 3,
+      "summary": "力率改善のための並列接続"
+    },
+    {
+      "id": "g3-zairyou-shashin",
+      "name": "材料の写真判別",
+      "category": 3,
+      "summary": "線ぴ・ダクト・ボックス類などの識別と用途"
+    },
+    {
+      "id": "g3-kougu-shashin",
+      "name": "工具の写真判別",
+      "category": 3,
+      "summary": "曲げ・切断・穴あけ工具の識別と用途"
+    },
+    {
+      "id": "g4-zetsuen-shori",
+      "name": "接続部分の絶縁処理",
+      "category": 4,
+      "summary": "テープの種類ごとの巻き回数と保護テープの要否"
+    },
+    {
+      "id": "g4-shijiten-kankaku",
+      "name": "支持点間の距離",
+      "category": 4,
+      "summary": "ケーブル・管・線ぴ・ダクトごとの支持間隔"
+    },
+    {
+      "id": "g4-setti-kouji",
+      "name": "接地工事の種類・省略条件",
+      "category": 4,
+      "summary": "D種接地の抵抗値・接地線と省略できる場合"
+    },
+    {
+      "id": "g4-kinzokukan-kouji",
+      "name": "金属管工事の施工方法",
+      "category": 4,
+      "summary": "収容率32 %、屈曲箇所、カップリングの使い分け"
+    },
+    {
+      "id": "g5-setti-teikou-sokutei",
+      "name": "接地抵抗の測定",
+      "category": 5,
+      "summary": "3極法の手順と補助接地極の配置"
+    },
+    {
+      "id": "g5-more-denryu-sokutei",
+      "name": "漏れ電流の測定",
+      "category": 5,
+      "summary": "クランプ形漏れ電流計で挟む電線の選び方"
+    },
+    {
+      "id": "g6-shousei-ryoku-kairo",
+      "name": "小勢力回路",
+      "category": 6,
+      "summary": "最大使用電圧60 V以下と電流・遮断器の区分"
+    },
+    {
+      "id": "g6-densen-honsu",
+      "name": "電線の最少本数",
+      "category": 6,
+      "summary": "スイッチの種類ごとに必要な心線数を数える"
+    },
+    {
+      "id": "g6-tenmetsuki-shurui",
+      "name": "点滅器の種類と図記号",
+      "category": 6,
+      "summary": "H・L・3・4・調光器などの識別"
+    },
+    {
+      "id": "g6-zumen-kigou-consent",
+      "name": "コンセントの図記号と傍記",
+      "category": 6,
+      "summary": "E・ET・EL・LK・WP などの読み取り"
+    },
+    {
+      "id": "g6-zumen-kigou-shoumei",
+      "name": "照明器具の図記号",
+      "category": 6,
+      "summary": "CL・CH・DL・ペンダント・引掛シーリング"
+    },
+    {
+      "id": "g6-boki-hyouji",
+      "name": "図記号の傍記表示",
+      "category": 6,
+      "summary": "ルームエアコンのI/O、抜け止め形LKなど"
+    },
+    {
+      "id": "g6-kyokuhaichi",
+      "name": "コンセントの極配置",
+      "category": 6,
+      "summary": "125 V/250 V、接地極付、20 A兼用形の刃受"
+    },
+    {
+      "id": "g6-zetsuen-teikou-zumen",
+      "name": "配線図での絶縁抵抗の最小値",
+      "category": 6,
+      "summary": "対地電圧から基準値0.1/0.2/0.4 MΩを判断"
+    },
+    {
+      "id": "g6-ringslv",
+      "name": "リングスリーブの種類・個数・刻印",
+      "category": 6,
+      "summary": "接続本数からスリーブの大きさと刻印を決める"
+    },
+    {
+      "id": "g6-cable-shurui",
+      "name": "必要なケーブルの心線数",
+      "category": 6,
+      "summary": "ボックス間を通る電線を数えてケーブルを選ぶ"
+    },
+    {
+      "id": "g6-bunden-ban-kiki",
+      "name": "分電盤に取り付ける機器",
+      "category": 6,
+      "summary": "B・E・BE・Wh の図記号と機器の写真"
+    },
+    {
+      "id": "g6-sokuteiki-shashin",
+      "name": "配線図での測定器の選定",
+      "category": 6,
+      "summary": "測定対象に応じた計器の写真判別"
+    },
+    {
+      "id": "g6-shoumei-kigu-shashin",
+      "name": "照明器具の写真判別",
+      "category": 6,
+      "summary": "図記号に対応する照明器具の写真"
+    },
+    {
+      "id": "g6-box-shashin",
+      "name": "ボックス類の写真判別",
+      "category": 6,
+      "summary": "ジョイントボックスとアウトレットボックスの区別"
+    },
+    {
+      "id": "g6-sashikomi-connector",
+      "name": "差込形コネクタの種類と個数",
+      "category": 6,
+      "summary": "接続本数と同じ極数のコネクタを選ぶ"
+    },
+    {
+      "id": "g6-shiyou-sarete-inai-switch",
+      "name": "配線図で使用されていない器具",
+      "category": 6,
+      "summary": "接点構成図と傍記から使用の有無を判断"
+    },
+    {
+      "id": "g7-denkiyouhin-anzenhou",
+      "name": "電気用品安全法（特定電気用品）",
+      "category": 7,
+      "summary": "特定電気用品とそれ以外の区分・PSEマーク"
+    },
+    {
+      "id": "g7-denki-setsubi-gijutsu-kijun",
+      "name": "電気設備技術基準と法令の体系",
+      "category": 7,
+      "summary": "根拠法・電圧の種別・絶縁性能の規定"
     }
   ]
 }

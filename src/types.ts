@@ -84,6 +84,8 @@ export interface GroupDef {
   category: CategoryId
   /** 一言で言うとどんな知識か */
   summary?: string
+  /** 分野をまたいで同じ知識を問うグループ（表示・復習導線用。出題制御には未使用） */
+  relatedGroups?: string[]
 }
 
 export interface GroupsFile {
