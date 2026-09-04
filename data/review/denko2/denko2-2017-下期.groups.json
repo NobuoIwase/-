@@ -1,0 +1,12 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g6-shinso-condenser-zumen",
+      "name": "配線図での進相コンデンサ",
+      "category": 6,
+      "summary": "電動機に並列に付けたコンデンサの図記号（四角の中に平行2本線）と実物写真の対応、力率改善の目的",
+      "relatedGroups": ["g3-shinso-condenser", "g1-rikiritsu-kaizen"]
+    }
+  ]
+}

@@ -495,6 +495,12 @@
       "summary": "2種金属製可とう電線管の接続材とボックスへの接続、湿気の多い場所での1種管の可否"
     },
     {
+      "id": "g4-kinzokuban-kantsuu",
+      "name": "メタルラス張り・金属板張りの壁の貫通",
+      "category": 4,
+      "summary": "木造造営物の金属板張り（金属系サイディング）・メタルラス張りを貫通する部分は、十分に切り開いて合成樹脂管などで電気的に絶縁する"
+    },
+    {
       "id": "g4-kinzokukan-kouji",
       "name": "金属管工事の施工方法",
       "category": 4,
@@ -831,6 +837,12 @@
       "summary": "原則4 m、技術上やむを得ず交通に支障がなければ2.5 m、道路横断は5 m"
     },
     {
+      "id": "g6-hyoujitou-kigou",
+      "name": "表示灯の図記号",
+      "category": 6,
+      "summary": "点滅器と並べて描かれる白丸○＝確認表示灯（パイロットランプ）と，●Hの位置表示灯内蔵スイッチの区別"
+    },
+    {
       "id": "g6-kanro-setsuzoku-zairyou",
       "name": "電線管の接続材料",
       "category": 6,
@@ -973,6 +985,12 @@
         "g4-setti-kouji",
         "g5-setti-zetsuen-kumiawase"
       ]
+    },
+    {
+      "id": "g6-shinso-condenser-zumen",
+      "name": "配線図での進相コンデンサ",
+      "category": 6,
+      "summary": "電動機に並列に付けたコンデンサの図記号（四角の中に平行2本線）と実物写真の対応、力率改善の目的"
     },
     {
       "id": "g6-shiyou-consent-zumen",

@@ -1,0 +1,12 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g6-hyoujitou-kigou",
+      "name": "表示灯の図記号",
+      "category": 6,
+      "summary": "点滅器と並べて描かれる白丸○＝確認表示灯（パイロットランプ）と，●Hの位置表示灯内蔵スイッチの区別",
+      "relatedGroups": ["g6-tenmetsuki-shurui"]
+    }
+  ]
+}

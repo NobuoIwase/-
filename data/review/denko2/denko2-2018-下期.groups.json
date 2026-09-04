@@ -1,0 +1,12 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g4-kinzokuban-kantsuu",
+      "name": "メタルラス張り・金属板張りの壁の貫通",
+      "category": 4,
+      "summary": "木造造営物の金属板張り（金属系サイディング）・メタルラス張りを貫通する部分は、十分に切り開いて合成樹脂管などで電気的に絶縁する",
+      "relatedGroups": ["g4-mokuzo-haisen-kouji"]
+    }
+  ]
+}
