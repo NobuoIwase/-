@@ -1,0 +1,12 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g6-denkyusen-cord",
+      "name": "配線図での電球線・コードの選定",
+      "category": 6,
+      "summary": "ペンダントなどにコード吊りで電球を取り付けるときのコードの種類と最小断面積（0.75 mm²以上、ビニルコードは熱を利用する器具に不可）",
+      "relatedGroups": ["g3-idou-densen-cord"]
+    }
+  ]
+}
