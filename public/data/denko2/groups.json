@@ -2,28 +2,22 @@
   "subject": "denko2",
   "groups": [
     {
-      "id": "g4-mokuzo-haisen-kouji",
-      "name": "木造住宅の配線工事の適否",
-      "category": 4,
-      "summary": "CD管/PF管、金属管、VE管などの施設場所と支持間隔"
+      "id": "g1-gousei-teikou",
+      "name": "合成抵抗の計算",
+      "category": 1,
+      "summary": "直列・並列・短絡された抵抗の扱いと、合成抵抗から I = V/R で全電流を求める型"
     },
     {
-      "id": "g5-sokuteiki-youto",
-      "name": "測定器と用途の組合せ",
-      "category": 5,
-      "summary": "テスタ・検相器・電力計・クランプ計などの用途"
+      "id": "g1-chokuryu-bubun-denatsu",
+      "name": "直流回路の各部の電圧",
+      "category": 1,
+      "summary": "直並列回路の分圧、スイッチ開閉による短絡、電流計の読みからの電圧計の指示値"
     },
     {
-      "id": "g5-zetsuen-teikou-kijun",
-      "name": "絶縁抵抗の基準値",
-      "category": 5,
-      "summary": "対地電圧区分ごとの絶縁抵抗基準（0.1/0.2/0.4 MΩ）"
-    },
-    {
-      "id": "g7-denkikoujishi-sagyou-hani",
-      "name": "電気工事士でなければできない作業・軽微な工事",
-      "category": 7,
-      "summary": "電気工事士法の作業範囲と軽微な工事"
+      "id": "g1-nidengen-kairo-denatsu",
+      "name": "2電源直流回路のa－b間の電圧",
+      "category": 1,
+      "summary": "電源2つと抵抗2つの回路で、それぞれの分圧点の電位差を求める"
     },
     {
       "id": "g1-shouhi-denryoku",
@@ -32,16 +26,22 @@
       "summary": "P = VI = V²/R = I²R"
     },
     {
-      "id": "g1-gousei-teikou",
-      "name": "合成抵抗の計算",
-      "category": 1,
-      "summary": "直列・並列・短絡された抵抗の扱い"
-    },
-    {
       "id": "g1-denki-teikou-teikouritsu",
       "name": "電線の電気抵抗と抵抗率",
       "category": 1,
       "summary": "R = ρL/A、温度特性、金属ごとの抵抗率"
+    },
+    {
+      "id": "g1-teikou-koushiki",
+      "name": "導線の電気抵抗を表す式",
+      "category": 1,
+      "summary": "R = ρL/A に A = πD²/4 を代入した式の選択と mm・m の単位換算"
+    },
+    {
+      "id": "g1-densen-teikou-hikaku",
+      "name": "電線の抵抗の比較",
+      "category": 1,
+      "summary": "R ∝ L/D² で2本の抵抗が何倍かを求める型と、抵抗が等しい電線を選ぶ型"
     },
     {
       "id": "g1-netsuryou-denryokuryou",
@@ -50,28 +50,127 @@
       "summary": "H = Pt、1 W·h = 3.6 kJ の換算"
     },
     {
-      "id": "g1-rikiritsu-kaizen",
-      "name": "力率と力率改善",
+      "id": "g1-sesshoku-teikou-hatsunetsu",
+      "name": "接触抵抗による発熱量",
       "category": 1,
-      "summary": "進相コンデンサによる電流・損失の変化"
+      "summary": "接続不良の接触抵抗による H = I²Rt〔kJ〕。電圧降下が与えられれば H = VIt"
+    },
+    {
+      "id": "g1-mizu-kanetsu-denryokuryou",
+      "name": "水の加熱に必要な電力量",
+      "category": 1,
+      "summary": "比熱4.2 kJ/(kg·K) で Q = mcΔT を求め、÷3 600 で kW·h に換算する"
+    },
+    {
+      "id": "g1-rl-chokuretsu-denatsu",
+      "name": "RL直列回路のインピーダンスと各部の電圧",
+      "category": 1,
+      "summary": "Z = √(R²+X²) から電流を出し、抵抗の両端の電圧 V = IR を求める"
+    },
+    {
+      "id": "g1-rikiritsu-keisan",
+      "name": "交流回路の力率の計算",
+      "category": 1,
+      "summary": "直列は cosθ = V_R/V、並列は cosθ = I_R/I。R と X から力率の式を選ぶ型も同じ"
+    },
+    {
+      "id": "g1-rikiritsu-kaizen",
+      "name": "力率改善（進相コンデンサ）",
+      "category": 1,
+      "summary": "コンデンサを並列に入れて力率100 %にしたときの電流計の指示値",
+      "relatedGroups": [
+        "g3-shinso-condenser"
+      ]
+    },
+    {
+      "id": "g1-koiru-riakutansu",
+      "name": "コイルのリアクタンスと周波数",
+      "category": 1,
+      "summary": "X_L = 2πfL。周波数を変えると電流は周波数に反比例して変化する"
+    },
+    {
+      "id": "g1-kouryu-isou-hakei",
+      "name": "交流の位相と電流波形",
+      "category": 1,
+      "summary": "コンデンサは電流が電圧より90°進み、コイルは90°遅れる"
+    },
+    {
+      "id": "g1-kouryu-shouhi-denryoku",
+      "name": "交流回路の消費電力",
+      "category": 1,
+      "summary": "電力を消費するのは抵抗だけ。P = V·I_R、P = I²R、P = VIcosθ"
+    },
+    {
+      "id": "g1-sanso-sen-denryu",
+      "name": "三相3線式回路の線電流",
+      "category": 1,
+      "summary": "Y結線とΔ結線での相電圧・線間電圧、相電流・線電流の √3 の使い分け"
+    },
+    {
+      "id": "g1-sanso-senkan-denatsu",
+      "name": "三相回路の線間電圧",
+      "category": 1,
+      "summary": "1相の相電圧 V = IR を求め、Y結線なら √3 倍して線間電圧を出す"
+    },
+    {
+      "id": "g1-sanso-zen-shouhi-denryoku",
+      "name": "三相回路の全消費電力",
+      "category": 1,
+      "summary": "1相分を3倍する P = 3I²R（リアクタンスは消費しない）と P = √3VIcosθ の変形"
     },
     {
       "id": "g1-sanso-y-dansen",
       "name": "三相Y結線と1相断線",
       "category": 1,
-      "summary": "相電圧と線間電圧、断線後の分圧"
+      "summary": "相電圧と線間電圧、断線後の分圧と流れる電流"
     },
     {
       "id": "g2-denatsu-kouka",
       "name": "配線の電圧降下",
       "category": 2,
-      "summary": "v = 2rI（単相2線式）など配電方式ごとの係数"
+      "summary": "v = 2rI（単相2線式）。1 000 m当たりの抵抗の換算と、太さを逆算する型も同じ"
+    },
+    {
+      "id": "g2-tanso2sen-kukan-denatsu",
+      "name": "単相2線式・区間ごとの電圧降下",
+      "category": 2,
+      "summary": "負荷が数か所ある線路で、区間ごとに流れる電流が違うので 2rI を順に足し引きする"
+    },
+    {
+      "id": "g2-haiden-houshiki-keisu",
+      "name": "配電方式ごとの電圧降下・電力損失の式",
+      "category": 2,
+      "summary": "1φ2W は 2rI・2I²r、平衡した1φ3W は rI・2I²r、3φ3W は √3rI・3I²r。方式変更による損失比も同じ"
     },
     {
       "id": "g2-tanso3sen-denatsu",
       "name": "単相3線式回路の電圧",
       "category": 2,
-      "summary": "平衡・不平衡と中性線電流"
+      "summary": "平衡・不平衡と中性線電流",
+      "relatedGroups": [
+        "g5-tanso3sen-denatsu-sokutei"
+      ]
+    },
+    {
+      "id": "g2-tanso3sen-chuseisen-dansen",
+      "name": "単相3線式の中性線断線",
+      "category": 2,
+      "summary": "断線すると2つの負荷が200 Vに直列接続され、抵抗比に分圧される",
+      "relatedGroups": [
+        "g5-chuuseisen-dansen"
+      ]
+    },
+    {
+      "id": "g2-tanso3sen-denryoku-sonshitsu",
+      "name": "単相3線式配線の電力損失",
+      "category": 2,
+      "summary": "平衡なら中性線に電流が流れず、損失は外側2線ぶんの 2I²r"
+    },
+    {
+      "id": "g2-sanso3sen-denryoku-sonshitsu",
+      "name": "三相3線式配線の電力損失と電圧降下",
+      "category": 2,
+      "summary": "3線とも同じ線電流が流れるので損失は 3I²r、電圧降下は √3rI"
     },
     {
       "id": "g2-kyoyou-denryu-gensyou",
@@ -86,28 +185,69 @@
       "summary": "IM と IH の大小による 1.25 倍・1.1 倍の使い分け"
     },
     {
+      "id": "g2-kansen-kadenryu-shadanki",
+      "name": "幹線の過電流遮断器の定格電流",
+      "category": 2,
+      "summary": "IB は 3IM＋IH と 2.5IW の小さい方。幹線の太さを決める IW との組合せで問われる"
+    },
+    {
+      "id": "g2-bunki-kansen-kyoyou-denryu",
+      "name": "分岐幹線の許容電流と長さの制限",
+      "category": 2,
+      "summary": "分岐点から3 m超8 m以下は遮断器定格の35 %以上、8 m超は55 %以上。長さの最大値を問う型も同じ表"
+    },
+    {
       "id": "g2-bunki-kairo",
       "name": "分岐回路の遮断器・電線・コンセント",
       "category": 2,
-      "summary": "定格電流ごとの電線の太さとコンセントの定格"
+      "summary": "定格電流ごとの電線の太さとコンセントの定格",
+      "relatedGroups": [
+        "g6-bunki-kairo-teikaku",
+        "g6-kyokuhaichi"
+      ]
     },
     {
       "id": "g2-cord-kyoyou-denryu",
       "name": "コードの許容電流と使用できる器具",
       "category": 2,
-      "summary": "0.75/1.25/2 mm² の許容電流と消費電力の換算"
+      "summary": "0.75/1.25/2 mm² の許容電流と消費電力の換算",
+      "relatedGroups": [
+        "g3-idou-densen-cord"
+      ]
     },
     {
-      "id": "g3-gouseijushikan-fuzokuhin",
-      "name": "合成樹脂管工事の付属品",
+      "id": "g3-zetsuen-saikou-kyoyou-ondo",
+      "name": "絶縁物の最高許容温度",
       "category": 3,
-      "summary": "TSカップリング・コネクタ・ブッシングなどの用途"
+      "summary": "IV 60 ℃、HIV・CV・EM-EEF 75 ℃など。耐熱性が最も優れたものを選ぶ型も同じ"
     },
     {
-      "id": "g3-sagyou-to-kougu",
-      "name": "作業と工具の組合せ",
+      "id": "g3-cable-shurui-shashin",
+      "name": "ケーブルの種類の識別と特徴",
       "category": 3,
-      "summary": "対象材料ごとの工具の使い分け"
+      "summary": "EM-EEF・VVF・CV・MIケーブルの表面表示と写真、エコケーブルの特徴",
+      "relatedGroups": [
+        "g6-densen-cable-meishou"
+      ]
+    },
+    {
+      "id": "g3-densen-shurui-youto",
+      "name": "電線の種類と使用できる場所",
+      "category": 3,
+      "summary": "OW・DV・IV・CVの用途の違い。地中の直接埋設に使えるのはケーブルだけ",
+      "relatedGroups": [
+        "g6-densen-cable-meishou",
+        "g6-chichu-densenro"
+      ]
+    },
+    {
+      "id": "g3-idou-densen-cord",
+      "name": "移動電線に使えるコードの種類",
+      "category": 3,
+      "summary": "300 V以下の屋内で、ビニルコードは発熱しない器具にしか使えない",
+      "relatedGroups": [
+        "g2-cord-kyoyou-denryu"
+      ]
     },
     {
       "id": "g3-yudo-dendouki",
@@ -116,22 +256,177 @@
       "summary": "同期速度 Ns = 120f/p、すべり、始動電流、逆回転"
     },
     {
+      "id": "g3-star-delta-shidou",
+      "name": "スターデルタ始動の特徴",
+      "category": 3,
+      "summary": "全電圧始動に比べ始動電流・始動トルクが1/3、巻線に加わる電圧は1/√3"
+    },
+    {
       "id": "g3-shinso-condenser",
       "name": "低圧進相コンデンサの目的",
       "category": 3,
-      "summary": "力率改善のための並列接続"
+      "summary": "力率改善のための並列接続",
+      "relatedGroups": [
+        "g1-rikiritsu-kaizen"
+      ]
     },
     {
-      "id": "g3-zairyou-shashin",
-      "name": "材料の写真判別",
+      "id": "g3-kiki-kumiawase",
+      "name": "組み合わせて使用する機器の組合せ",
       "category": 3,
-      "summary": "線ぴ・ダクト・ボックス類などの識別と用途"
+      "summary": "ネオン変圧器とネオン放電灯、安定器と水銀ランプ、自動点滅器と庭園灯などの適否"
+    },
+    {
+      "id": "g3-taiyoukou-kiki",
+      "name": "太陽光発電設備で使用される機器",
+      "category": 3,
+      "summary": "系統連系型ではパワーコンディショナ（インバータ）を使う",
+      "relatedGroups": [
+        "g7-ippanyou-kousakubutsu-youken"
+      ]
+    },
+    {
+      "id": "g3-led-lamp",
+      "name": "LEDランプの特徴",
+      "category": 3,
+      "summary": "白熱電球より発光効率が高く長寿命、青色LEDと蛍光体で白色を得る"
+    },
+    {
+      "id": "g3-keikoutou-kougen",
+      "name": "蛍光灯と各種光源の特徴",
+      "category": 3,
+      "summary": "点灯管式と高周波点灯専用形の違い、白熱電灯との比較、低圧ナトリウム灯の用途"
+    },
+    {
+      "id": "g3-shadanki-dousa-jikan",
+      "name": "配線用遮断器・ヒューズの動作時間",
+      "category": 3,
+      "summary": "定格の1.25倍で60分以内・2倍で2分以内など、動作時間の限度の数値"
+    },
+    {
+      "id": "g3-rouden-shadanki",
+      "name": "漏電遮断器と零相変流器",
+      "category": 3,
+      "summary": "零相変流器による地絡電流の検出、定格感度電流30 mA・動作時間0.1秒以内",
+      "relatedGroups": [
+        "g6-kigou-shadanki"
+      ]
+    },
+    {
+      "id": "g3-shadanki-shashin",
+      "name": "遮断器類の写真判別",
+      "category": 3,
+      "summary": "銘板の表示から配線用遮断器・漏電遮断器・漏電警報器を見分ける",
+      "relatedGroups": [
+        "g6-bunden-ban-kiki",
+        "g6-kigou-shadanki"
+      ]
+    },
+    {
+      "id": "g3-denji-kaiheiki",
+      "name": "電磁開閉器・熱動継電器の写真判別",
+      "category": 3,
+      "summary": "電磁接触器と熱動継電器（電動機の過負荷保護）の区別",
+      "relatedGroups": [
+        "g6-kigou-dendouki-seigyo"
+      ]
+    },
+    {
+      "id": "g3-anteiki-henryuki-shashin",
+      "name": "安定器・変流器・ネオン変圧器の写真判別",
+      "category": 3,
+      "summary": "「危険 感電注意」表示のある機器の識別と用途（放電の安定・地絡検出・力率改善）"
+    },
+    {
+      "id": "g3-sokuteiki-shashin",
+      "name": "測定器の写真判別",
+      "category": 3,
+      "summary": "検相器・絶縁抵抗計・接地抵抗計・クランプ形電流計・照度計などの名称と用途",
+      "relatedGroups": [
+        "g5-sokuteiki-youto",
+        "g6-sokuteiki-shashin"
+      ]
+    },
+    {
+      "id": "g3-jidou-tenmetsuki-shashin",
+      "name": "点滅器・ソケット類の写真判別",
+      "category": 3,
+      "summary": "光電式自動点滅器・熱線式自動スイッチ・調光器・ランプレセプタクルなどの用途",
+      "relatedGroups": [
+        "g6-tenmetsuki-shurui",
+        "g6-consent-shashin"
+      ]
+    },
+    {
+      "id": "g3-remocon-kigu",
+      "name": "リモコン配線に使う機器の写真判別",
+      "category": 3,
+      "summary": "リモコンリレー・リモコン変圧器・リモコンセレクタスイッチの識別",
+      "relatedGroups": [
+        "g6-kigou-seigyo-kiki"
+      ]
+    },
+    {
+      "id": "g3-sagyou-to-kougu",
+      "name": "作業と工具の組合せ",
+      "category": 3,
+      "summary": "対象材料ごとの工具の使い分け",
+      "relatedGroups": [
+        "g6-kougu-zumen"
+      ]
+    },
+    {
+      "id": "g3-concrete-torituke",
+      "name": "コンクリート壁への取付け材料と工具",
+      "category": 3,
+      "summary": "カールプラグ＋サドルと振動ドリルの組合せ"
     },
     {
       "id": "g3-kougu-shashin",
       "name": "工具の写真判別",
       "category": 3,
-      "summary": "曲げ・切断・穴あけ工具の識別と用途"
+      "summary": "曲げ・切断・穴あけ・面取り・圧着など工具の識別と用途",
+      "relatedGroups": [
+        "g6-kougu-zumen"
+      ]
+    },
+    {
+      "id": "g3-kinzokukan-fuzokuhin",
+      "name": "金属管工事の付属品",
+      "category": 3,
+      "summary": "ノーマルベンド・カップリング・絶縁ブッシング・リングレジューサなどの名称と用途",
+      "relatedGroups": [
+        "g6-kanro-setsuzoku-zairyou"
+      ]
+    },
+    {
+      "id": "g3-gouseijushikan-fuzokuhin",
+      "name": "合成樹脂管工事の付属品",
+      "category": 3,
+      "summary": "TSカップリング・コネクタ・ブッシングなどの用途",
+      "relatedGroups": [
+        "g6-kanro-setsuzoku-zairyou",
+        "g6-denkikan-shurui"
+      ]
+    },
+    {
+      "id": "g3-pullbox-outletbox",
+      "name": "プルボックス・アウトレットボックスの使用目的",
+      "category": 3,
+      "summary": "多数の管が集まる箇所の通線用、電線接続や器具取付用という使い分け",
+      "relatedGroups": [
+        "g6-kigou-box-meishou"
+      ]
+    },
+    {
+      "id": "g3-zairyou-shashin",
+      "name": "材料の写真判別",
+      "category": 3,
+      "summary": "線ぴ・ダクト・ボックス類などの識別と用途",
+      "relatedGroups": [
+        "g6-box-shashin",
+        "g6-shiyou-shinai-zairyou"
+      ]
     },
     {
       "id": "g4-zetsuen-shori",
@@ -140,22 +435,187 @@
       "summary": "テープの種類ごとの巻き回数と保護テープの要否"
     },
     {
-      "id": "g4-shijiten-kankaku",
-      "name": "支持点間の距離",
+      "id": "g4-ring-sleeve-kokuin",
+      "name": "リングスリーブの種類と圧着マーク",
       "category": 4,
-      "summary": "ケーブル・管・線ぴ・ダクトごとの支持間隔"
+      "summary": "電線の太さと本数から小・中・大と刻印（○・小・中・大）を決める",
+      "relatedGroups": [
+        "g6-ringslv"
+      ]
     },
     {
-      "id": "g4-setti-kouji",
-      "name": "接地工事の種類・省略条件",
+      "id": "g4-densen-setsuzoku-kitei",
+      "name": "絶縁電線相互の接続の要件",
       "category": 4,
-      "summary": "D種接地の抵抗値・接地線と省略できる場合"
+      "summary": "電気抵抗を増加させない、引張強さを20 %以上減少させない、絶縁被覆、接続器の使用",
+      "relatedGroups": [
+        "g6-setsuzoku-kougu-zairyou"
+      ]
+    },
+    {
+      "id": "g4-shisetsu-basho-kouji",
+      "name": "施設場所と工事の種類",
+      "category": 4,
+      "summary": "展開／隠ぺい×乾燥／湿気の区分ごとに施設できる工事を判断する",
+      "relatedGroups": [
+        "g6-kouji-houhou-tekihi"
+      ]
+    },
+    {
+      "id": "g4-tokushu-basho-kouji",
+      "name": "特殊場所で施工できる工事",
+      "category": 4,
+      "summary": "爆燃性粉じん・可燃性ガス・危険物などの場所ごとの金属管・ケーブル工事の可否"
     },
     {
       "id": "g4-kinzokukan-kouji",
       "name": "金属管工事の施工方法",
       "category": 4,
       "summary": "収容率32 %、屈曲箇所、カップリングの使い分け"
+    },
+    {
+      "id": "g4-denjiteki-fuheikou",
+      "name": "電磁的不平衡を生じない電線の挿入",
+      "category": 4,
+      "summary": "同一回路の電線をすべて1本の金属管に収める（1φ2Wは2本、3φ3Wは3本）"
+    },
+    {
+      "id": "g4-kinzoku-katokan-kouji",
+      "name": "金属可とう電線管工事",
+      "category": 4,
+      "summary": "2種金属製可とう電線管の接続材とボックスへの接続、湿気の多い場所での1種管の可否"
+    },
+    {
+      "id": "g4-gouseijushikan-kouji",
+      "name": "合成樹脂管工事の施工方法",
+      "category": 4,
+      "summary": "VE管の差込み深さ（外径の1.2倍、接着剤使用時0.8倍）、曲げ半径、端口のブッシング"
+    },
+    {
+      "id": "g4-shijiten-kankaku",
+      "name": "支持点間の距離",
+      "category": 4,
+      "summary": "ケーブル・管・線ぴ・ダクトごとの支持間隔"
+    },
+    {
+      "id": "g4-cable-kouji",
+      "name": "ケーブル工事の施工方法",
+      "category": 4,
+      "summary": "屈曲部の内側半径は外径の6倍以上、防護装置に使う金属管、弱電流電線との同一管収納"
+    },
+    {
+      "id": "g4-jakudenryu-rikaku",
+      "name": "弱電流電線との離隔と接触防護措置",
+      "category": 4,
+      "summary": "弱電流電線・水管・ガス管とは接触させない。簡易接触防護措置は屋内1.8 m・屋外2 m"
+    },
+    {
+      "id": "g4-rinpi-duct-kouji",
+      "name": "金属線ぴ・ダクト工事",
+      "category": 4,
+      "summary": "ダクト内での分岐の可否、ライティングダクトの向きと終端、接地を省略できる長さ"
+    },
+    {
+      "id": "g4-setti-kouji",
+      "name": "接地工事の種類・省略条件",
+      "category": 4,
+      "summary": "D種接地の抵抗値・接地線と省略できる場合",
+      "relatedGroups": [
+        "g5-setti-zetsuen-kumiawase",
+        "g6-setti-kouji-zumen"
+      ]
+    },
+    {
+      "id": "g4-bunden-ban-kouji",
+      "name": "住宅用分電盤の工事",
+      "category": 4,
+      "summary": "中性線への過電流素子の禁止、200 V回路の2極2素子、漏電遮断器と逆接続可能型",
+      "relatedGroups": [
+        "g6-bunden-ban-kiki"
+      ]
+    },
+    {
+      "id": "g4-room-aircon-shisetsu",
+      "name": "三相200 Vルームエアコンの施設",
+      "category": 4,
+      "summary": "対地電圧150 V超の機器は専用回路・屋内配線と直接接続・漏電遮断器・D種接地"
+    },
+    {
+      "id": "g4-sansou-dendouki-kairo",
+      "name": "三相電動機回路の施工方法",
+      "category": 4,
+      "summary": "手元開閉器と過負荷保護、使用できる電線、可とう電線管と接地省略の可否"
+    },
+    {
+      "id": "g4-mokuzo-haisen-kouji",
+      "name": "木造住宅の配線工事の適否",
+      "category": 4,
+      "summary": "CD管/PF管、金属管、VE管などの施設場所と支持間隔",
+      "relatedGroups": [
+        "g6-kouji-houhou-tekihi"
+      ]
+    },
+    {
+      "id": "g4-zumen-kigou-koujihou",
+      "name": "配線の図記号と施工方法の組合せ",
+      "category": 4,
+      "summary": "(19)＝厚鋼電線管、(E19)＝ねじなし電線管、(PF16)＝合成樹脂製可とう電線管などの傍記と管種の対応",
+      "relatedGroups": [
+        "g6-denkikan-shurui"
+      ]
+    },
+    {
+      "id": "g4-pilot-lamp-kairo",
+      "name": "パイロットランプの点滅回路",
+      "category": 4,
+      "summary": "常時点灯は電源に並列、同時点滅は負荷側に並列、異時点滅はスイッチに並列",
+      "relatedGroups": [
+        "g6-kigu-uragawa-kessen"
+      ]
+    },
+    {
+      "id": "g4-neon-shousei-ryoku",
+      "name": "ネオン放電灯工事・小勢力回路",
+      "category": 4,
+      "summary": "管灯回路1 000 V超のがいし引き・支持点1 m以下・D種接地と、60 V以下の小勢力回路",
+      "relatedGroups": [
+        "g6-shousei-ryoku-kairo"
+      ]
+    },
+    {
+      "id": "g4-okugawa-unsengai-kouji",
+      "name": "屋側配線・雨線外の工事",
+      "category": 4,
+      "summary": "屋側配線に使える工事と、管末端の選定（垂直はエントランスキャップ、水平はターミナルキャップ）"
+    },
+    {
+      "id": "g5-sokuteiki-youto",
+      "name": "測定器と用途の組合せ",
+      "category": 5,
+      "summary": "テスタ・検相器・電力計・クランプ計などの用途",
+      "relatedGroups": [
+        "g3-sokuteiki-shashin",
+        "g6-sokuteiki-shashin"
+      ]
+    },
+    {
+      "id": "g5-zetsuen-teikou-kijun",
+      "name": "絶縁抵抗の基準値",
+      "category": 5,
+      "summary": "対地電圧区分ごとの絶縁抵抗基準（0.1/0.2/0.4 MΩ）",
+      "relatedGroups": [
+        "g6-zetsuen-teikou-zumen"
+      ]
+    },
+    {
+      "id": "g5-setti-zetsuen-kumiawase",
+      "name": "絶縁抵抗値と接地抵抗値の組合せ",
+      "category": 5,
+      "summary": "対地電圧から絶縁抵抗値を、電圧区分から接地工事の種類と接地抵抗値を決める（0.5秒以内の遮断で500 Ω）",
+      "relatedGroups": [
+        "g4-setti-kouji",
+        "g6-setti-kouji-zumen"
+      ]
     },
     {
       "id": "g5-setti-teikou-sokutei",
@@ -167,31 +627,76 @@
       "id": "g5-more-denryu-sokutei",
       "name": "漏れ電流の測定",
       "category": 5,
-      "summary": "クランプ形漏れ電流計で挟む電線の選び方"
+      "summary": "クランプ形漏れ電流計で挟む電線の選び方と、通電したまま測定できる特徴",
+      "relatedGroups": [
+        "g6-sokuteiki-shashin"
+      ]
     },
     {
-      "id": "g6-shousei-ryoku-kairo",
-      "name": "小勢力回路",
-      "category": 6,
-      "summary": "最大使用電圧60 V以下と電流・遮断器の区分"
+      "id": "g5-roueidenryu-kijun",
+      "name": "漏えい電流による絶縁性能の判定",
+      "category": 5,
+      "summary": "絶縁抵抗測定が困難なとき、漏えい電流が1 mA以下なら絶縁性能を有するとみなす"
     },
     {
-      "id": "g6-densen-honsu",
-      "name": "電線の最少本数",
-      "category": 6,
-      "summary": "スイッチの種類ごとに必要な心線数を数える"
+      "id": "g5-zetsuen-teikoukei-toriatsukai",
+      "name": "絶縁抵抗計の取扱いと測定方法",
+      "category": 5,
+      "summary": "電池と零点の確認、停電させて測定、一括測定では点滅器を入・常時接続の負荷は外す"
     },
     {
-      "id": "g6-tenmetsuki-shurui",
-      "name": "点滅器の種類と図記号",
-      "category": 6,
-      "summary": "H・L・3・4・調光器などの識別"
+      "id": "g5-kairokei-tesuta",
+      "name": "回路計（テスタ）の特徴と測定手順",
+      "category": 5,
+      "summary": "測れるもの・測れないもの、電圧レンジの選び方、0 Ω調整と倍率の掛け方"
     },
     {
-      "id": "g6-zumen-kigou-consent",
-      "name": "コンセントの図記号と傍記",
-      "category": 6,
-      "summary": "E・ET・EL・LK・WP などの読み取り"
+      "id": "g5-kendenki",
+      "name": "検電器の目的と種類",
+      "category": 5,
+      "summary": "充電の有無の確認。ネオン式は電池不要、音響発光式は電池が必要"
+    },
+    {
+      "id": "g5-shunkou-kensa",
+      "name": "竣工検査の項目と順序",
+      "category": 5,
+      "summary": "目視点検→絶縁抵抗→接地抵抗→導通試験→通電試験の順。導通試験の目的"
+    },
+    {
+      "id": "g5-keiki-kigou",
+      "name": "指示電気計器の記号",
+      "category": 5,
+      "summary": "目盛板の記号から動作原理（可動コイル形＝直流など）と置き方を読む"
+    },
+    {
+      "id": "g5-analog-digital-keiki",
+      "name": "アナログ計器とディジタル計器の特徴",
+      "category": 5,
+      "summary": "指針の振れ角で読むアナログと、入力抵抗が高く回路に影響しにくいディジタルの違い"
+    },
+    {
+      "id": "g5-keiki-kessen",
+      "name": "電圧計・電流計・電力計の結線",
+      "category": 5,
+      "summary": "電圧計は並列、電流計は直列、電力計は電圧コイル並列・電流コイル直列"
+    },
+    {
+      "id": "g5-tanso3sen-denatsu-sokutei",
+      "name": "単相3線式の電圧測定結果",
+      "category": 5,
+      "summary": "電線相互間は100/100/200 V、大地間は中性線0 V・両外線100 V",
+      "relatedGroups": [
+        "g2-tanso3sen-denatsu"
+      ]
+    },
+    {
+      "id": "g5-chuuseisen-dansen",
+      "name": "単相3線式の中性線断線",
+      "category": 5,
+      "summary": "100 Vのはずが120 V・150 Vになる原因。負荷が200 Vに直列となり抵抗比で分圧される",
+      "relatedGroups": [
+        "g2-tanso3sen-chuseisen-dansen"
+      ]
     },
     {
       "id": "g6-zumen-kigou-shoumei",
@@ -200,28 +705,195 @@
       "summary": "CL・CH・DL・ペンダント・引掛シーリング"
     },
     {
+      "id": "g6-okugai-tou",
+      "name": "屋外灯・特殊照明の種類",
+      "category": 6,
+      "summary": "H＝水銀灯、N＝ナトリウム灯、M＝メタルハライド灯の判別と誘導灯・非常用照明の区別"
+    },
+    {
+      "id": "g6-zumen-kigou-consent",
+      "name": "コンセントの図記号と傍記",
+      "category": 6,
+      "summary": "E・ET・EL・LK・WP などの読み取り"
+    },
+    {
+      "id": "g6-kigu-toritsuke-basho",
+      "name": "器具の取付け場所を表す図記号",
+      "category": 6,
+      "summary": "同じ器具でも床面・壁面・天井面・二重床面で図記号の描き方が変わる"
+    },
+    {
+      "id": "g6-tenmetsuki-shurui",
+      "name": "点滅器の種類と図記号",
+      "category": 6,
+      "summary": "H・L・3・4・調光器などの識別と、一般形／ワイド形の区別",
+      "relatedGroups": [
+        "g3-jidou-tenmetsuki-shashin"
+      ]
+    },
+    {
       "id": "g6-boki-hyouji",
       "name": "図記号の傍記表示",
       "category": 6,
       "summary": "ルームエアコンのI/O、抜け止め形LKなど"
     },
     {
-      "id": "g6-kyokuhaichi",
-      "name": "コンセントの極配置",
+      "id": "g6-kigou-shadanki",
+      "name": "開閉器・遮断器の図記号",
       "category": 6,
-      "summary": "125 V/250 V、接地極付、20 A兼用形の刃受"
+      "summary": "B＝配線用遮断器、E＝漏電遮断器、BE＝過負荷保護付漏電遮断器、S＝開閉器",
+      "relatedGroups": [
+        "g3-shadanki-shashin",
+        "g3-rouden-shadanki"
+      ]
+    },
+    {
+      "id": "g6-kigou-seigyo-kiki",
+      "name": "制御・警報機器の図記号",
+      "category": 6,
+      "summary": "リモコンリレー・変圧器・セレクタスイッチ、漏電警報器、ベル・ブザー・チャイム",
+      "relatedGroups": [
+        "g3-remocon-kigu"
+      ]
+    },
+    {
+      "id": "g6-kigou-dendouki-seigyo",
+      "name": "電動機制御機器の図記号",
+      "category": 6,
+      "summary": "電磁開閉器MS・押しボタンBS・フロートスイッチ・圧力スイッチ・電流計付箱開閉器",
+      "relatedGroups": [
+        "g3-denji-kaiheiki"
+      ]
+    },
+    {
+      "id": "g6-kigou-keiki-bunden",
+      "name": "計器・盤の図記号",
+      "category": 6,
+      "summary": "Wh＝電力量計、W＝電力計、TS＝タイムスイッチ、分電盤・配電盤・制御盤の使い分け"
+    },
+    {
+      "id": "g6-kigou-box-meishou",
+      "name": "ボックス類の図記号と名称",
+      "category": 6,
+      "summary": "ジョイントボックス・VVF用ジョイントボックス・プルボックスを図記号から名前で答える",
+      "relatedGroups": [
+        "g3-pullbox-outletbox"
+      ]
+    },
+    {
+      "id": "g6-kigou-haisen-houhou",
+      "name": "配線方法を表す線種の図記号",
+      "category": 6,
+      "summary": "実線＝天井隠ぺい、破線＝床隠ぺい、点線＝露出。線ぴ・ダクトの図記号も含む"
+    },
+    {
+      "id": "g6-densen-cable-meishou",
+      "name": "電線・ケーブルの名称と記号",
+      "category": 6,
+      "summary": "VVF・VVR・CV・CVT・IV・DV・OW・EM-EEFの正式名称と、その箇所に使える電線",
+      "relatedGroups": [
+        "g3-cable-shurui-shashin",
+        "g3-densen-shurui-youto"
+      ]
+    },
+    {
+      "id": "g6-denkikan-shurui",
+      "name": "電線管の種類と傍記",
+      "category": 6,
+      "summary": "(VE28)(PF16)(E19)(FEP)などの傍記から管の種類を読む",
+      "relatedGroups": [
+        "g4-zumen-kigou-koujihou",
+        "g3-gouseijushikan-fuzokuhin"
+      ]
+    },
+    {
+      "id": "g6-kouji-houhou-tekihi",
+      "name": "配線図中の工事方法の適否",
+      "category": 6,
+      "summary": "その施設場所（湿気・水気・点検できない隠ぺい）で施工できる工事・できない工事を選ぶ",
+      "relatedGroups": [
+        "g4-shisetsu-basho-kouji",
+        "g4-mokuzo-haisen-kouji"
+      ]
+    },
+    {
+      "id": "g6-setti-kouji-zumen",
+      "name": "配線図での接地工事と接地抵抗値",
+      "category": 6,
+      "summary": "300 V以下→D種100 Ω、300 V超→C種10 Ω（0.5秒以内の遮断で500 Ω）、接地線は1.6 mm以上",
+      "relatedGroups": [
+        "g4-setti-kouji",
+        "g5-setti-zetsuen-kumiawase"
+      ]
+    },
+    {
+      "id": "g6-hikikomisen-takasa",
+      "name": "引込線取付点の高さ",
+      "category": 6,
+      "summary": "原則4 m、技術上やむを得ず交通に支障がなければ2.5 m、道路横断は5 m"
+    },
+    {
+      "id": "g6-hikikomiguchi-kaiheiki",
+      "name": "引込口開閉器の省略条件",
+      "category": 6,
+      "summary": "母屋と車庫などで、電路の長さが15 m以下なら省略できる"
+    },
+    {
+      "id": "g6-bunki-kairo-teikaku",
+      "name": "分岐回路の定格電流と遮断器の極数",
+      "category": 6,
+      "summary": "コンセント・遮断器の定格の最大値、2極1素子と2極2素子の使い分け、中性線の過電流素子",
+      "relatedGroups": [
+        "g2-bunki-kairo"
+      ]
+    },
+    {
+      "id": "g6-chichu-densenro",
+      "name": "地中電線路の施設と材料",
+      "category": 6,
+      "summary": "直接埋設式の深さ（重量物の圧力を受ける場所1.2 m、その他0.6 m）、トラフ・埋設標識シート・FEP",
+      "relatedGroups": [
+        "g3-densen-shurui-youto"
+      ]
     },
     {
       "id": "g6-zetsuen-teikou-zumen",
       "name": "配線図での絶縁抵抗の最小値",
       "category": 6,
-      "summary": "対地電圧から基準値0.1/0.2/0.4 MΩを判断"
+      "summary": "対地電圧から基準値0.1/0.2/0.4 MΩを判断",
+      "relatedGroups": [
+        "g5-zetsuen-teikou-kijun"
+      ]
+    },
+    {
+      "id": "g6-shousei-ryoku-kairo",
+      "name": "小勢力回路",
+      "category": 6,
+      "summary": "最大使用電圧60 V以下と電流・遮断器の区分",
+      "relatedGroups": [
+        "g4-neon-shousei-ryoku"
+      ]
+    },
+    {
+      "id": "g6-densen-honsu",
+      "name": "電線の最少本数",
+      "category": 6,
+      "summary": "スイッチの種類ごとに必要な心線数を数える"
     },
     {
       "id": "g6-ringslv",
       "name": "リングスリーブの種類・個数・刻印",
       "category": 6,
-      "summary": "接続本数からスリーブの大きさと刻印を決める"
+      "summary": "接続本数からスリーブの大きさと刻印を決める",
+      "relatedGroups": [
+        "g4-ring-sleeve-kokuin"
+      ]
+    },
+    {
+      "id": "g6-sashikomi-connector",
+      "name": "差込形コネクタの種類と個数",
+      "category": 6,
+      "summary": "接続本数と同じ極数のコネクタを選ぶ"
     },
     {
       "id": "g6-cable-shurui",
@@ -230,16 +902,42 @@
       "summary": "ボックス間を通る電線を数えてケーブルを選ぶ"
     },
     {
+      "id": "g6-kigu-uragawa-kessen",
+      "name": "器具裏面から見た結線",
+      "category": 6,
+      "summary": "白＝接地側、黒＝非接地側、赤＝負荷への電線という色別で裏面結線の正誤を判断",
+      "relatedGroups": [
+        "g4-pilot-lamp-kairo"
+      ]
+    },
+    {
+      "id": "g6-kyokuhaichi",
+      "name": "コンセントの極配置",
+      "category": 6,
+      "summary": "125 V/250 V、接地極付、20 A兼用形の刃受",
+      "relatedGroups": [
+        "g2-bunki-kairo"
+      ]
+    },
+    {
       "id": "g6-bunden-ban-kiki",
       "name": "分電盤に取り付ける機器",
       "category": 6,
-      "summary": "B・E・BE・Wh の図記号と機器の写真"
+      "summary": "B・E・BE・Wh の図記号と機器の写真",
+      "relatedGroups": [
+        "g3-shadanki-shashin",
+        "g4-bunden-ban-kouji"
+      ]
     },
     {
       "id": "g6-sokuteiki-shashin",
       "name": "配線図での測定器の選定",
       "category": 6,
-      "summary": "測定対象に応じた計器の写真判別"
+      "summary": "測定対象に応じた計器の写真判別",
+      "relatedGroups": [
+        "g5-sokuteiki-youto",
+        "g3-sokuteiki-shashin"
+      ]
     },
     {
       "id": "g6-shoumei-kigu-shashin",
@@ -251,25 +949,121 @@
       "id": "g6-box-shashin",
       "name": "ボックス類の写真判別",
       "category": 6,
-      "summary": "ジョイントボックスとアウトレットボックスの区別"
+      "summary": "ジョイントボックスとアウトレットボックスの区別",
+      "relatedGroups": [
+        "g3-zairyou-shashin"
+      ]
     },
     {
-      "id": "g6-sashikomi-connector",
-      "name": "差込形コネクタの種類と個数",
+      "id": "g6-consent-shashin",
+      "name": "コンセント・配線器具の写真判別",
       "category": 6,
-      "summary": "接続本数と同じ極数のコネクタを選ぶ"
+      "summary": "図記号と傍記（EET・LK・WP・T・250 V）に対応する実物写真を選ぶ",
+      "relatedGroups": [
+        "g3-jidou-tenmetsuki-shashin"
+      ]
+    },
+    {
+      "id": "g6-shiyou-consent-zumen",
+      "name": "配線図で使用されているコンセント",
+      "category": 6,
+      "summary": "図面全体を走査して、使用されている／されていない器具とその個数を判断する"
     },
     {
       "id": "g6-shiyou-sarete-inai-switch",
-      "name": "配線図で使用されていない器具",
+      "name": "配線図で使用されていないスイッチ",
       "category": 6,
       "summary": "接点構成図と傍記から使用の有無を判断"
+    },
+    {
+      "id": "g6-shiyou-shinai-zairyou",
+      "name": "配線図全体で使用されない材料",
+      "category": 6,
+      "summary": "図面の工事種別（金属管・合成樹脂管・ケーブル等）から不要な材料の写真を選ぶ",
+      "relatedGroups": [
+        "g3-zairyou-shashin"
+      ]
+    },
+    {
+      "id": "g6-bubun-kouji-zairyou",
+      "name": "指示箇所の工事で使用する材料",
+      "category": 6,
+      "summary": "接地工事・地中配線・金属管工事・引込線引留・点滅器の取付けに使う（使わない）材料"
+    },
+    {
+      "id": "g6-kougu-zumen",
+      "name": "配線図の工事に使う工具",
+      "category": 6,
+      "summary": "木部や金属製分電盤の穴あけ、FEPの切断など、その工事に使う（使わない）工具",
+      "relatedGroups": [
+        "g3-sagyou-to-kougu",
+        "g3-kougu-shashin"
+      ]
+    },
+    {
+      "id": "g6-setsuzoku-kougu-zairyou",
+      "name": "電線接続の工具・材料",
+      "category": 6,
+      "summary": "ボックス内の接続に使うもの、圧着ペンチとリングスリーブ・圧着端子の組合せ",
+      "relatedGroups": [
+        "g4-densen-setsuzoku-kitei",
+        "g4-ring-sleeve-kokuin"
+      ]
+    },
+    {
+      "id": "g6-kanro-setsuzoku-zairyou",
+      "name": "電線管の接続材料",
+      "category": 6,
+      "summary": "管相互の接続（カップリング類）と、管とボックスの接続（コネクタ・ロックナット・ブッシング）",
+      "relatedGroups": [
+        "g3-kinzokukan-fuzokuhin",
+        "g3-gouseijushikan-fuzokuhin"
+      ]
+    },
+    {
+      "id": "g7-denkikoujishi-sagyou-hani",
+      "name": "電気工事士でなければできない作業・軽微な工事",
+      "category": 7,
+      "summary": "電気工事士法の作業範囲と軽微な工事"
+    },
+    {
+      "id": "g7-koujishi-gimu-seigen",
+      "name": "電気工事士の義務と制限",
+      "category": 7,
+      "summary": "免状の携帯義務と書換え、技術基準に適合させる義務、表示のある電気用品を使う義務"
+    },
+    {
+      "id": "g7-menjo-shurui-hani",
+      "name": "免状の種類と従事できる工事の範囲",
+      "category": 7,
+      "summary": "第二種で従事できる範囲。自家用の低圧部分は認定電気工事従事者、ネオン・非常用予備発電装置は特種"
     },
     {
       "id": "g7-denkiyouhin-anzenhou",
       "name": "電気用品安全法（特定電気用品）",
       "category": 7,
       "summary": "特定電気用品とそれ以外の区分・PSEマーク"
+    },
+    {
+      "id": "g7-denkiyouhin-kisei-gimu",
+      "name": "電気用品の定義・販売と使用の制限",
+      "category": 7,
+      "summary": "電気用品と特定電気用品の定義、製造・輸入事業者の表示、販売と工事での使用の制限"
+    },
+    {
+      "id": "g7-ippanyou-kousakubutsu-youken",
+      "name": "一般用電気工作物の要件",
+      "category": 7,
+      "summary": "低圧受電＋小出力発電設備（太陽電池50 kW未満、風力20 kW未満、内燃力・燃料電池10 kW未満）",
+      "relatedGroups": [
+        "g3-taiyoukou-kiki"
+      ]
+    },
+    {
+      "id": "g7-denatsu-shubetsu",
+      "name": "電圧の種別",
+      "category": 7,
+      "summary": "低圧は直流750 V以下・交流600 V以下、高圧は7 000 V以下、特別高圧はそれを超えるもの"
     },
     {
       "id": "g7-denki-setsubi-gijutsu-kijun",
