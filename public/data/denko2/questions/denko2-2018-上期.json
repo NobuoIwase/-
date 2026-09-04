@@ -1499,7 +1499,7 @@
     "type": "static",
     "stem": "⑪で示す部分の接続工事をリングスリーブ小3個を使用して圧着接続する場合の刻印は。\nただし，使用する電線はすべてVVF1.6とする。また，写真に示す**リングスリーブ中央の○，小は刻印を表す**。",
     "sharedFigure": "figures/denko2-2018-上期/p15.png",
-    "choicesFigure": "figures/denko2-2018-上期/q41_choices.png",
+    "choicesFigure": "figures/denko2-2018-上期/q41_ans.png",
     "choices": [
       "3個とも 小",
       "1個が ○，2個が 小",
@@ -1536,7 +1536,7 @@
     "type": "static",
     "stem": "⑫で示すコンセントの電圧と極性を確認するための測定器の組合せで，**正しいものは**。",
     "sharedFigure": "figures/denko2-2018-上期/p15.png",
-    "choicesFigure": "figures/denko2-2018-上期/q42_choices.png",
+    "choicesFigure": "figures/denko2-2018-上期/q42_ans.png",
     "choices": [
       "絶縁抵抗計と回路計",
       "検電器と回路計",
@@ -1573,7 +1573,7 @@
     "type": "static",
     "stem": "⑬で示す図記号の機器は。",
     "sharedFigure": "figures/denko2-2018-上期/p15.png",
-    "choicesFigure": "figures/denko2-2018-上期/q43_choices.png",
+    "choicesFigure": "figures/denko2-2018-上期/q43_ans.png",
     "choices": [
       "写真イ",
       "写真ロ",
@@ -1609,7 +1609,7 @@
     "type": "static",
     "stem": "⑭で示す部分の工事で管とボックスを接続するために**使用されるものは**。",
     "sharedFigure": "figures/denko2-2018-上期/p15.png",
-    "choicesFigure": "figures/denko2-2018-上期/q44_choices.png",
+    "choicesFigure": "figures/denko2-2018-上期/q44_ans.png",
     "choices": [
       "写真イ",
       "写真ロ",
@@ -1646,7 +1646,7 @@
     "type": "static",
     "stem": "⑮で示すポンプ室及び受水槽室内で**使用されていないものは**。\nただし，写真下の図は，接点の構成を示す。",
     "sharedFigure": "figures/denko2-2018-上期/p15.png",
-    "choicesFigure": "figures/denko2-2018-上期/q45_choices.png",
+    "choicesFigure": "figures/denko2-2018-上期/q45_ans.png",
     "choices": [
       "写真イ",
       "写真ロ",
