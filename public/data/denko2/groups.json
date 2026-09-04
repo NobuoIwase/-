@@ -634,6 +634,12 @@
       ]
     },
     {
+      "id": "g5-clamp-denryukei",
+      "name": "クランプ形電流計の特徴",
+      "category": 5,
+      "summary": "通電したまま測れる，交流専用形と直流も測れる形がある，クランプ部の寸法と測定範囲に制限がある"
+    },
+    {
       "id": "g5-kairokei-tesuta",
       "name": "回路計（テスタ）の特徴と測定手順",
       "category": 5,
