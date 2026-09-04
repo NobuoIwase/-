@@ -61,6 +61,12 @@ export function QuestionView({
         </span>
       </div>
       {q.sharedFigure && <Figure src={figureUrl(q.subject, q.sharedFigure)} alt="配線図" />}
+      {q.premise && (
+        <details className="premise">
+          <summary>前提条件（この問題群に共通）</summary>
+          <Md text={q.premise} />
+        </details>
+      )}
       <div className="stem">
         <Md text={renderStem(q, item)} />
       </div>

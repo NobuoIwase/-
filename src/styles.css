@@ -90,6 +90,9 @@ main { flex: 1; padding: 12px; }
 .feedback p { margin: 0 0 6px; white-space: pre-wrap; }
 .feedback ul { margin: 0; padding-left: 18px; }
 .note { background: var(--info-bg); border-radius: 10px; padding: 8px 12px; font-size: 14px; margin: 8px 0; }
+.premise { background: var(--info-bg); border-radius: 10px; padding: 8px 12px; font-size: 14px; margin: 8px 0; }
+.premise summary { color: var(--muted); font-size: 13px; }
+.premise p { margin: 6px 0 0; }
 .progressbar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
 .progressbar > div { height: 100%; background: var(--accent); transition: width 0.2s; }
 .bottombar {

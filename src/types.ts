@@ -55,6 +55,12 @@ export interface Question {
   category: CategoryId
   groupId: string
   type: 'static' | 'calc'
+  /**
+   * 問題文の前に置かれる共通の前提条件。実試験で問題群の冒頭に印刷される
+   * 「図は，木造2階建住宅の配線図である」「【注意】屋内配線はVVFのケーブル工事」などにあたる。
+   * 配線図問題（分野6）では答えの根拠になるため、1問ずつに持たせて単独で解けるようにしている。
+   */
+  premise?: string
   stem: string
   /** 問題文の図（回路図・写真など）。public/data/<subject>/ からの相対パス */
   figure?: string
