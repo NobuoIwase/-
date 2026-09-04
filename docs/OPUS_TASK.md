@@ -102,14 +102,20 @@ python3 scripts/publish_figures.py public/data/denko2/questions/<examId>.json
 **この順で通す。すべて通ってからコミットする。**
 
 ```bash
-# 1. subject.json の questionFiles に "<examId>.json" を追加
-# 2. 公式解答と突き合わせ（欠番なし・不一致なしになるまで直す）
+# 1. 公式解答と突き合わせ（欠番なし・不一致なしになるまで直す）
 python3 scripts/check_answers.py <examId>
-# 3. スキーマ・画像・計算テンプレートの検証（エラー 0 になるまで直す）
+# 2. この回だけを検証（エラー 0 になるまで直す）
+npx tsx scripts/validate-data.ts --exam <examId>
+# 3. subject.json の questionFiles に "<examId>.json" を追加してから全体検証
 npm run validate
-# 4. 出題エンジンの単体テスト
 npm test
 ```
+
+`--exam` は `subject.json` に登録していない回も検証でき、`groups.json` に加えて
+`data/review/denko2/<examId>.groups.json` も既知グループとして読む。
+複数の回を並行して作るときは、**`groups.json` と `subject.json` を直接編集せず**、
+新しいグループを `data/review/denko2/<examId>.groups.json` に
+`{"subject":"denko2","groups":[{...}]}` の形で書く。統合は最後にまとめて行う。
 
 ### 2-5. レビューノートとコミット
 

@@ -5,13 +5,26 @@
  *  - 参照画像ファイルの存在
  *  - 計算テンプレート: 全組合せで正答が選択肢に一意に存在、採用可能な組合せが1つ以上
  *  - 出典 (source) が揃っている
+ *
+ * 使い方:
+ *   npx tsx scripts/validate-data.ts                        subject.json の questionFiles を全部検証
+ *   npx tsx scripts/validate-data.ts --exam denko2-2024-上期  1 回分だけ検証（questionFiles 未登録でも可）
+ *
+ * --exam では groups.json に加えて data/review/denko2/<examId>.groups.json（作業中の新規グループ）も
+ * 既知グループとして読み込む。複数エージェントが並行して別々の回を作れるようにするため。
  */
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { allValidCalcs } from '../src/engine/calc'
-import type { GroupsFile, Question, SubjectDef } from '../src/types'
+import type { GroupDef, GroupsFile, Question, SubjectDef } from '../src/types'
 
 const root = join(import.meta.dirname ?? '.', '..')
+const examArgIndex = process.argv.indexOf('--exam')
+const onlyExam = examArgIndex >= 0 ? process.argv[examArgIndex + 1] : undefined
+if (examArgIndex >= 0 && !onlyExam) {
+  console.error('ERROR --exam には examId が必要（例: --exam denko2-2024-上期）')
+  process.exit(1)
+}
 const dataDir = join(root, 'public', 'data')
 const subjects = JSON.parse(readFileSync(join(dataDir, 'subjects.json'), 'utf8')) as { subjects: { id: string }[] }
 let errors = 0
@@ -24,18 +37,27 @@ for (const s of subjects.subjects) {
   const def = JSON.parse(readFileSync(join(dir, 'subject.json'), 'utf8')) as SubjectDef
   const catIds = new Set(def.categories.map((c) => c.id))
   let groups = new Set<string>()
-  if (existsSync(join(dir, 'groups.json'))) {
-    const g = JSON.parse(readFileSync(join(dir, 'groups.json'), 'utf8')) as GroupsFile
-    groups = new Set(g.groups.map((x) => x.id))
-    for (const x of g.groups) if (!catIds.has(x.category)) err(`${s.id}/groups.json: ${x.id} の category ${x.category} が不正`)
+  const collectGroups = (path: string, label: string) => {
+    if (!existsSync(path)) return
+    const g = JSON.parse(readFileSync(path, 'utf8')) as GroupsFile
+    for (const x of g.groups as GroupDef[]) {
+      groups.add(x.id)
+      if (!catIds.has(x.category)) err(`${label}: ${x.id} の category ${x.category} が不正`)
+    }
   }
+  collectGroups(join(dir, 'groups.json'), `${s.id}/groups.json`)
+  if (onlyExam) collectGroups(join(root, 'data', 'review', s.id, `${onlyExam}.groups.json`), `${onlyExam}.groups.json`)
   const ids = new Set<string>()
   const questionDir = join(dir, 'questions')
-  const listed = new Set(def.questionFiles)
-  for (const f of readdirSync(questionDir)) if (f.endsWith('.json') && !listed.has(f)) warn(`${s.id}/questions/${f} は subject.json の questionFiles に載っていない（読み込まれない）`)
+  // --exam のときはその 1 ファイルだけ。通常は subject.json の questionFiles をすべて
+  const targets = onlyExam ? [`${onlyExam}.json`] : def.questionFiles
+  if (!onlyExam) {
+    const listed = new Set(def.questionFiles)
+    for (const f of readdirSync(questionDir)) if (f.endsWith('.json') && !listed.has(f)) warn(`${s.id}/questions/${f} は subject.json の questionFiles に載っていない（読み込まれない）`)
+  }
   let total = 0, active = 0, calc = 0
   const groupCats = new Map<string, number>()
-  for (const f of def.questionFiles) {
+  for (const f of targets) {
     const p = join(questionDir, f)
     if (!existsSync(p)) { err(`${s.id}: questions/${f} が存在しない`); continue }
     let qs: Question[]
