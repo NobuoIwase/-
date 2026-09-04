@@ -1,0 +1,12 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g3-rinpi-duct-shurui",
+      "name": "線ぴ・ダクト類の種類と用途",
+      "category": 3,
+      "summary": "金属線ぴ・金属ダクト・ライティングダクト・フロアダクト・ケーブルラックを用途（収める場所と収めるもの）で見分ける",
+      "relatedGroups": ["g4-rinpi-duct-kouji", "g6-duct-shashin"]
+    }
+  ]
+}
