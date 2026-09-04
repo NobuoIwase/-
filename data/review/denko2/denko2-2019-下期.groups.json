@@ -1,0 +1,12 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g3-consent-shurui-youto",
+      "name": "コンセントの種類と用途",
+      "category": 3,
+      "summary": "引掛形・抜け止め形・接地端子付・接地極付接地端子付など、使用する機器や場所に適したコンセントの選定",
+      "relatedGroups": ["g6-zumen-kigou-consent", "g6-consent-shashin"]
+    }
+  ]
+}

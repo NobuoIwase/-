@@ -1,0 +1,12 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g6-kankisen-kigou",
+      "name": "換気扇の図記号と写真",
+      "category": 6,
+      "summary": "四角枠に円2つ＝天井付換気扇、枠なし＝壁付換気扇。図記号に対応する換気扇の実物写真を選ぶ",
+      "relatedGroups": ["g6-shoumei-kigu-shashin"]
+    }
+  ]
+}
