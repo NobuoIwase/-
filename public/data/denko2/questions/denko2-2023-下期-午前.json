@@ -1104,7 +1104,7 @@
     "category": 7,
     "groupId": "g7-denkiyouhin-anzenhou",
     "type": "static",
-    "stem": "「電気用品安全法」の適用を受ける次の電気用品のうち，**特定電気用品は**。",
+    "stem": "「電気用品安全法」の適用を受ける次の電気用品のうち，特定電気用品は。",
     "choices": [
       "定格電流20 Aの漏電遮断器",
       "消費電力30 Wの換気扇",
@@ -1841,7 +1841,7 @@
     "category": 6,
     "groupId": "g6-shiyou-consent-zumen",
     "type": "static",
-    "stem": "この配線図の図記号で，**使用されていないコンセントは**。",
+    "stem": "この配線図の図記号で，**使用されていない**コンセントは。",
     "sharedFigure": "figures/denko2-2023-下期-午前/p15.png",
     "choicesFigure": "figures/denko2-2023-下期-午前/q49_choices.png",
     "choices": [
