@@ -114,28 +114,27 @@ export function ExplanationView({ q, item, selected, subjectCitation }: { q: Que
           <Md text={item.calc.explanation} />
         </>
       ) : (
-        <>
-          {!isOk && (
-            <>
-              <h4>なぜ {CHOICE_LABELS[correct]} が正答か</h4>
-              <Md text={q.explanation.whyCorrect} />
-              {whyWrong && (
-                <>
-                  <h4>選んだ {CHOICE_LABELS[selected!]} が違う理由</h4>
-                  <Md text={whyWrong} />
-                </>
-              )}
-            </>
-          )}
-          <h4>{isOk ? '補足' : 'ポイント'}</h4>
-          <Md text={isOk ? q.explanation.supplement : q.explanation.supplement} />
-          {isOk && q.explanation.whyCorrect && (
-            <details>
-              <summary>根拠を見る</summary>
-              <Md text={q.explanation.whyCorrect} />
-            </details>
-          )}
-        </>
+        !isOk && (
+          <>
+            <h4>なぜ {CHOICE_LABELS[correct]} が正答か</h4>
+            <Md text={q.explanation.whyCorrect} />
+            {whyWrong && (
+              <>
+                <h4>選んだ {CHOICE_LABELS[selected!]} が違う理由</h4>
+                <Md text={whyWrong} />
+              </>
+            )}
+          </>
+        )
+      )}
+      {/* 補足は計算問題でも出す（周辺知識・覚え方は数値が変わっても役に立つ） */}
+      <h4>{isOk ? '補足' : 'ポイント'}</h4>
+      <Md text={q.explanation.supplement} />
+      {isOk && !item.calc && q.explanation.whyCorrect && (
+        <details>
+          <summary>根拠を見る</summary>
+          <Md text={q.explanation.whyCorrect} />
+        </details>
       )}
       {q.explanation.references?.length ? <p className="small muted">根拠: {q.explanation.references.join('、')}</p> : null}
       <p className="small muted">

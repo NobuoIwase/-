@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { allValidCalcs, buildCalc, instantiate } from '../src/engine/calc'
+import { allValidCalcs, buildCalc, formatNumber, instantiate } from '../src/engine/calc'
 import { mulberry32 } from '../src/engine/rng'
 import type { CalcTemplate, Question } from '../src/types'
 
@@ -27,9 +27,17 @@ describe('calc template', () => {
     expect(buildCalc(t, { V: 100, R: 50 })?.answer).toBe(200)
     expect(buildCalc({ ...t, accept: 'answer > 1000' }, { V: 100, R: 50 })).toBeNull()
   })
-  it('解説テンプレートに値が埋まる', () => {
+  it('解説テンプレートに値が埋まる（4桁以上は実試験と同じ空白区切り）', () => {
     const r = buildCalc(t, { V: 200, R: 20 })!
-    expect(r.explanation).toBe('P = V²/R = 200²/20 = **2000 W**')
+    expect(r.explanation).toBe('P = V²/R = 200²/20 = **2 000 W**')
+  })
+  it('formatNumber は 4 桁以上だけ区切り、小数はそのまま', () => {
+    expect(formatNumber(999, 0)).toBe('999')
+    expect(formatNumber(1000, 0)).toBe('1 000')
+    expect(formatNumber(1440, 0)).toBe('1 440')
+    expect(formatNumber(123456, 0)).toBe('123 456')
+    expect(formatNumber(2.5, 1)).toBe('2.5')
+    expect(formatNumber(1234.5, 1)).toBe('1 234.5')
   })
   it('誤答が重複したら既定ルールで補われる', () => {
     const r = buildCalc({ ...t, distractors: ['answer', 'answer', 'answer'] }, { V: 100, R: 10 })!
@@ -42,7 +50,7 @@ describe('calc template', () => {
     }
     const inst = instantiate(q, mulberry32(1))
     expect(inst.calc).toBeDefined()
-    const nums = inst.calc!.choices.map((c) => parseFloat(c))
+    const nums = inst.calc!.choices.map((c) => parseFloat(c.replace(/ /g, '')))
     expect([...nums].sort((a, b) => a - b)).toEqual(nums)
     const st = instantiate({ ...q, type: 'static', calcTemplate: undefined }, mulberry32(1))
     expect([...st.order].sort()).toEqual([0, 1, 2, 3])

@@ -15,10 +15,18 @@ function roundTo(v: number, digits: number): number {
   return Math.round(v * f) / f
 }
 
+/**
+ * 実試験の表記に合わせて数値を文字列にする。
+ * 4 桁以上の整数部は半角スペースで 3 桁ずつ区切る（実試験の「1 440」「1 600」と同じ書き方）。
+ */
 export function formatNumber(v: number, digits: number): string {
   const r = roundTo(v, digits)
-  // 1440 → "1 440" のような実試験の空白区切りは使わず、通常表記
-  return digits > 0 ? r.toFixed(digits).replace(/\.?0+$/, '') : String(r)
+  const s = digits > 0 ? r.toFixed(digits).replace(/\.?0+$/, '') : String(r)
+  const [intPart, frac] = s.split('.')
+  const sign = intPart.startsWith('-') ? '-' : ''
+  const body = sign ? intPart.slice(1) : intPart
+  const grouped = body.length >= 4 ? body.replace(/\B(?=(\d{3})+(?!\d))/g, ' ') : body
+  return sign + grouped + (frac ? `.${frac}` : '')
 }
 
 /** 全パラメータ組合せを列挙（プールが大きい場合はランダムに最大 maxCombos 件） */

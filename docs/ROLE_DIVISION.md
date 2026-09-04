@@ -1,99 +1,146 @@
-# 役割分担仕様書 — Fable 5.1（設計・システム・素材取得）／ Opus（問題データ作成）
+# 役割分担仕様書 — Fable 5.1 と Opus
 
-## 0. なぜ分けるか
+## 0. 方針
 
-- Fable 5.1 は使用制限が厳しく、「PDF の文章を JSON に書き写す」「1,350 問分の解説を書く」といった
-  **量が多くコピペに近い作業**に使うと制限を食いつぶす。
-- そこで、**判断・設計・仕組み作り・素材のダウンロード**は Fable 5.1、
-  **問題データを実際に作る作業（文字起こし・解説執筆・グループ分け・計算テンプレート化）**は Opus に割り当てる。
-- Opus は `docs/OPUS_TASK.md` の指示書だけを読めば、追加の判断なしに作業を進められるようにしてある。
+作業を性質で 2 つに割り、モデルを使い分ける。
+
+- **Fable 5.1** — 判断が要る仕事。設計、実装、デザイン、素材の取得と機械的な下ごしらえ、成果物のレビュー。
+- **Opus** — 量が支配する仕事。過去問 1,350 問（27 回 × 50 問）の文字起こし、解説の執筆、グループ化、計算問題のテンプレート化、法改正チェック。
+
+分ける理由は 2 つ。Fable 5.1 は使用制限が厳しく、1 問ずつ書き写す作業に充てると制限を使い切る。そして問題データの作成は、型と手順を先に固めれば判断をほぼ伴わない作業に落とせる。
+
+切り出しが成立する条件は、Opus が追加の判断なしに着手できることである。そのために次の 4 つを先に用意した。
+
+| # | 用意したもの | 実体 |
+|---|---|---|
+| 1 | 素材 | 公式 PDF と、そこから切り出した問ごとの画像・テキスト草稿・解答キー |
+| 2 | 型 | `src/types.ts`（正本）と `docs/DATA_FORMAT.md` |
+| 3 | 手順 | `docs/OPUS_TASK.md` |
+| 4 | 自動検証 | `npm run validate` と `scripts/check_answers.py` |
 
 ## 1. 分担表
 
 | 領域 | 担当 | 状態 | 成果物 |
 |---|---|---|---|
-| 公式サイト調査・取得可能な年度の一覧化 | Fable 5.1 | 完了 | `data/raw/denko2/sources.json` |
-| 過去問 PDF（問題・解答）のダウンロード | Fable 5.1 | 完了（27 回分 54 ファイル） | `data/raw/denko2/pdf/*.pdf` |
-| PDF → 問ごとの画像・テキスト草稿・解答キーの自動抽出 | Fable 5.1 | 完了 | `scripts/extract_pdf.py`, `data/extracted/denko2/<回>/` |
-| データモデル・JSON スキーマ・検証スクリプト | Fable 5.1 | 完了 | `src/types.ts`, `scripts/validate-data.ts`, `docs/DATA_FORMAT.md` |
-| アプリ本体（出題エンジン・間隔反復・計算問題の数値変化・UI・PWA・進捗・設定） | Fable 5.1 | 完了 | `src/`, `vite.config.ts` |
+| 公式サイト調査・取得可能な回の一覧化 | Fable 5.1 | 完了 | `data/raw/denko2/sources.json` |
+| 過去問 PDF（問題・解答）の取得 | Fable 5.1 | 完了（27 回・54 ファイル） | `data/raw/denko2/pdf/` |
+| PDF → 問ごとの画像・テキスト草稿・解答キーの抽出 | Fable 5.1 | 完了（27 回すべて 50 問） | `scripts/extract_pdf.py`, `data/extracted/denko2/` |
+| データモデル・検証スクリプト | Fable 5.1 | 完了 | `src/types.ts`, `scripts/validate-data.ts`, `docs/DATA_FORMAT.md` |
+| アプリ本体（出題エンジン・間隔反復・計算問題・UI・PWA） | Fable 5.1 | 完了 | `src/`, `vite.config.ts` |
 | デザイン（スマホ縦・片手操作・ダークモード） | Fable 5.1 | 完了 | `src/styles.css` |
 | デプロイ設定（GitHub Pages） | Fable 5.1 | 完了 | `.github/workflows/deploy.yml` |
-| **問題データの作成**（文字起こし・正答付け・図の割り当て） | **Opus** | 未着手 | `public/data/denko2/questions/<回>.json` |
-| **解説の執筆**（whyCorrect / whyOthersWrong / supplement / references） | **Opus** | 未着手 | 同上 |
-| **類似問題のグループ化** | **Opus** | 未着手 | `public/data/denko2/groups.json` |
-| **計算問題のテンプレート化**（数値プール・式・誤答ルール） | **Opus** | 未着手 | 各問の `calcTemplate` |
-| **法改正チェック**（retired / note の付与） | **Opus** | 未着手 | 各問の `status` / `note` |
-| **図・写真の公開用コピー** | **Opus**（スクリプト実行のみ） | 未着手 | `public/data/denko2/figures/<回>/*.png` |
-| 品質チェック（自動） | 両者（スクリプト） | 整備済み | `npm run validate`, `npm test` |
-| 最終レビュー・Opus の成果物の抜き取り確認 | Fable 5.1（または人間） | Opus 完了後 | — |
+| **問題データの作成**（文字起こし・正答付け・図の割り当て） | **Opus** | **1 / 27 回** | `public/data/denko2/questions/<examId>.json` |
+| **解説の執筆**（whyCorrect / whyOthersWrong / supplement / references） | **Opus** | 同上 | 同上 |
+| **類似問題のグループ化** | **Opus** | 46 グループ（2026 上期ぶん） | `public/data/denko2/groups.json` |
+| **計算問題のテンプレート化** | **Opus** | 2 問 | 各問の `calcTemplate` |
+| **法改正チェック**（`status` / `note` の付与） | **Opus** | 2026 上期のみ | 各問の `status` / `note` |
+| **図・写真の公開用コピー** | **Opus**（スクリプト実行） | 24 点 | `public/data/denko2/figures/<examId>/` |
+| 抜き取りレビュー | Fable 5.1 または人間 | 1 回分実施 | — |
 
-## 2. 引き継ぎの境界（インターフェース）
+## 2. 引き継ぎの境界
 
-Fable 5.1 → Opus に渡すもの（すべてリポジトリ内にある）:
+### Fable 5.1 → Opus に渡すもの
 
-1. `data/raw/denko2/pdf/` — 公式 PDF（問題 27 回、解答 27 回）
-2. `data/extracted/denko2/<examId>/` — `scripts/extract_pdf.py` の出力
-   - `answers.json` … 公式解答キー（問番号 → イ/ロ/ハ/ニ）
-   - `questions_raw.json` … 問ごとのテキスト草稿（2022 年以降は PDF から直接、2015〜2021 年は OCR）と画像パス
-   - `cells/qNN_stem.png` / `qNN_choices.png` / `qNN_row.png` / `qNN_figure.png`（自動切り出しの図）/ `qNN_choice_K.png`
-   - `pages/pNN.png` … 4 頁目以降の全頁画像（配線図面はここから）
-   - `meta.json` … 年度・回・午前/午後・テキスト PDF かどうか・図面ページ番号
-   - PNG は git 管理外。`python3 scripts/extract_pdf.py` で数分で再生成できる
-3. `docs/DATA_FORMAT.md` — 出力 JSON の厳密な仕様
-4. `docs/OPUS_TASK.md` — Opus への作業指示書（手順・品質基準・禁止事項・チェック方法）
-5. `docs/samples.json` — 書式の見本（4 問）。実例は `public/data/denko2/questions/denko2-2026-上期.json`（パイロット成果、レビュー済み）
+すべてリポジトリ内にある。公式サイトへのアクセスは要らない。
 
-Opus → Fable 5.1（または人間）に返すもの:
+| パス | 中身 |
+|---|---|
+| `data/raw/denko2/pdf/` | 公式 PDF（問題 27・解答 27） |
+| `data/raw/denko2/sources.json` | 取得元 URL・利用条件・sha256 |
+| `data/raw/denko2/answers_override/` | 解答表がスキャンで OCR できなかった回の、目視で書き起こした解答キー |
+| `data/extracted/denko2/index.json` | 全 27 回の一覧（examId・年・期・午前午後・テキスト PDF か・図面ページ） |
+| `data/extracted/denko2/<examId>/` | 1 回分の素材（下表） |
+| `docs/DATA_FORMAT.md` | 出力 JSON の仕様 |
+| `docs/OPUS_TASK.md` | 作業手順・品質基準・禁止事項 |
+| `docs/samples.json` | 書式の見本（4 問） |
+| `public/data/denko2/questions/denko2-2026-上期.json` | 完成済みの実例 50 問（レビュー済み） |
 
-- `public/data/denko2/questions/denko2-<year>-<term>[-<session>].json`（1 回分 50 問ずつ）
-- `public/data/denko2/groups.json`
-- `public/data/denko2/figures/**`
-- `subject.json` の `questionFiles` への追記
-- `data/review/denko2/<examId>.md` … その回で判断に迷った点・retired にした理由・OCR が読めず画像で確認した問のリスト
+1 回分の素材（`data/extracted/denko2/<examId>/`）:
 
-## 3. 作業順序
+| ファイル | 中身 |
+|---|---|
+| `meta.json` | 年・期・午前午後・`textPdf`・`figurePages`・`answerSource` |
+| `answers.json` | 公式解答キー（問番号 → イ/ロ/ハ/ニ） |
+| `questions_raw.json` | 問ごとのテキスト草稿・bbox・画像パス・要注意フラグ |
+| `cells/qNN_row.png` | 問 1 行ぶん（問いと選択肢が両方写る） |
+| `cells/qNN_stem.png`, `qNN_choices.png` | 「問い」欄・「答え」欄 |
+| `cells/qNN_figure.png` | 自動切り出しの図（テキスト PDF のみ） |
+| `cells/qNN_choice_K.png` | 写真選択肢の 1 枚ずつ |
+| `pages/pNN.png` | 4 頁目以降の全頁画像。配線図面は必ず `p15.png` |
+
+PNG は git 管理外。`python3 scripts/extract_pdf.py --exam <examId>` で再生成する（全 27 回なら 1 時間ほど）。
+
+### Opus → Fable 5.1 に返すもの
+
+- `public/data/denko2/questions/<examId>.json`（1 回 50 問）
+- `public/data/denko2/groups.json` への追記
+- `public/data/denko2/figures/<examId>/`（`publish_figures.py` が生成）
+- `public/data/denko2/subject.json` の `questionFiles` への追記
+- `data/review/denko2/<examId>.md`（判断に迷った点・retired の理由・画像で確認した問・仕様への提案）
+
+## 3. 進め方
+
+テキスト PDF の回から始めてスキャン PDF の回に進む。テキスト PDF は問題文がそのまま取り出せるぶん速く、
+先に片付けると型と勘所が固まる。
+
+| 段階 | 回 | 数 | 状態 |
+|---|---|---|---|
+| ① パイロット | 2026 上期 | 1 | 完了 |
+| ② テキスト PDF・午前午後なし | 2024 上期/下期、2025 上期/下期 | 4 | 未着手 |
+| ③ テキスト PDF・午前午後あり | 2022 上期/下期、2023 上期/下期 の各午前・午後 | 8 | 未着手 |
+| ④ スキャン PDF | 2015〜2019 の上期/下期、2020 下期、2021 上期 の午前・午後 | 14 | 未着手 |
+| ⑤ 横断作業 | `groups.json` の整理、計算問題の追加、法改正の総ざらい | — | 未着手 |
+
+進捗の正本は `public/data/denko2/subject.json` の `questionFiles`。ここに載っている回が完成した回である。
+
+1 回ごとに 1 コミットし、`npm run validate` が通った状態で push する。全部まとめてからのコミットは避ける。
+途中で仕様の不備に気づいても仕様は変えず、レビューノートに提案として書き残す（判断は Fable 5.1 か人間が行う）。
+
+## 4. 品質ゲート
+
+Opus の成果物は次をすべて満たすこと。①〜③ は機械で確認でき、④〜⑥ は書き手が担保する。
+
+1. `python3 scripts/check_answers.py <examId>` が「欠番なし・不一致なし」
+2. `npm run validate` がエラー 0
+3. `npm test` が通る
+4. 解説は市販教材・Web 記事の転載でなく、根拠（条番号・公式・法則名）を `references` に持つ
+5. 図がないと解けない問に図が付いている
+6. 現行法令で答えが変わる問は `retired`、用語だけの違いは `note`
+
+## 5. 想定コスト
+
+パイロット（2026 上期・テキスト PDF・50 問）の実測は **約 33 万トークン、ツール呼び出し 120 回、42 分**。
+成果は 50 問すべて active、計算問題 2、図 24 点、公式解答と全問一致、validate エラー 0。
+
+ここから残り 26 回を見積もると次のとおり。
+
+| 区分 | 回数 | 1 回あたり | 小計 |
+|---|---|---|---|
+| テキスト PDF | 12 | 約 33 万トークン | 約 400 万 |
+| スキャン PDF | 14 | 約 50 万トークン（画像確認が増えるため 1.5 倍） | 約 700 万 |
+| 合計 | 26 | — | **約 1,100 万トークン・実時間 20〜25 時間** |
+
+Fable 5.1 側の残作業は抜き取りレビューだけで、1 回あたり 1〜2 万トークン。
+
+## 6. Opus セッションの始め方
+
+1. Claude Code を Opus で起動し、このリポジトリを作業用ブランチで開く
+2. 最初のメッセージに次を貼る（`denko2-2024-上期` の部分を対象の回に差し替える）
 
 ```
-[Fable 5.1 完了済み]  PDF取得 → 抽出 → アプリ実装 → 仕様書
-        ↓
-[Opus]  ① 2026-上期（テキストPDF・最新）で 1 回分を作り、npm run validate を通す
-        ② 2024〜2025 の 4 回分（テキストPDF）
-        ③ 2022〜2023 の 8 回分（テキストPDF、午前/午後）
-        ④ 2015〜2021 の 14 回分（スキャン → OCR草稿 + 画像確認。時間がかかる）
-        ⑤ groups.json の整理（全回を横断して類似問題をまとめ直す）
-        ⑥ 計算問題のテンプレート化（分野1・2 中心）
-        ⑦ 法改正チェックの総ざらい
-        ↓
-[Fable 5.1 / 人間]  抜き取りレビュー → main へマージ → GitHub Pages に自動デプロイ
+docs/OPUS_TASK.md の手順どおりに、第二種電気工事士 学科試験の問題データを作成してください。
+対象は denko2-2024-上期（1 回分 50 問）です。
+scripts/check_answers.py と npm run validate を通し、レビューノートを書いてコミットしてから報告してください。
 ```
 
-新しい回ごとに **1 ファイル 1 コミット**にし、`npm run validate` が通った状態で push する。
+3. 報告を確認し、次の回を指示する。回の一覧は `python3 scripts/extract_pdf.py --list` で出せる
 
-## 4. 品質ゲート（Opus の成果物が満たすべきこと）
+## 7. 素材についての既知の制約
 
-- `npm run validate` がエラー 0（スキーマ・画像存在・計算テンプレートの一意性）
-- 正答が `answers.json` と全問一致（validate ではなく Opus が作成時に突き合わせる。指示書に手順あり）
-- 解説は市販教材の転載禁止。根拠（電技解釈の条番号・省令条番号・公式）を `references` に入れる
-- 2023 年の法改正（「一般用電気工作物」→「一般用電気工作物等」等）で答えが変わる問は `retired`、用語だけの違いは `note`
-- 図が必要な問（stemDrawings > 0 や写真選択肢）は必ず `figure` / `choicesFigure` を付ける。図なしでは解けない問を図なしで出さない
-
-## 5. 想定コスト（パイロット実測に基づく目安）
-
-- パイロット（denko2-2026-上期、テキスト PDF、50 問）: Opus サブエージェント 1 セッションで
-  **約 33 万トークン・ツール呼び出し 120 回・42 分**。成果: 50 問 active、calc 2、図 24 点、公式解答と全問一致、validate エラー 0
-- 27 回分の見込み: テキスト PDF の 13 回 ≒ 430 万トークン、スキャン PDF の 14 回は画像確認が増えるため 1.5 倍で ≒ 700 万トークン。
-  合計 1,100 万トークン前後、実時間 20〜25 時間（1 セッション 1 回分として 27 セッション）
-- Fable 5.1 側の残作業は抜き取りレビュー（1 回あたり 1〜2 万トークン）のみ
-
-## 6. Opus セッションの起動方法（人間がやること）
-
-1. Claude Code を Opus で起動し、このリポジトリを開く（ブランチ: 作業用ブランチを切る）
-2. 最初のメッセージに以下を貼る:
-
-```
-docs/OPUS_TASK.md を読み、その手順どおりに第二種電気工事士の問題データを作成してください。
-まず対象: denko2-2026-上期（1回分50問）。完了したら npm run validate を通し、コミットして報告してください。
-```
-
-3. 1 回分ごとに結果を確認し、次の回を指示する（または「残り全部」と指示する）
+- **2021 年度（令和 3 年度）下期の学科試験は取得できていない。** 公式サイトの「試験問題と解答」ページに
+  掲載が見当たらず、日付総当たりでも PDF が見つからなかった。掲載が確認できたら
+  `data/raw/denko2/pdf/` に追加し、`scripts/extract_pdf.py` の `EXAMS` に日付を足せば取り込める。
+- **2020 年度（令和 2 年度）上期は実施されていない**ため存在しない。
+- **2023 年度下期（午前・午後）の解答 PDF はスキャン画像**で、OCR が実用精度に届かなかった。
+  解答表を目視で書き起こして `data/raw/denko2/answers_override/` に置き、抽出時にそちらを優先している
+  （`meta.json` の `answerSource` が `manual`）。この 2 回は問題データ作成時に解答表画像で再確認すること。

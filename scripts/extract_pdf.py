@@ -474,8 +474,9 @@ def extract_answers(apdf):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--exam", help="例: 20260524_q01 (省略時は全回)")
+    ap.add_argument("--exam", help="examId (denko2-2024-上期) か PDF キー (20240526_q01)。省略時は全回")
     ap.add_argument("--dpi", type=int, default=200)
+    ap.add_argument("--list", action="store_true", help="抽出は行わず、全回の examId とキーを一覧表示")
     ap.add_argument("--index-only", action="store_true", help="抽出は行わず meta.json を集めて index.json を再生成")
     args = ap.parse_args()
     if args.index_only:
@@ -488,19 +489,22 @@ def main():
         base = os.path.basename(qpdf)
         date, sess = base[:8], base[-6:-4]  # "q01"→"01"
         key = f"{date}_q{sess}"
-        if args.exam and args.exam != key:
-            continue
         year, term = EXAMS[date]
         apdf = qpdf.replace("_q0", "_a0")
         has_pm = os.path.exists(os.path.join(PDF_DIR, f"{date}_co_second_q02.pdf"))
         session = ("午前" if sess == "01" else "午後") if has_pm else None
         exam_id = f"denko2-{year}-{term}" + (f"-{session}" if session else "")
+        if args.list:
+            print(f"{exam_id:24s} {key}  {base}")
+            continue
+        if args.exam and args.exam not in (key, exam_id):
+            continue
         print(f"== {exam_id}  ({base})", flush=True)
         meta = extract_exam(qpdf, apdf, exam_id, {"subject": "denko2", "year": year, "term": term,
                                                   "session": session, "date": date}, dpi=args.dpi)
         print(f"   questions={meta['questionCount']} textPdf={meta['textPdf']} figurePages={meta['figurePages']} answers={meta['answerSource']}")
         results.append(meta)
-    if not args.exam:
+    if not args.exam and not args.list:
         json.dump(results, open(os.path.join(OUT_DIR, "index.json"), "w"), ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
