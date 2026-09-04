@@ -1,0 +1,19 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g3-kiki-rikiritsu",
+      "name": "電気機械器具の力率",
+      "category": 3,
+      "summary": "抵抗負荷（電熱器具）は力率≒1，電動機・安定器などコイルを含む機器は遅れ力率。力率の良い／悪い器具を選ぶ型",
+      "relatedGroups": ["g1-rikiritsu-keisan", "g3-shinso-condenser"]
+    },
+    {
+      "id": "g4-showwindow-cord",
+      "name": "ショウウインドー内のコード配線",
+      "category": 4,
+      "summary": "コードは原則として屋内配線に使えない。乾燥した場所のショウウインドー・ショウケース内で外部から見えやすい箇所に限り，0.75 mm²以上のコードを造営材に留め具で取り付けられる",
+      "relatedGroups": ["g3-idou-densen-cord"]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g1-sanso-dansen-denryu",
+      "name": "三相回路の断線後に流れる電流",
+      "category": 1,
+      "summary": "Δ結線などで電源線が1線断線したあとの単相回路に読み替え，指定した抵抗に流れる電流（式）を求める",
+      "relatedGroups": ["g1-sanso-y-dansen"]
+    },
+    {
+      "id": "g6-duct-shashin",
+      "name": "線ぴ・ダクト類の図記号と写真",
+      "category": 6,
+      "summary": "LD（ライティングダクト）などの傍記から，線ぴ・金属ダクト・ライティングダクト・ケーブルラックの実物を選ぶ",
+      "relatedGroups": ["g4-rinpi-duct-kouji", "g6-kigou-haisen-houhou"]
+    }
+  ]
+}

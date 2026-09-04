@@ -1,0 +1,12 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g3-kiki-rikiritsu",
+      "name": "電気機械器具の力率",
+      "category": 3,
+      "summary": "電熱器のような純抵抗負荷は力率がほぼ100 %、電動機や制御装置内蔵形の機器は力率が下がる",
+      "relatedGroups": ["g1-rikiritsu-keisan", "g3-shinso-condenser"]
+    }
+  ]
+}

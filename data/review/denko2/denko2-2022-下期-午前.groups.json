@@ -1,0 +1,19 @@
+{
+  "subject": "denko2",
+  "groups": [
+    {
+      "id": "g1-sanso-delta-dansen",
+      "name": "三相Δ結線と1線断線",
+      "category": 1,
+      "summary": "Δ結線の三相回路で電源側の1線が断線したとき、単相回路に描き直して各抵抗に流れる電流を求める",
+      "relatedGroups": ["g1-sanso-y-dansen"]
+    },
+    {
+      "id": "g6-zairyou-kougu-kumiawase",
+      "name": "配線図の施工に使う材料と工具の組合せ",
+      "category": 6,
+      "summary": "電線管の種類（ねじなし／ねじ切り）に対応する接続材料、圧着工具と圧着スリーブなど、材料と工具の組合せの適否",
+      "relatedGroups": ["g6-kanro-setsuzoku-zairyou", "g6-setsuzoku-kougu-zairyou", "g6-kougu-zumen"]
+    }
+  ]
+}
