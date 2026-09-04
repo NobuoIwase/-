@@ -95,6 +95,12 @@
       "summary": "Δ結線の三相回路で電源側の1線が断線したとき、単相回路に描き直して各抵抗に流れる電流を求める"
     },
     {
+      "id": "g1-sanso-rikiritsu-shiki",
+      "name": "三相電動機の力率を表す式",
+      "category": 1,
+      "summary": "P = √3VIcosθ と電力量W = Pt から力率を逆算する型。kW·h→W（×10³）と小数→％（×10²）の換算を合わせて×10⁵"
+    },
+    {
       "id": "g1-sanso-sen-denryu",
       "name": "三相3線式回路の線電流",
       "category": 1,
