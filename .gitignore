@@ -8,3 +8,6 @@ data/extracted/**/*.png
 __pycache__/
 *.pyc
 *.tsbuildinfo
+
+# 問題データ作成中の一時ファイル（作成エージェントが結合後に削除する）
+data/review/**/*.part*.json
