@@ -29,13 +29,14 @@
 | アプリ本体（出題エンジン・間隔反復・計算問題・UI・PWA） | Fable 5.1 | 完了 | `src/`, `vite.config.ts` |
 | デザイン（スマホ縦・片手操作・ダークモード） | Fable 5.1 | 完了 | `src/styles.css` |
 | デプロイ設定（GitHub Pages） | Fable 5.1 | 完了 | `.github/workflows/deploy.yml` |
-| **問題データの作成**（文字起こし・正答付け・図の割り当て） | **Opus** | **1 / 27 回** | `public/data/denko2/questions/<examId>.json` |
-| **解説の執筆**（whyCorrect / whyOthersWrong / supplement / references） | **Opus** | 同上 | 同上 |
-| **類似問題のグループ化** | **Opus** | 46 グループ（2026 上期ぶん） | `public/data/denko2/groups.json` |
-| **計算問題のテンプレート化** | **Opus** | 2 問 | 各問の `calcTemplate` |
-| **法改正チェック**（`status` / `note` の付与） | **Opus** | 2026 上期のみ | 各問の `status` / `note` |
-| **図・写真の公開用コピー** | **Opus**（スクリプト実行） | 24 点 | `public/data/denko2/figures/<examId>/` |
-| 抜き取りレビュー | Fable 5.1 または人間 | 1 回分実施 | — |
+| **問題データの作成**（文字起こし・正答付け・図の割り当て） | **Opus** | 完了（27 / 27 回・1,350 問） | `public/data/denko2/questions/<examId>.json` |
+| **解説の執筆**（whyCorrect / whyOthersWrong / supplement / references） | **Opus** | 完了 | 同上 |
+| **類似問題のグループ化** | **Opus** | 完了（159 グループ） | `public/data/denko2/groups.json` |
+| **計算問題のテンプレート化** | **Opus** | 完了（63 問） | 各問の `calcTemplate` |
+| **法改正チェック**（`status` / `note` の付与） | **Opus** | 完了（retired 2・note 30） | 各問の `status` / `note` |
+| **図・写真の公開用コピー** | **Opus**（スクリプト実行） | 完了（645 点・39 MB） | `public/data/denko2/figures/<examId>/` |
+| **転記と解説の検証**（作成とは別のエージェント） | **Opus** | 完了（26 回） | `data/review/denko2/<examId>.md` |
+| 最終レビュー・統合・実機確認 | Opus | 完了 | — |
 
 ## 2. 引き継ぎの境界
 
@@ -86,10 +87,13 @@ PNG は git 管理外。`python3 scripts/extract_pdf.py --exam <examId>` で再�
 | 段階 | 回 | 数 | 状態 |
 |---|---|---|---|
 | ① パイロット | 2026 上期 | 1 | 完了 |
-| ② テキスト PDF・午前午後なし | 2024 上期/下期、2025 上期/下期 | 4 | 未着手 |
-| ③ テキスト PDF・午前午後あり | 2022 上期/下期、2023 上期/下期 の各午前・午後 | 8 | 未着手 |
-| ④ スキャン PDF | 2015〜2019 の上期/下期、2020 下期、2021 上期 の午前・午後 | 14 | 未着手 |
-| ⑤ 横断作業 | `groups.json` の整理、計算問題の追加、法改正の総ざらい | — | 未着手 |
+| ② テキスト PDF | 2022〜2025（午前・午後を含む） | 12 | 完了 |
+| ③ スキャン PDF | 2015〜2021（午前・午後を含む） | 14 | 完了 |
+| ④ 横断作業 | グループ体系の設計、配線図の前提条件、図記号の記述統一、画像の軽量化 | — | 完了 |
+
+**実施方法**: ②③ は 1 回につき「作成」と「検証」の 2 エージェントを流す並列ワークフローで実行した。
+検証側は作成側の自己申告を受け取り、原本画像と突き合わせて転記を疑い、解説の電気的・法令的な誤りを
+探して直す。1 回あたり 6〜15 件の修正が入った。
 
 進捗の正本は `public/data/denko2/subject.json` の `questionFiles`。ここに載っている回が完成した回である。
 

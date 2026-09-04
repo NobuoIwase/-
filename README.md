@@ -15,9 +15,13 @@
 | アプリ本体 | 完成（デイリー練習・模擬試験・分野別集中・進捗・設定・PWA） |
 | 公式 PDF の取得 | 27 回分（2015〜2026 年、問題 27・解答 27） |
 | 素材の抽出 | 27 回すべて 50 問 |
-| 問題データ | **1 / 27 回**（2026 年上期のみ完成、50 問） |
+| 問題データ | **27 / 27 回・1,350 問**（うち出題可能 1,348 問） |
+| グループ（間隔反復の単位） | 159 個 |
+| 計算問題（数値が毎回変わる） | 63 問 |
 
-残り 26 回の問題データ作成は Opus が担当する。分担は `docs/ROLE_DIVISION.md`、手順は `docs/OPUS_TASK.md`。
+全問が公式解答と一致し、作成とは別のエージェントが原本画像と突き合わせて転記と解説を検証済み。
+回ごとの判断・修正の記録は `data/review/denko2/<examId>.md` にある。
+作成の分担は `docs/ROLE_DIVISION.md`、手順は `docs/OPUS_TASK.md`。
 
 取得できていない回が 1 つある。2021 年度（令和 3 年度）下期の学科試験は公式サイトに掲載が見当たらない。
 2020 年度上期は試験自体が実施されていない。
@@ -44,8 +48,13 @@ public/data/                問題データ（JSON）と図（PNG）→ docs/DAT
 scripts/
   extract_pdf.py            公式 PDF → 問ごとの画像・テキスト草稿・解答キー
   publish_figures.py        問題 JSON が参照する図を public/ にコピー
+  crop_figure.py            「問い」欄の画像から図だけを切り出す
+  dump_stems.py             問番号の範囲で27回分の問題文を横断一覧
+  merge_rounds.py           完成した回を groups.json / subject.json に取り込む
+  apply_premise.py          配線図問題に共通の前提条件を書き込む
+  optimize_figures.py       写真を WebP に変換して軽量化
   check_answers.py          公式解答との突き合わせ
-  validate-data.ts          データ検証
+  validate-data.ts          データ検証（--exam で1回分だけも可）
 data/raw/denko2/            公式 PDF・出典マニフェスト・手書き起こしの解答キー
 data/extracted/denko2/      抽出結果（JSON は git 管理、PNG は再生成）
 data/review/denko2/         回ごとのレビューノート

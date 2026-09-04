@@ -27,7 +27,10 @@ function inline(s: string) {
 /** 計算問題: 問題文中の {R} などをインスタンスの値に置換 */
 export function renderStem(q: Question, item: QuestionInstance): string {
   if (!item.calc) return q.stem
-  return q.stem.replace(/\{(\w+)\}/g, (m, k: string) => (k in item.calc!.params ? String(item.calc!.params[k]) : m))
+  const { params, paramsText } = item.calc
+  return q.stem.replace(/\{(\w+)\}/g, (m, k: string) =>
+    paramsText && k in paramsText ? paramsText[k] : k in params ? String(params[k]) : m,
+  )
 }
 
 export function QuestionView({

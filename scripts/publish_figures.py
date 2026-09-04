@@ -6,10 +6,11 @@
 
 各問の figure / choicesFigure / sharedFigure / choiceFigures のパス（"figures/<examId>/<name>.png"）について、
 public 側に無ければ data/extracted/denko2/<examId>/cells/ または pages/ から探してコピーする。
-  figures/<examId>/qNN.png          ← cells/qNN_figure.png（無ければ cells/qNN_stem.png）
-  figures/<examId>/qNN_choices.png  ← cells/qNN_choices.png
-  figures/<examId>/qNN_choice_K.png ← cells/qNN_choice_K.png
-  figures/<examId>/pNN.png          ← pages/pNN.png（配線図面）
+  figures/<examId>/qNN.png           ← cells/qNN_figure.png（無ければ cells/qNN_stem.png）
+  figures/<examId>/qNN_choices.webp  ← cells/qNN_choices.png
+  figures/<examId>/qNN_choice_K.webp ← cells/qNN_choice_K.png
+  figures/<examId>/pNN.png           ← pages/pNN.png（配線図面）
+拡張子で保存形式が決まる。写真（選択肢の器具・工具）は .webp、回路図・配線図面は .png にする。
 それ以外の名前は data/extracted/denko2/<examId>/custom/<name>.png を探す（Opusが手動で切り出した画像置き場）。
 """
 import json, os, shutil, sys
@@ -20,6 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def resolve(exam_id, name):
     base = os.path.join(ROOT, "data", "extracted", "denko2", exam_id)
     stem, _ = os.path.splitext(name)
+    name = stem + ".png"   # 素材側は常に PNG。保存形式は呼び出し側の拡張子で決まる
     cands = []
     if stem.startswith("p") and stem[1:].isdigit():
         cands.append(os.path.join(base, "pages", name))
@@ -54,11 +56,16 @@ def main():
                 if not src:
                     missing.append((q["id"], r)); continue
                 os.makedirs(os.path.dirname(dst), exist_ok=True)
-                # スマホ向けに幅1200px以下へ縮小し PNG→ 画質を保ったまま保存
+                # スマホ向けに幅1200px以下へ縮小する
                 im = Image.open(src)
                 if im.width > 1200:
                     im = im.resize((1200, int(im.height * 1200 / im.width)), Image.LANCZOS)
-                im.save(dst, optimize=True)
+                # 写真は WebP（品質92なら刻印や刃受の形状は原本と見分けがつかず、容量は約1/5）。
+                # 回路図・配線図面は線をたどって解くので可逆の PNG のまま残す。
+                if dst.endswith(".webp"):
+                    im.convert("RGB").save(dst, "WEBP", quality=92, method=6)
+                else:
+                    im.save(dst, optimize=True)
                 copied += 1
     print(f"copied {copied} images")
     if missing:

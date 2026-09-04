@@ -56,3 +56,18 @@ describe('calc template', () => {
     expect([...st.order].sort()).toEqual([0, 1, 2, 3])
   })
 })
+
+describe('パラメータの表示', () => {
+  it('プールの小数桁を保つ（電線の直径 2.0 が "2" にならない）', () => {
+    const t2: CalcTemplate = {
+      params: { d: [1.6, 2.0, 2.6], L: [10, 20] },
+      formula: 'd * L',
+      distractors: ['answer * 2', 'answer / 2', 'answer + 5'],
+      round: 1,
+      explanation: '直径 {d} mm・長さ {L} m',
+    }
+    const r = buildCalc(t2, { d: 2.0, L: 20 })!
+    expect(r.paramsText).toEqual({ d: '2.0', L: '20' })
+    expect(r.explanation).toBe('直径 2.0 mm・長さ 20 m')
+  })
+})

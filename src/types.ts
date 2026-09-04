@@ -107,6 +107,8 @@ export interface QuestionInstance {
   /** 計算問題で確定した値・選択肢 */
   calc?: {
     params: Record<string, number>
+    /** 表示用に桁を保った値（電線の直径 2.0 が "2" にならないようにする） */
+    paramsText?: Record<string, string>
     choices: [string, string, string, string]
     answer: 0 | 1 | 2 | 3
     explanation: string

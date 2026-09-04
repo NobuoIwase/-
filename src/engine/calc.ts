@@ -29,6 +29,19 @@ export function formatNumber(v: number, digits: number): string {
   return sign + grouped + (frac ? `.${frac}` : '')
 }
 
+/**
+ * パラメータを表示用の文字列にする。プール内の値の小数桁に合わせるので、
+ * 電線の直径 2.0 mm が「2 mm」になるような桁落ちを防ぐ。
+ */
+export function formatParams(pool: Record<string, number[]>, chosen: Record<string, number>): Record<string, string> {
+  const out: Record<string, string> = {}
+  for (const [k, v] of Object.entries(chosen)) {
+    const digits = Math.max(0, ...(pool[k] ?? [v]).map((n) => (String(n).split('.')[1] ?? '').length))
+    out[k] = digits > 0 ? v.toFixed(digits) : String(v)
+  }
+  return out
+}
+
 /** 全パラメータ組合せを列挙（プールが大きい場合はランダムに最大 maxCombos 件） */
 export function* combos(params: Record<string, number[]>): Generator<Record<string, number>> {
   const keys = Object.keys(params)
@@ -51,6 +64,8 @@ export function* combos(params: Record<string, number[]>): Generator<Record<stri
 
 export interface CalcResult {
   params: Record<string, number>
+  /** 表示用に桁を保った値（2.0 が "2" にならないようにする） */
+  paramsText: Record<string, string>
   answer: number
   choices: number[]
   answerIndex: 0 | 1 | 2 | 3
@@ -105,13 +120,14 @@ export function buildCalc(t: CalcTemplate, params: Record<string, number>): Calc
   if (ds.length < 3) return null
   const choices = [ra, ...ds].sort((a, b) => a - b) // 実試験は数値の昇順
   const answerIndex = choices.indexOf(ra) as 0 | 1 | 2 | 3
+  const paramsText = formatParams(t.params, params)
   const expl = t.explanation.replace(/\{(\w+)\}/g, (_, k: string) => {
     if (k === 'answer') return formatNumber(ra, digits)
-    if (k in params) return String(params[k])
+    if (k in paramsText) return paramsText[k]
     // {expr:...} 形式は非対応。未知のキーはそのまま残す
     return `{${k}}`
   })
-  return { params, answer: ra, choices, answerIndex, explanation: expl }
+  return { params, paramsText, answer: ra, choices, answerIndex, explanation: expl }
 }
 
 /** 採用可能な全組合せを列挙（データ検証用） */
@@ -145,6 +161,7 @@ export function instantiate(q: Question, rng: Rng): QuestionInstance {
         order: [0, 1, 2, 3],
         calc: {
           params: c.params,
+          paramsText: c.paramsText,
           choices: c.choices.map((v) => formatNumber(v, digits) + unit) as [string, string, string, string],
           answer: c.answerIndex,
           explanation: c.explanation,
