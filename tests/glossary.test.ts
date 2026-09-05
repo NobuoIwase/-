@@ -6,6 +6,9 @@ const entries: GlossaryEntry[] = [
   { term: '絶縁抵抗', reading: 'ぜつえんていこう', short: '電気の漏れにくさ', plain: '…' },
   { term: '絶縁抵抗計', reading: 'ぜつえんていこうけい', short: '漏れにくさを測る計器', plain: '…', aliases: ['メガー'] },
   { term: '接地', short: 'アース', plain: '…', related: ['絶縁抵抗'] },
+  { term: 'ルームエアコン', short: '部屋用エアコン', plain: '…', aliases: ['RC'] },
+  { term: '電力量計', short: '電力量をはかる計器', plain: '…', aliases: ['Wh'] },
+  { term: '架橋ポリエチレン絶縁ビニルシースケーブル', short: '熱に強いケーブル', plain: '…', aliases: ['CV'] },
 ]
 const g = new Glossary(entries)
 
@@ -43,6 +46,16 @@ describe('Glossary', () => {
   it('collect は出現順に重複なく集める', () => {
     const got = g.collect(['絶縁抵抗を測る', '接地と絶縁抵抗'])
     expect(got.map((e) => e.term)).toEqual(['絶縁抵抗', '接地'])
+  })
+
+  it('英字の略号は長い英単語の一部としては拾わない', () => {
+    const terms = (text: string) =>
+      g.split(text).filter((p) => typeof p !== 'string').map((p) => (p as { text: string }).text)
+    expect(terms('CIRCUIT BREAKER')).toEqual([]) // CIRCUIT の中の RC
+    expect(terms('W（White）の刻印')).toEqual([]) // White の中の Wh
+    expect(terms('DCV・ACV の表示')).toEqual([]) // DCV/ACV の中の CV
+    expect(terms('RC は図記号')).toEqual(['RC']) // 単独なら拾う
+    expect(terms('CV14－3C を使う')).toEqual(['CV']) // 数字は区切りとして扱う
   })
 
   it('用語辞典が空でも落ちない', () => {
