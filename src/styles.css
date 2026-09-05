@@ -12,6 +12,9 @@
   --ng-bg: #fee2e2;
   --info-bg: #eff6ff;
   --flag: #7c3aed;
+  --simple-bg: #fffbeb;
+  --simple-line: #fcd34d;
+  --simple-fg: #92400e;
   --radius: 14px;
   --tap: 56px;
   color-scheme: light;
@@ -30,6 +33,9 @@
   --ng-bg: #7f1d1d;
   --info-bg: #1e3a5f;
   --flag: #c4b5fd;
+  --simple-bg: #2a2214;
+  --simple-line: #a16207;
+  --simple-fg: #fcd34d;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -139,3 +145,73 @@ label.check input { width: 22px; height: 22px; }
 .small { font-size: 13px; }
 details summary { cursor: pointer; color: var(--muted); font-size: 14px; }
 .toast { position: fixed; left: 50%; bottom: 80px; transform: translateX(-50%); background: var(--fg); color: var(--bg); padding: 8px 14px; border-radius: 999px; font-size: 14px; z-index: 60; }
+
+/* --- 用語辞典と「もっと分かりやすく！」 --- */
+/* 本文中の用語。読みの邪魔をしないよう、下線だけで色は変えない */
+.term {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-bottom: 1px dashed var(--accent);
+  line-height: inherit;
+}
+.term:active { background: var(--info-bg); }
+
+.term-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  border: 1px solid var(--line);
+  background: var(--bg2);
+  color: inherit;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  min-height: 36px;
+}
+.term-chip.disabled { opacity: 0.5; cursor: default; }
+.term-chip .small { font-size: 12px; }
+
+/* 「もっと分かりやすく！」。解説とは別の色で、ここだけ読めば分かる場所だと示す */
+.simple {
+  background: var(--simple-bg);
+  border: 1px solid var(--simple-line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-top: 12px;
+}
+.simple h3 { margin: 0 0 8px; font-size: 17px; color: var(--simple-fg); }
+.simple p { margin: 0 0 8px; font-size: 16px; line-height: 1.8; }
+.simple p:last-child { margin-bottom: 0; }
+.glossary-list { margin-top: 12px; }
+.glossary-list h4 { margin: 0 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
+
+/* 用語の意味を出すシート（下から出る） */
+.sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 60;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.sheet {
+  width: 100%;
+  max-width: 720px;
+  background: var(--bg2);
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 14px 14px calc(18px + env(safe-area-inset-bottom));
+  max-height: 80dvh;
+  overflow-y: auto;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.25);
+}
+.sheet-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.sheet-title { flex: 1; font-size: 18px; }
+.sheet-short { margin: 0 0 10px; color: var(--simple-fg); font-weight: 600; }
+.sheet-plain { margin: 0; font-size: 16px; line-height: 1.8; white-space: pre-wrap; }
+.sheet-related { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Page } from '../components/Layout'
-import { ExplanationView, QuestionView } from '../components/QuestionCard'
+import { ExplanationView, QuestionView, SimpleView } from '../components/QuestionCard'
 import { useAppStore } from '../store/useAppStore'
 
 export default function Session({ id }: { id: number }) {
@@ -99,7 +99,12 @@ export default function Session({ id }: { id: number }) {
           </div>
         )}
         <QuestionView q={q} item={item} selected={selected} reveal={reveal} onSelect={(pos) => answer(i, pos)} index={i} total={total} />
-        {reveal && <ExplanationView q={q} item={item} selected={selected} subjectCitation={subject.def.citation} />}
+        {reveal && (
+          <>
+            <ExplanationView q={q} item={item} selected={selected} subjectCitation={subject.def.citation} />
+            <SimpleView q={q} item={item} />
+          </>
+        )}
       </main>
       <div className="bottombar">
         <button className="btn secondary" style={{ flex: 1 }} disabled={i === 0} onClick={() => goTo(i - 1)}>

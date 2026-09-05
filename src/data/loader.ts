@@ -1,4 +1,5 @@
-import type { GroupDef, GroupsFile, Question, SubjectDef } from '../types'
+import type { GlossaryFile, GroupDef, GroupsFile, Question, SubjectDef } from '../types'
+import { EMPTY_GLOSSARY, Glossary, parseGlossary } from './glossary'
 
 export interface SubjectsIndex {
   subjects: { id: string; name: string; shortName: string }[]
@@ -9,6 +10,8 @@ export interface LoadedSubject {
   questions: Question[]
   groups: Map<string, GroupDef>
   byId: Map<string, Question>
+  /** 用語辞典。無ければ空（用語リンクが出ないだけで動く） */
+  glossary: Glossary
 }
 
 const BASE = import.meta.env.BASE_URL
@@ -46,5 +49,11 @@ export async function loadSubject(id: string): Promise<LoadedSubject> {
   } catch {
     // groups.json が無くても動く（groupId をそのまま名前として扱う）
   }
-  return { def, questions, groups, byId }
+  let glossary = EMPTY_GLOSSARY
+  try {
+    glossary = parseGlossary(await getJson<GlossaryFile>(`${id}/glossary.json`))
+  } catch {
+    // glossary.json が無くても動く（用語リンクが出ないだけ）
+  }
+  return { def, questions, groups, byId, glossary }
 }

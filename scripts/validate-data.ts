@@ -16,7 +16,7 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { allValidCalcs } from '../src/engine/calc'
-import type { GroupDef, GroupsFile, Question, SubjectDef } from '../src/types'
+import type { GlossaryFile, GroupDef, GroupsFile, Question, SubjectDef } from '../src/types'
 
 const root = join(import.meta.dirname ?? '.', '..')
 const examArgIndex = process.argv.indexOf('--exam')
@@ -47,6 +47,29 @@ for (const s of subjects.subjects) {
   }
   collectGroups(join(dir, 'groups.json'), `${s.id}/groups.json`)
   if (onlyExam) collectGroups(join(root, 'data', 'review', s.id, `${onlyExam}.groups.json`), `${onlyExam}.groups.json`)
+  // 用語辞典（あれば検証する）
+  let glossaryTerms = new Set<string>()
+  const gpath = join(dir, 'glossary.json')
+  if (existsSync(gpath)) {
+    const gl = JSON.parse(readFileSync(gpath, 'utf8')) as GlossaryFile
+    const keys = new Set<string>()
+    for (const t of gl.terms) {
+      if (!t.term?.trim()) { err(`${s.id}/glossary.json: term が空の項目がある`); continue }
+      if (glossaryTerms.has(t.term)) err(`${s.id}/glossary.json: 見出し語 ${t.term} が重複`)
+      glossaryTerms.add(t.term)
+      if (!t.short?.trim()) err(`${s.id}/glossary.json: ${t.term} の short が空`)
+      if (!t.plain?.trim()) err(`${s.id}/glossary.json: ${t.term} の plain が空`)
+      if (t.short && t.short.length > 40) warn(`${s.id}/glossary.json: ${t.term} の short が長い（${t.short.length}字）`)
+      if (t.category != null && !catIds.has(t.category)) err(`${s.id}/glossary.json: ${t.term} の category ${t.category} が不正`)
+      for (const k of [t.term, ...(t.aliases ?? [])]) {
+        if (k.length < 2) { err(`${s.id}/glossary.json: ${t.term} の見出し「${k}」が1文字（誤検出するので2文字以上にする）`); continue }
+        if (keys.has(k)) warn(`${s.id}/glossary.json: 見出し・別名「${k}」が複数の項目にある`)
+        keys.add(k)
+      }
+    }
+    for (const t of gl.terms) for (const r of t.related ?? []) if (!glossaryTerms.has(r)) err(`${s.id}/glossary.json: ${t.term} の related「${r}」が辞典にない`)
+    console.log(`${s.id}/glossary.json: ${gl.terms.length} 語`)
+  }
   const ids = new Set<string>()
   const questionDir = join(dir, 'questions')
   // --exam のときはその 1 ファイルだけ。通常は subject.json の questionFiles をすべて
@@ -55,7 +78,7 @@ for (const s of subjects.subjects) {
     const listed = new Set(def.questionFiles)
     for (const f of readdirSync(questionDir)) if (f.endsWith('.json') && !listed.has(f)) warn(`${s.id}/questions/${f} は subject.json の questionFiles に載っていない（読み込まれない）`)
   }
-  let total = 0, active = 0, calc = 0
+  let total = 0, active = 0, calc = 0, simpleCount = 0
   const groupCats = new Map<string, number>()
   for (const f of targets) {
     const p = join(questionDir, f)
@@ -84,6 +107,7 @@ for (const s of subjects.subjects) {
       if (![0, 1, 2, 3].includes(q.answer)) err(`${tag}: answer は 0-3`)
       if (!q.explanation?.whyCorrect?.trim()) err(`${tag}: explanation.whyCorrect が空`)
       if (!q.explanation?.supplement?.trim()) err(`${tag}: explanation.supplement が空`)
+      if (q.explanation?.simple != null && !q.explanation.simple.trim()) err(`${tag}: explanation.simple が空文字`)
       if (q.explanation?.whyOthersWrong && q.explanation.whyOthersWrong.length !== 4) err(`${tag}: whyOthersWrong は4要素（正答の位置は空文字）`)
       if (!['active', 'retired'].includes(q.status)) err(`${tag}: status が不正`)
       if (q.status === 'retired' && !q.retiredReason) warn(`${tag}: retired だが retiredReason がない`)
@@ -110,10 +134,11 @@ for (const s of subjects.subjects) {
           for (const k of Object.keys(t.params)) if (!q.stem.includes(`{${k}}`) && !t.explanation.includes(`{${k}}`)) warn(`${tag}: パラメータ {${k}} が stem/explanation で使われていない`)
         }
       } else if (q.type !== 'static') err(`${tag}: type が不正`)
+      if (q.explanation?.simple?.trim()) simpleCount++
       if (q.status === 'active') active++
     }
   }
-  console.log(`${s.id}: ${total} 問 (active ${active}, calc ${calc}), groups ${groupCats.size}`)
+  console.log(`${s.id}: ${total} 問 (active ${active}, calc ${calc}), groups ${groupCats.size}, もっと分かりやすく ${simpleCount}/${total}`)
 }
 console.log(`errors: ${errors}, warnings: ${warnings}`)
 if (errors > 0) process.exit(1)

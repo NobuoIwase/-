@@ -46,7 +46,36 @@ export interface Explanation {
   whyCorrect: string
   whyOthersWrong?: string[]
   supplement: string
+  /**
+   * 「もっと分かりやすく！」— 予備知識のない人向けの言い換え。
+   * 専門用語をできるだけ使わず、身近な例えで、なぜそうなるのかを 3〜5 文で書く。
+   * 正解・不正解にかかわらず表示される。
+   */
+  simple?: string
   references?: string[]
+}
+
+/** 用語辞典の1項目。全問で共有し、本文中に出てきたらタップで意味を出す */
+export interface GlossaryEntry {
+  /** 見出し語。本文中の表記に合わせる */
+  term: string
+  /** よみ（ひらがな） */
+  reading?: string
+  /** 一言で言うと（20字程度）。一覧やバッジに使う */
+  short: string
+  /** 噛み砕いた説明。2〜4 文。身近な例えを使ってよい */
+  plain: string
+  /** 表記ゆれ・略記・別名。本文中のこれらもタップ対象にする */
+  aliases?: string[]
+  /** 主に出てくる分野 */
+  category?: CategoryId
+  /** 関連語（辞典内の term） */
+  related?: string[]
+}
+
+export interface GlossaryFile {
+  subject: SubjectId
+  terms: GlossaryEntry[]
 }
 
 export interface Question {

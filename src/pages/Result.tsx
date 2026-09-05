@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Page } from '../components/Layout'
-import { ExplanationView, QuestionView } from '../components/QuestionCard'
+import { ExplanationView, QuestionView, SimpleView } from '../components/QuestionCard'
 import { db } from '../db/db'
 import { correctPos, isCorrect, useAppStore } from '../store/useAppStore'
 import { CHOICE_LABELS, type SessionRecord } from '../types'
@@ -74,6 +74,7 @@ export default function Result({ id }: { id: number }) {
         <>
           <QuestionView q={items[open].q!} item={items[open].it} selected={session.answers[open]} reveal index={open} total={total} />
           <ExplanationView q={items[open].q!} item={items[open].it} selected={session.answers[open]} subjectCitation={subject.def.citation} />
+          <SimpleView q={items[open].q!} item={items[open].it} />
           <p className="muted small">
             あなたの回答: {session.answers[open] != null ? CHOICE_LABELS[session.answers[open]] : '未回答'} / 正答: {CHOICE_LABELS[correctPos(items[open].q!, items[open].it)]}
           </p>
