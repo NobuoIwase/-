@@ -29,17 +29,25 @@ function inline(s: string, glossary?: boolean, skip?: Set<string>) {
   })
 }
 
-/** 計算問題: 文中の {R} などをインスタンスの値に置換（問題文と「もっと分かりやすく」で共通） */
-function fillParams(text: string, item: QuestionInstance): string {
-  if (!item.calc) return text
-  const { params, paramsText } = item.calc
-  return text.replace(/\{(\w+)\}/g, (m, k: string) =>
-    paramsText && k in paramsText ? paramsText[k] : k in params ? String(params[k]) : m,
-  )
+/**
+ * 文中の差し込みを実際の表示に合わせる。
+ *  - {R} など: 計算問題のパラメータを今回の値に
+ *  - {c0}〜{c3}: 出題時の選択肢（0=イ … 3=ニ）を、いま画面に並んでいる位置の記号に
+ *    解説は出題時の並びで書かれているので、選択肢を並び替えたときはここで読み替える。
+ */
+function fill(text: string, item: QuestionInstance): string {
+  let out = text.replace(/\{c([0-3])\}/g, (_m, d: string) => CHOICE_LABELS[item.order.indexOf(Number(d))])
+  if (item.calc) {
+    const { params, paramsText } = item.calc
+    out = out.replace(/\{(\w+)\}/g, (m, k: string) =>
+      paramsText && k in paramsText ? paramsText[k] : k in params ? String(params[k]) : m,
+    )
+  }
+  return out
 }
 
 export function renderStem(q: Question, item: QuestionInstance): string {
-  return fillParams(q.stem, item)
+  return fill(q.stem, item)
 }
 
 export function QuestionView({
@@ -78,7 +86,7 @@ export function QuestionView({
       {q.premise && (
         <details className="premise">
           <summary>前提条件（この問題群に共通）</summary>
-          <Md text={q.premise} glossary skip={termSkip} />
+          <Md text={fill(q.premise, item)} glossary skip={termSkip} />
         </details>
       )}
       <div className="stem">
@@ -138,11 +146,11 @@ export function ExplanationView({ q, item, selected, subjectCitation }: { q: Que
         !isOk && (
           <>
             <h4>なぜ {CHOICE_LABELS[correct]} が正答か</h4>
-            <Md text={q.explanation.whyCorrect} glossary skip={termSkip} />
+            <Md text={fill(q.explanation.whyCorrect, item)} glossary skip={termSkip} />
             {whyWrong && (
               <>
                 <h4>選んだ {CHOICE_LABELS[selected!]} が違う理由</h4>
-                <Md text={whyWrong} glossary skip={termSkip} />
+                <Md text={fill(whyWrong, item)} glossary skip={termSkip} />
               </>
             )}
           </>
@@ -150,11 +158,11 @@ export function ExplanationView({ q, item, selected, subjectCitation }: { q: Que
       )}
       {/* 補足は計算問題でも出す（周辺知識・覚え方は数値が変わっても役に立つ） */}
       <h4>{isOk ? '補足' : 'ポイント'}</h4>
-      <Md text={q.explanation.supplement} glossary skip={termSkip} />
+      <Md text={fill(q.explanation.supplement, item)} glossary skip={termSkip} />
       {isOk && !item.calc && q.explanation.whyCorrect && (
         <details>
           <summary>根拠を見る</summary>
-          <Md text={q.explanation.whyCorrect} glossary skip={termSkip} />
+          <Md text={fill(q.explanation.whyCorrect, item)} glossary skip={termSkip} />
         </details>
       )}
       {q.explanation.references?.length ? <p className="small muted">根拠: {q.explanation.references.join('、')}</p> : null}
@@ -172,7 +180,7 @@ export function ExplanationView({ q, item, selected, subjectCitation }: { q: Que
  */
 export function SimpleView({ q, item }: { q: Question; item: QuestionInstance }) {
   const { glossary } = useGlossary()
-  const simple = q.explanation.simple ? fillParams(q.explanation.simple, item) : undefined
+  const simple = q.explanation.simple ? fill(q.explanation.simple, item) : undefined
   const terms: GlossaryEntry[] = glossary.collect([
     renderStem(q, item),
     q.explanation.whyCorrect,
