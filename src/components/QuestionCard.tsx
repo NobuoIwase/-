@@ -29,13 +29,17 @@ function inline(s: string, glossary?: boolean, skip?: Set<string>) {
   })
 }
 
-/** 計算問題: 問題文中の {R} などをインスタンスの値に置換 */
-export function renderStem(q: Question, item: QuestionInstance): string {
-  if (!item.calc) return q.stem
+/** 計算問題: 文中の {R} などをインスタンスの値に置換（問題文と「もっと分かりやすく」で共通） */
+function fillParams(text: string, item: QuestionInstance): string {
+  if (!item.calc) return text
   const { params, paramsText } = item.calc
-  return q.stem.replace(/\{(\w+)\}/g, (m, k: string) =>
+  return text.replace(/\{(\w+)\}/g, (m, k: string) =>
     paramsText && k in paramsText ? paramsText[k] : k in params ? String(params[k]) : m,
   )
+}
+
+export function renderStem(q: Question, item: QuestionInstance): string {
+  return fillParams(q.stem, item)
 }
 
 export function QuestionView({
@@ -168,7 +172,7 @@ export function ExplanationView({ q, item, selected, subjectCitation }: { q: Que
  */
 export function SimpleView({ q, item }: { q: Question; item: QuestionInstance }) {
   const { glossary } = useGlossary()
-  const simple = q.explanation.simple
+  const simple = q.explanation.simple ? fillParams(q.explanation.simple, item) : undefined
   const terms: GlossaryEntry[] = glossary.collect([
     renderStem(q, item),
     q.explanation.whyCorrect,
