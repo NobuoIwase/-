@@ -27,7 +27,11 @@ jobs:
       - run: npm test
       - name: Build (base path = /<repo>/)
         run: VITE_BASE="/${GITHUB_REPOSITORY#*/}/" npm run build
+      # enablement: true で、リポジトリの Pages が未設定でもワークフロー側から有効化する
+      # （Settings → Pages を手で操作しなくても初回デプロイが通る）
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
